@@ -4105,9 +4105,7 @@ canvas.addEventListener('pointerup', (e) => {
                 }
 
                 if (correctedShape) {
-                    drawnStrokes.pop();
-
-                    if (Array.isArray(correctedShape)) {
+                    drawnStrokes.pop(); if (typeof window.sendNetworkData === 'function' && typeof isConnected !== 'undefined' && isConnected && lastStroke && lastStroke.id) { window.sendNetworkData({ type: 'sil_belirli', id: lastStroke.id }); } if (Array.isArray(correctedShape)) {
                         correctedShape.forEach(s => s.id = Date.now() + Math.random());
                         drawnStrokes.push(...correctedShape);
 
