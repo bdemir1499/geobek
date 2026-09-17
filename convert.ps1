@@ -1,0 +1,1 @@
+$content = [System.IO.File]::ReadAllText("app.js", [System.Text.Encoding]::GetEncoding(1254)); [System.IO.File]::WriteAllText("app.js", $content, [System.Text.Encoding]::UTF8); $contentHTML = [System.IO.File]::ReadAllText("index.html", [System.Text.Encoding]::GetEncoding(1254)); [System.IO.File]::WriteAllText("index.html", $contentHTML, [System.Text.Encoding]::UTF8)

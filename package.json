@@ -1,0 +1,17 @@
+{
+  "name": "geobek-lan",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Local-only Geobek classroom host and PeerJS signaling server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "peer": "^1.0.2"
+  },
+  "overrides": {
+    "qs": "^6.16.0"
+  }
+}

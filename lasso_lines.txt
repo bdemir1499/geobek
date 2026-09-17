@@ -1,0 +1,135 @@
+19: body.cursor-snapshot { cursor: crosshair !important; }
+24: body.cursor-snapshot #drawing-canvas { cursor: crosshair !important; }
+72: let currentLassoX = 0;
+73: let currentLassoY = 0;
+74: let isDrawingLasso = false;
+75: let lassoPoints = [];
+797: let snapshotStart = null;
+808: let returnToSnapshot = false; // ─░┼şlem bitince geri d├Ân├╝lecek mi?
+940: const btnSnapshotMain = document.getElementById('btn-snapshot-main');
+941: const snapshotOptions = document.getElementById('snapshot-options');
+942: const btnSnapshotBox = document.getElementById('btn-snapshot-box');
+943: const btnSnapshotLasso = document.getElementById('btn-snapshot-lasso');
+946: const toggleSnapshotMenu = (e) => {
+956: let sOptions = document.getElementById('snapshot-options') || document.querySelector('.snapshot-options');
+965: setActiveTool('snapshot');
+967: currentTool = 'snapshot';
+976: if (btnSnapshotMain) btnSnapshotMain.classList.add('active');
+980: const refBtn = btnSnapshotMain || animateButton;
+997: if (btnSnapshotMain) btnSnapshotMain.classList.remove('active');
+1002: if (btnSnapshotMain) {
+1003: btnSnapshotMain.onclick = null;
+1004: btnSnapshotMain.ontouchstart = null;
+1005: btnSnapshotMain.addEventListener('click', toggleSnapshotMenu);
+1006: btnSnapshotMain.addEventListener('pointerdown', toggleSnapshotMenu);
+1008: if (btnSnapshotBox) {
+1009: btnSnapshotBox.addEventListener('click', (e) => {
+1011: setActiveTool('snapshot'); // Kutu arac─▒n─▒ se├ğ
+1012: if (snapshotOptions) {
+1013: snapshotOptions.classList.add('hidden');
+1014: snapshotOptions.style.display = 'none';
+1018: if (btnSnapshotLasso) {
+1019: btnSnapshotLasso.addEventListener('click', (e) => {
+1021: setActiveTool('lasso'); // Serbest (Kement) kesim arac─▒n─▒ se├ğ
+1022: if (snapshotOptions) {
+1023: snapshotOptions.classList.add('hidden');
+1024: snapshotOptions.style.display = 'none';
+1212: if (stroke.type === 'lasso-mask') {
+1268: // --- RES─░M / PDF VE CANLANDIR (SNAPSHOT) KOPYASI ---
+1677: // Ayr─▒ca Lasso-mask ile PDF ├╝zerinde delik a├ğ─▒lm─▒┼şsa onu da bgCtx'den siliyoruz
+1678: else if (stroke.type === 'lasso-mask') {
+1714: // --- 4. ADIM: YEN─░ POL─░GONAL LASSO ├ûN─░ZLEMES─░ ---
+1715: if (currentTool === 'lasso' && typeof lassoPoints !== 'undefined' && lassoPoints.length > 0) {
+1723: ctx.moveTo(lassoPoints[0].x, lassoPoints[0].y);
+1724: for (let i = 1; i < lassoPoints.length; i++) {
+1725: ctx.lineTo(lassoPoints[i].x, lassoPoints[i].y);
+1734: let lastPoint = lassoPoints[lassoPoints.length - 1];
+1743: for (let i = 0; i < lassoPoints.length; i++) {
+1747: ctx.arc(lassoPoints[i].x, lassoPoints[i].y, radius, 0, Math.PI * 2);
+1759: } // <-- BURASI YEN─░ POL─░GONAL LASSO BLO─ŞUNUN B─░T─░┼Ş PARANTEZ─░
+1763: // (Lasso se├ğiliyse ve parmak ekrana bas─▒l─▒ysa her zaman ├ğ─▒kar)
+1764: if (currentTool === 'lasso' && window.isDraggingLassoPoint && typeof currentMousePos !== 'undefined' && currentMousePos) {
+1776: if (window.lassoIsClosing) {
+1789: ctx.fillStyle = window.lassoIsClosing ? '#00FF00' : '#ff00ff';
+1797: function processLassoCut() {
+1798: if (lassoPoints.length < 3) return;
+1801: lassoPoints.forEach(p => {
+1840: offCtx.moveTo(lassoPoints[0].x - minX, lassoPoints[0].y - minY);
+1841: for (let i = 1; i < lassoPoints.length; i++) {
+1842: offCtx.lineTo(lassoPoints[i].x - minX, lassoPoints[i].y - minY);
+1904: pCtx.moveTo(lassoPoints[0].x - minX, lassoPoints[0].y - minY);
+1905: for (let i = 1; i < lassoPoints.length; i++) {
+1906: pCtx.lineTo(lassoPoints[i].x - minX, lassoPoints[i].y - minY);
+2260: body.classList.remove('cursor-pen', 'cursor-eraser', 'cursor-snapshot');
+2300: if (typeof snapshotOptions !== 'undefined' && snapshotOptions) {
+2301: snapshotOptions.classList.add('hidden');
+2302: snapshotOptions.style.display = 'none';
+2312: if (typeof snapshotOptions !== 'undefined' && snapshotOptions) {
+2313: snapshotOptions.classList.add('hidden');
+2314: snapshotOptions.style.display = 'none';
+2369: } else if (tool === 'snapshot') {
+2371: if (btnSnapshotMain) btnSnapshotMain.classList.add('active'); // ­şÜ¿ EKLEND─░
+2372: body.classList.add('cursor-snapshot');
+2375: if (typeof snapshotOptions !== 'undefined' && snapshotOptions) {
+2376: snapshotOptions.classList.remove('hidden');
+2377: snapshotOptions.style.display = 'flex';
+2378: snapshotOptions.style.zIndex = '10000'; // ­şÜ¿ Z-index de─şeri y├╝kseltildi
+2379: const refBtn = btnSnapshotMain || animateButton; // ­şÜ¿ EKLEND─░
+2380: if (refBtn) snapshotOptions.style.top = `${refBtn.getBoundingClientRect().top - refBtn.parentElement.getBoundingClientRect().top}px`;
+2680: // Arka plan olan t├╝m ├Â─şeleri, lasso maskelerini ve yamalar─▒ kald─▒r
+2681: drawnStrokes = drawnStrokes.filter(s => !s.isBackground && !s.isPDFPage && s.type !== 'lasso-mask' && !s.isPatch);
+2940: #pen-options, #line-options, #polygon-options, #fill-options, #snapshot-options,
+2987: animateButton.addEventListener('pointerdown', toggleSnapshotMenu, { passive: false });
+3091: if (currentTool === 'lasso') {
+3093: window.isDraggingLassoPoint = true;
+3095: window.lassoIsClosing = false;
+3193: if (currentTool === 'snapshot') { snapshotStart = getPointerPos(e); return; }
+3441: const aktifCizimVarMi = isDrawingLine || isDrawingInfinityLine || isDrawingSegment || isDrawingRay || isDrawingRectangle || (window.tempPolygonData && window.tempPolygonData.center) || (currentTool === 'snapshot' && typeof snapshotStart !== 'undefined' && snapshotStart);
+3456: else if (currentTool === 'snapshot' && snapshotStart) { ctx.strokeStyle = '#00ffcc'; ctx.beginPath(); ctx.rect(Math.min(snapshotStart.x, endPos.x), Math.min(snapshotStart.y, endPos.y), Math.abs(endPos.x - snapshotStart.x), Math.abs(endPos.y - snapshotStart.y)); ctx.stroke(); }
+3474: if (currentTool === 'lasso') { currentMousePos = pos; if (typeof isDrawingLasso !== 'undefined' && isDrawingLasso && typeof lassoPoints !== 'undefined' && lassoPoints.length > 0) { let startPoint = lassoPoints[0]; const toleransScale = (typeof globalScale !== 'undefined' && globalScale > 0) ? globalScale : 1; window.lassoIsClosing = (Math.hypot(pos.x - startPoint.x, pos.y - startPoint.y) < (40 / toleransScale)); } redrawAllStrokes(); return; }
+3560: if (returnToSnapshot) {
+3561: returnToSnapshot = false;
+3562: setActiveTool('snapshot');
+3564: document.body.classList.add('cursor-snapshot');
+3632: // --- E) CANLANDIR (KUTU SNAPSHOT) ---
+3633: if (currentTool === 'snapshot' && snapshotStart && currentMousePos) {
+3634: const x = Math.round(Math.min(snapshotStart.x, currentMousePos.x));
+3635: const y = Math.round(Math.min(snapshotStart.y, currentMousePos.y));
+3636: const w = Math.round(Math.abs(currentMousePos.x - snapshotStart.x));
+3637: const h = Math.round(Math.abs(currentMousePos.y - snapshotStart.y));
+3670: snapshotStart = null;
+3785: // --- H) KESK─░N N─░┼ŞANCI LASSO (SERBEST KES─░M) ---
+3786: if (currentTool === 'lasso' && window.isDraggingLassoPoint) {
+3787: window.isDraggingLassoPoint = false;
+3789: if (!isDrawingLasso) {
+3790: isDrawingLasso = true;
+3791: lassoPoints = [{ x: currentMousePos.x, y: currentMousePos.y }];
+3793: let startPoint = lassoPoints[0];
+3797: lassoPoints.push({ x: startPoint.x, y: startPoint.y });
+3799: let minX = Math.min(...lassoPoints.map(p => p.x));
+3800: let minY = Math.min(...lassoPoints.map(p => p.y));
+3801: let maxX = Math.max(...lassoPoints.map(p => p.x));
+3802: let maxY = Math.max(...lassoPoints.map(p => p.y));
+3812: tempCtx.moveTo(lassoPoints[0].x - minX, lassoPoints[0].y - minY);
+3813: for (let i = 1; i < lassoPoints.length; i++) tempCtx.lineTo(lassoPoints[i].x - minX, lassoPoints[i].y - minY);
+3831: for (let p of lassoPoints) { cx += p.x; cy += p.y; }
+3832: cx /= lassoPoints.length; cy /= lassoPoints.length;
+3834: let dx = lassoPoints[0].x - cx; let dy = lassoPoints[0].y - cy;
+3836: let sampleX = lassoPoints[0].x + (dx / dist) * 10; let sampleY = lassoPoints[0].y + (dy / dist) * 10;
+3845: const maskStroke = { type: 'lasso-mask', points: lassoPoints.map(p => ({ x: p.x, y: p.y })), fillColor: detectedColor, id: Date.now() + Math.random() };
+3862: isDrawingLasso = false; window.lassoIsClosing = false; currentMousePos = null; lassoPoints = [];
+3864: lassoPoints.push({ x: currentMousePos.x, y: currentMousePos.y });
+3934: snapshotStart = null;
+4133: (s.isPatch === true || s.type === 'lasso-mask')) {
+4318: // PDF, Resim, arka plan, lasso maskesi ve yamalar─▒n hepsini temizle
+4320: if (s.isBackground === true || s.type === 'lasso-mask' || s.isPatch === true) {
+4554: // CANLANDIR (SNAPSHOT) - TABLET/PC UYUMLU Y├£ZEN KOPYA
+5080: update('btn-snapshot-main', t.canlandir);
+5081: update('btn-snapshot-box', t.kutu);
+5082: update('btn-snapshot-lasso', t.serbest);
+5112: document.getElementById('snapshot-options'),
+5448: window.temizleLassoVeKopyalar = function () {
+5458: if (s.type === 'lasso-mask' || (s.type === 'image' && s.isBackground === false && !s.isBoxCopy)) {
+5499: setTimeout(window.temizleLassoVeKopyalar, 50);
+6588: if (s.isBackground === true || s.type === 'lasso-mask' || s.isPatch === true) {
+7926: #pen-options, #line-options, #polygon-options, #fill-options, #snapshot-options,

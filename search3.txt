@@ -1,0 +1,13 @@
+1003: btnSnapshotMain.addEventListener('pointerdown', toggleSnapshotMenu);
+2922: document.addEventListener('pointerdown', (e) => {
+3037: animateButton.addEventListener('pointerdown', toggleSnapshotMenu, { passive: false });
+3102: canvas.addEventListener('pointerdown', (e) => {
+4777: rotateBtn.addEventListener('pointerdown', (e) => {
+4791: resizeBtn.addEventListener('pointerdown', (e) => {
+4802: container.addEventListener('pointerdown', (e) => {
+4864: window.removeEventListener('pointerdown', disariTiklama, true);
+4934: window.addEventListener('pointerdown', disariTiklama, true);
+5337: btn.addEventListener('pointerdown', handleSelect);
+5552: canvasElm.addEventListener('pointerdown', (e) => akilliSilgi(e, true));
+7437: ['mousedown', 'touchstart'].forEach(evt => {
+8615: canvas.addEventListener('pointerdown', () => {

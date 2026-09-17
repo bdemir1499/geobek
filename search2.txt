@@ -1,0 +1,79 @@
+796: let currentTool = 'none';
+903: currentTool = 'draw_rectangle';
+964: currentTool = 'snapshot';
+988: currentTool = 'none';
+1280: if (typeof currentTool !== 'undefined' && currentTool === 'move' && selectedItem === stroke) {
+1338: if (typeof currentTool !== 'undefined' && currentTool === 'move' && selectedItem === stroke) {
+1462: if (typeof currentTool !== 'undefined' && currentTool === 'move' && selectedItem === stroke) {
+1528: if (typeof currentTool !== 'undefined' && currentTool === 'move' && selectedItem === stroke) {
+1589: if (currentTool === 'move' && selectedItem === stroke) {
+1722: if (currentTool === 'lasso' && typeof lassoPoints !== 'undefined' && lassoPoints.length > 0) {
+1771: if (currentTool === 'lasso' && window.isDraggingLassoPoint && typeof currentMousePos !== 'undefined' && currentMousePos) {
+1961: currentTool = 'move';
+2098: if (currentTool === 'move' && selectedItem === stroke) {
+2119: if (currentTool === 'move' && selectedItem === stroke) {
+2171: if (currentTool === 'move' || currentTool === 'fill') { // Fill i├ğin de hit gerekli
+2271: currentTool = tool;
+2354: currentTool = tool;
+2450: penButton.addEventListener('click', () => setActiveTool(currentTool === 'pen' ? 'none' : 'pen'));
+2451: eraserButton.addEventListener('click', () => setActiveTool(currentTool === 'eraser' ? 'none' : 'eraser'));
+2515: moveButton.addEventListener('click', () => setActiveTool(currentTool === 'move' ? 'none' : 'move'));
+2747: if (fillButton) fillButton.addEventListener('click', () => setActiveTool(currentTool === 'fill' ? 'none' : 'fill'));
+2958: setActiveTool(currentTool === 'point' ? 'none' : 'point');
+2960: straightLineButton.addEventListener('click', (e) => { e.stopPropagation(); if (window.audio_select) window.audio_select.play(); setActiveTool(currentTool === 'straightLine' ? 'none' : 'straightLine'); });
+2961: infinityLineButton.addEventListener('click', (e) => { e.stopPropagation(); if (window.audio_select) window.audio_select.play(); setActiveTool(currentTool === 'line' ? 'none' : 'line'); });
+2962: segmentButton.addEventListener('click', (e) => { e.stopPropagation(); if (window.audio_select) window.audio_select.play(); setActiveTool(currentTool === 'segment' ? 'none' : 'segment'); });
+2963: rayButton.addEventListener('click', (e) => { e.stopPropagation(); if (window.audio_select) window.audio_select.play(); setActiveTool(currentTool === 'ray' ? 'none' : 'ray'); });
+3050: if (currentTool === 'move' && e.touches && e.touches.length >= 2) {
+3142: if (currentTool === 'lasso') {
+3161: if (currentTool === 'move') {
+3170: if (currentTool === 'move' || currentTool === 'select') {
+3176: else if (currentTool && currentTool.startsWith('draw_3d_')) {
+3177: let toolName = currentTool.replace('draw_3d_', '');
+3195: if (currentTool === 'move') {
+3242: if (currentTool === 'none') return;
+3243: if (['point', 'straightLine', 'line', 'segment', 'ray'].includes(currentTool)) { if (typeof lineOptions !== 'undefined' && lineOptions) { lineOptions.classList.add('hidden'); lineOptions.style.display = 'none'; } }
+3244: if (currentTool === 'snapshot') { snapshotStart = getPointerPos(e); return; }
+3246: switch (currentTool) {
+3259: if (window.tempPolygonData.center === null) { window.tempPolygonData.center = snapPos; window.tempPolygonData.type = currentTool === 'draw_polygon_circle' ? 0 : parseInt(currentTool.split('_')[2]); if (window.PolygonTool) window.PolygonTool.state.isDrawing = true; if (typeof polygonPreviewLabel !== 'undefined' && polygonPreviewLabel) polygonPreviewLabel.classList.remove('hidden'); }
+3281: if (pointers.size >= 2 && currentTool === 'move') {
+3335: if (currentTool === 'move' && isMoving && selectedItem) {
+3486: if (['ruler', 'gonye', 'aciolcer', 'pergel', 'none'].includes(currentTool)) return;
+3488: if (['point', 'straightLine', 'pen', 'segment'].includes(currentTool)) { const potentialSnap = findSnapPoint(pos); if (potentialSnap) { snapHoverTimer = setTimeout(() => { snapTarget = potentialSnap; snapIndicator.style.left = `${snapTarget.x}px`; snapIndicator.style.top = `${snapTarget.y}px`; snapIndicator.style.display = 'block'; }, 25); } else { snapTarget = null; snapIndicator.style.display = 'none'; } }
+3489: if (currentTool === 'eraser') { eraserPreview.style.left = `${pos.x}px`; eraserPreview.style.top = `${pos.y}px`; eraserPreview.style.display = 'block'; } else if (typeof eraserPreview !== 'undefined' && eraserPreview) eraserPreview.style.display = 'none';
+3492: const aktifCizimVarMi = isDrawingLine || isDrawingInfinityLine || isDrawingSegment || isDrawingRay || isDrawingRectangle || (window.tempPolygonData && window.tempPolygonData.center) || (currentTool === 'snapshot' && typeof snapshotStart !== 'undefined' && snapshotStart);
+3497: if (['straightLine', 'line', 'segment', 'ray'].includes(currentTool) && lineStartPoint) {
+3499: if (dx !== 0 || dy !== 0) { const devCarpan = 5000; if (currentTool === 'line') { ctx.moveTo(lineStartPoint.x - dx * devCarpan, lineStartPoint.y - dy * devCarpan); ctx.lineTo(lineStartPoint.x + dx * devCarpan, lineStartPoint.y + dy * devCarpan); } else if (currentTool === 'ray') { ctx.moveTo(lineStartPoint.x, lineStartPoint.y); ctx.lineTo(lineStartPoint.x + dx * devCarpan, lineStartPoint.y + dy * devCarpan); } else { ctx.moveTo(lineStartPoint.x, lineStartPoint.y); ctx.lineTo(endPos.x, endPos.y); } } else { ctx.moveTo(lineStartPoint.x, lineStartPoint.y); ctx.lineTo(endPos.x, endPos.y); } ctx.stroke();
+3507: else if (currentTool === 'snapshot' && snapshotStart) { ctx.strokeStyle = '#00ffcc'; ctx.beginPath(); ctx.rect(Math.min(snapshotStart.x, endPos.x), Math.min(snapshotStart.y, endPos.y), Math.abs(endPos.x - snapshotStart.x), Math.abs(endPos.y - snapshotStart.y)); ctx.stroke(); }
+3515: if (['straightLine', 'line', 'segment', 'ray'].includes(currentTool) && typeof lineStartPoint !== 'undefined' && lineStartPoint) previewData = { tool: currentTool, start: lineStartPoint, end: anlikPos };
+3517: else if (currentTool === 'draw_rectangle' && typeof rectStartPoint !== 'undefined' && rectStartPoint) previewData = { tool: 'draw_rectangle', start: rectStartPoint, end: anlikPos };
+3525: if (currentTool === 'lasso') { currentMousePos = pos; if (typeof isDrawingLasso !== 'undefined' && isDrawingLasso && typeof lassoPoints !== 'undefined' && lassoPoints.length > 0) { let startPoint = lassoPoints[0]; const toleransScale = (typeof globalScale !== 'undefined' && globalScale > 0) ? globalScale : 1; window.lassoIsClosing = (Math.hypot(pos.x - startPoint.x, pos.y - startPoint.y) < (40 / toleransScale)); } redrawAllStrokes(); return; }
+3528: if (currentTool === 'pen') {
+3583: currentTool = 'none';
+3597: const isPhysicalTool = ['ruler', 'gonye', 'aciolcer', 'pergel'].includes(currentTool);
+3600: if (currentTool === 'ruler' && window.RulerTool && window.RulerTool.finalizeDraw) window.RulerTool.finalizeDraw();
+3601: if (currentTool === 'gonye' && window.GonyeTool && window.GonyeTool.finalizeDraw) window.GonyeTool.finalizeDraw();
+3602: if (currentTool === 'aciolcer' && window.AciolcerTool && window.AciolcerTool.finalizeDraw) window.AciolcerTool.finalizeDraw();
+3603: if (currentTool === 'pergel' && window.PergelTool && window.PergelTool.finalizeDraw) window.PergelTool.finalizeDraw();
+3621: if (currentTool === 'move' && isMoving) {
+3668: if (currentTool && currentTool.startsWith('draw_polygon_')) {
+3697: if (currentTool === 'snapshot' && snapshotStart && currentMousePos) {
+3750: else currentTool = 'move';
+3790: if (currentTool === 'pen') {
+3869: if (currentTool === 'lasso' && window.isDraggingLassoPoint) {
+3965: if (typeof setActiveTool === 'function') setActiveTool('move'); else currentTool = 'move';
+3986: if (currentTool !== 'move') return;
+5161: if (typeof currentTool !== 'undefined' && currentTool === 'eraser') {
+5162: currentTool = 'none';
+5260: // currentTool = null;
+5361: if (typeof currentTool === 'undefined' || currentTool !== 'eraser') return false;
+7017: else currentTool = 'move';
+7461: if (!this.currentMesh || currentTool !== 'move') {
+7575: if (!foundMesh && window.drawnStrokes && currentTool === 'move') {
+7595: if (currentTool === 'move') {
+7629: if (currentTool === 'move') {
+7704: if (this.isRotatingShape && this.currentMesh && currentTool !== 'move') {
+7973: currentTool = 'draw_3d_' + toolName;
+7986: if (window.currentTool === 'move' && window.selectedItem && window.selectedItem.type === '3d_shape') {
+7988: } else if (!window.currentTool || window.currentTool === 'none' || window.currentTool.startsWith('draw_3d_')) {
+8007: let isSelectedMove = (currentTool === 'move' && window.selectedItem === activeShape);
