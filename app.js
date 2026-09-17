@@ -6590,11 +6590,7 @@ function setupConnectionEvents() {
     const chunkState = new Map();
 
     connection.on('data', function (data) {
-        if (!window._debugDataCount) window._debugDataCount = 0;
-        window._debugDataCount++;
-        if (window._debugDataCount <= 3) {
-            alert('PAKET GELDİ: ' + (data ? data.type : 'null'));
-        }
+
         const now = Date.now();
         if (now - packetWindow.startedAt >= 1000) {
             packetWindow.startedAt = now;
@@ -9314,3 +9310,4 @@ if (window.OyunListesi) {
         window.OyunListesi[i].tr = duzeltmeler[i];
     }
 }
+
