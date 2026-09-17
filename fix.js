@@ -1,0 +1,10 @@
+const fs = require('fs');
+let c = fs.readFileSync('C:/Users/bekir demirel/Desktop/geobek/app.js', 'utf8');
+c = c.replace(/Be[^\x00-\x7F]+gen Prizma/g, 'Beşgen Prizma');
+c = c.replace(/Alt[^\x00-\x7F]+gen Prizma/g, 'Altıgen Prizma');
+c = c.replace(/K[^\x00-\x7F]+re/g, 'Küre');
+c = c.replace(/P[^\x00-\x7F]+RAM[^\x00-\x7F]+T/g, 'PİRAMİT');
+c = c.replace(/KON[^\x00-\x7F]+/g, 'KONİ');
+c = c.replace(/S[^\x00-\x7F]+L[^\x00-\x7F]+ND[^\x00-\x7F]+R/g, 'SİLİNDİR');
+c = c.replace(/PR[^\x00-\x7F]+ZMA/g, 'PRİZMA');
+fs.writeFileSync('C:/Users/bekir demirel/Desktop/geobek/app.js', c, 'utf8');
