@@ -1,4 +1,4 @@
-window.onerror = function(msg, url, line) { alert('HATA: ' + msg + '\nSatir: ' + line); };
+﻿window.onerror = function(msg, url, line) { alert('HATA: ' + msg + '\nSatir: ' + line); };
 // ?? ALAN ADI K�L�D� (DOMAIN BINDING) ??
 // Sadece bdemir1499.github.io adresinde, EBA sunucular�nda ve yerel bilgisayarda �al���r!
 const gecerliAdresler = ["bdemir1499.github.io", "127.0.0.1", "localhost", "eba.gov.tr", "vercel.app"];
@@ -7001,13 +7001,12 @@ if (!data || !data.type) return;
         if (!window.baglantiOnaylandi) return;
 
         // --- A) TOPLU �EK�L ALICISI (�OKGENLER VE ��GENLER) ---
-            if (data.type === 'akilli_sekil_toplu') {
-        // Çifte çizimi engellemek için, yeni kalıcı akıllı şekil geldiğinde tüm eski geçici önizlemeleri zorla temizle:
-        if (window.drawnStrokes) {
-            for (let i = window.drawnStrokes.length - 1; i >= 0; i--) {
-                if (window.drawnStrokes[i].type === 'preview') window.drawnStrokes.splice(i, 1);
+        if (data.type === 'akilli_sekil_toplu') {
+            if (window.drawnStrokes) {
+                for (let i = window.drawnStrokes.length - 1; i >= 0; i--) {
+                    if (window.drawnStrokes[i].type === 'preview') window.drawnStrokes.splice(i, 1);
+                }
             }
-        }
             if (data.strokes && Array.isArray(data.strokes)) {
                 data.strokes.forEach(s => {
                     if (typeof adaptStrokeToScreen === 'function') {
@@ -7025,13 +7024,12 @@ if (!data || !data.type) return;
 
 
         // --- B) TEK�L ��Z�M/KALEM/RES�M ALICISI ---
-            if (data.type === 'yeni_cizim') {
-        // Çifte çizimi engellemek için, yeni kalıcı çizim geldiğinde tüm eski geçici önizlemeleri zorla temizle:
-        if (window.drawnStrokes) {
-            for (let i = window.drawnStrokes.length - 1; i >= 0; i--) {
-                if (window.drawnStrokes[i].type === 'preview') window.drawnStrokes.splice(i, 1);
+        if (data.type === 'yeni_cizim') {
+            if (window.drawnStrokes) {
+                for (let i = window.drawnStrokes.length - 1; i >= 0; i--) {
+                    if (window.drawnStrokes[i].type === 'preview') window.drawnStrokes.splice(i, 1);
+                }
             }
-        }
             const stroke = data.stroke;
             if (!stroke) return;
 
