@@ -7002,6 +7002,7 @@ if (!data || !data.type) return;
 
         // --- A) TOPLU �EK�L ALICISI (�OKGENLER VE ��GENLER) ---
         if (data.type === 'akilli_sekil_toplu') {
+            window.lastFinalStrokeTime = Date.now();
             if (window.drawnStrokes) {
                 for (let i = window.drawnStrokes.length - 1; i >= 0; i--) {
                     if (window.drawnStrokes[i].type === 'preview') window.drawnStrokes.splice(i, 1);
@@ -7025,6 +7026,7 @@ if (!data || !data.type) return;
 
         // --- B) TEK�L ��Z�M/KALEM/RES�M ALICISI ---
         if (data.type === 'yeni_cizim') {
+            window.lastFinalStrokeTime = Date.now();
             if (window.drawnStrokes) {
                 for (let i = window.drawnStrokes.length - 1; i >= 0; i--) {
                     if (window.drawnStrokes[i].type === 'preview') window.drawnStrokes.splice(i, 1);
