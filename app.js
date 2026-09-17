@@ -6059,14 +6059,7 @@ function createPeer(id) {
         return id ? new Peer(id, localPeerOptions) : new Peer(localPeerOptions);
     }
     // Public GitHub bağlantısı için standart Google STUN sunucuları (mDNS engelini aşmak için)
-    const publicIce = {
-        config: {
-            iceServers: [
-                { urls: 'stun:stun.l.google.com:19302' },
-                { urls: 'stun:stun1.l.google.com:19302' }
-            ]
-        }
-    };
+    const publicIce = { config: { iceServers: [] } };
     return id ? new Peer(id, publicIce) : new Peer(publicIce);
 }
 
