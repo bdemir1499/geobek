@@ -609,18 +609,46 @@ function katlanmisBirak(p1, p2) {
     const dataUrl = cropCanvas.toDataURL('image/png');
 
     // Resim yaması (patch) oluştur
-    const patchObj = { 
-        type: 'image', imgData: dataUrl, 
-        x: cropX * dpr, 
-        y: cropY * dpr, 
-        width: cropW * dpr, 
-        height: cropH * dpr, 
-        rotation: 0, 
-        isBackground: false, 
-        isPatch: true,
-        foldLine: [{x: p1.x * dpr, y: p1.y * dpr}, {x: p2.x * dpr, y: p2.y * dpr}],
-        id: Date.now() + Math.random().toString() 
-    };
+          let f1 = {x: p1.x, y: p1.y};
+      let f2 = {x: p2.x, y: p2.y};
+      if (currentCaptureRect && p1 && p2) {
+          const dx = p2.x - p1.x;
+          const dy = p2.y - p1.y;
+          if (Math.abs(dx) > 0.1 || Math.abs(dy) > 0.1) {
+              const midX = (p1.x + p2.x) / 2;
+              const midY = (p1.y + p2.y) / 2;
+              const nx = -dy; const ny = dx;
+              const left = currentCaptureRect.x; const right = currentCaptureRect.x + currentCaptureRect.w;
+              const top = currentCaptureRect.y; const bottom = currentCaptureRect.y + currentCaptureRect.h;
+              let pts = [];
+              if (nx !== 0) {
+                  let t = (left - midX) / nx; let y = midY + ny * t; if (y >= top && y <= bottom) pts.push({x: left, y: y});
+                  t = (right - midX) / nx; y = midY + ny * t; if (y >= top && y <= bottom) pts.push({x: right, y: y});
+              }
+              if (ny !== 0) {
+                  let t = (top - midY) / ny; let x = midX + nx * t; if (x >= left && x <= right) pts.push({x: x, y: top});
+                  t = (bottom - midY) / ny; x = midX + nx * t; if (x >= left && x <= right) pts.push({x: x, y: bottom});
+              }
+              let uPts = [];
+              for (let p of pts) {
+                  if (!uPts.some(up => Math.abs(up.x - p.x) < 0.1 && Math.abs(up.y - p.y) < 0.1)) uPts.push(p);
+              }
+              if (uPts.length === 2) { f1 = uPts[0]; f2 = uPts[1]; }
+          }
+      }
+      
+      const patchObj = { 
+          type: 'image', imgData: dataUrl, 
+          x: cropX * dpr, 
+          y: cropY * dpr, 
+          width: cropW * dpr, 
+          height: cropH * dpr, 
+          rotation: 0, 
+          isBackground: false, 
+          isPatch: true,
+          foldLine: [f1, f2],
+          id: Date.now() + Math.random().toString() 
+      };
     
     // Geobek çizim geçmişine ekle
     window.drawnStrokes.push(patchObj);
