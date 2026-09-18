@@ -1,0 +1,13 @@
+diff --git a/app.js b/app.js
+index ff7ac56..d3f0736 100644
+--- a/app.js
++++ b/app.js
+@@ -6065,7 +6065,7 @@ function createPeer(id) {
+         return id ? new Peer(id, localPeerOptions) : new Peer(localPeerOptions);
+     }
+     // Public GitHub bağlantısı için standart Google STUN sunucuları (mDNS engelini aşmak için)
+-    const publicIce = { config: { iceServers: [] } };
++    const publicIce = { config: { iceServers: [{ urls: 'stun:stun.l.google.com:19302' }] } };
+     return id ? new Peer(id, publicIce) : new Peer(publicIce);
+ }
+ 
