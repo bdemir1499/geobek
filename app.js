@@ -1603,15 +1603,19 @@ function redrawAllStrokes() {
             }
 
             if (imgToDraw && (imgToDraw.complete || imgToDraw.readyState >= 2)) {
-                ctx.save();
+                const targetCtx = (stroke.isBackground !== false && typeof bgCtx !== 'undefined' && bgCtx) ? bgCtx : ctx;
+                targetCtx.save();
                 const centerX = stroke.x + (stroke.width / 2);
                 const centerY = stroke.y + (stroke.height / 2);
-                ctx.translate(centerX, centerY);
-                ctx.rotate((stroke.rotation || 0) * Math.PI / 180);
+                targetCtx.translate(centerX, centerY);
+                targetCtx.rotate((stroke.rotation || 0) * Math.PI / 180);
 
-                ctx.drawImage(imgToDraw, -stroke.width / 2, -stroke.height / 2, stroke.width, stroke.height);
+                targetCtx.drawImage(imgToDraw, -stroke.width / 2, -stroke.height / 2, stroke.width, stroke.height);
 
-                if (typeof currentTool !== 'undefined' && currentTool === 'move' && selectedItem === stroke) {
+                targetCtx.restore();                if (typeof currentTool !== 'undefined' && currentTool === 'move' && selectedItem === stroke) {
+                    ctx.save();
+                    ctx.translate(centerX, centerY);
+                    ctx.rotate((stroke.rotation || 0) * Math.PI / 180);
                     ctx.strokeStyle = '#00FFCC'; ctx.lineWidth = 2; ctx.setLineDash([5, 5]);
                     ctx.strokeRect(-stroke.width / 2, -stroke.height / 2, stroke.width, stroke.height);
                     ctx.setLineDash([]);
@@ -1626,8 +1630,9 @@ function redrawAllStrokes() {
                     ctx.beginPath(); ctx.arc(resX, resY, 12, 0, 2 * Math.PI);
                     ctx.fillStyle = '#F0F'; ctx.fill(); ctx.strokeStyle = '#000'; ctx.lineWidth = 2; ctx.stroke();
                     ctx.fillStyle = "#FFF"; ctx.fillText("?", resX, resY);
+                    
+                    ctx.restore();
                 }
-                ctx.restore();
             }
         }
 
@@ -7078,7 +7083,7 @@ if (!data || !data.type) return;
                         if (!window.Scene3D.isInit) window.Scene3D.init();
                         if (window.Scene3D.container) {
                             window.Scene3D.container.style.display = 'block';
-                            window.Scene3D.container.style.zIndex = '9995';
+                            window.Scene3D.container.style.zIndex = '15';
                         }
                         if (typeof window.Scene3D.addShapeFromNetwork === 'function') {
                             window.Scene3D.addShapeFromNetwork(stroke);
@@ -8007,6 +8012,7 @@ window.Scene3D = {
         if (this.container) {
             // ?? GÃ¯Â¿Â½VENLÃ¯Â¿Â½K 1: BaÃ¯Â¿Â½langÃ¯Â¿Â½Ã¯Â¿Â½ta tahtayÃ¯Â¿Â½ zorla gÃ¯Â¿Â½rÃ¯Â¿Â½nÃ¯Â¿Â½r yap!
             this.container.style.display = 'block';
+            this.container.style.zIndex = '15';
             this.container.classList.remove('hidden');
         }
 
@@ -8181,7 +8187,9 @@ window.Scene3D = {
 
     onDown: function (x, y) {
         if (!this.isInit) return false;
-        if (this.container) { this.container.style.display = 'block'; this.container.classList.remove('hidden'); }
+        if (this.container) { this.container.style.display = 'block';
+            this.container.style.zIndex = '15';
+            this.container.classList.remove('hidden'); }
         if (this.isRotatingHandle || this.isResizingHandle) return true;
 
         this.raycaster.setFromCamera(this.getNormalizedCoords(x, y), this.camera);
@@ -8424,6 +8432,7 @@ window.Scene3D = {
         // ?? GÃ¯Â¿Â½VENLÃ¯Â¿Â½K 4: AraÃ¯Â¿Â½ seÃ¯Â¿Â½ildiÃ¯Â¿Â½inde de konteynerÃ¯Â¿Â½ zorla gÃ¯Â¿Â½ster! (Senin notun)
         if (this.container) {
             this.container.style.display = 'block';
+            this.container.style.zIndex = '15';
             this.container.classList.remove('hidden');
         }
     },
@@ -8579,7 +8588,7 @@ window.addEventListener('load', () => {
                     if (!window.Scene3D.isInit) window.Scene3D.init();
                     if (window.Scene3D.container) {
                         window.Scene3D.container.style.display = 'block';
-                        window.Scene3D.container.style.zIndex = '9995';
+                        window.Scene3D.container.style.zIndex = '15';
                     }
                     let toolName = 'sphere';
                     if (data3d.includes('kure')) toolName = 'sphere';
