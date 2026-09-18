@@ -6409,6 +6409,7 @@ function setupConnectionEvents() {
 
         if (stroke.path) stroke.path.forEach(p => { p.x = mapX(p.x); p.y = mapY(p.y); });
         if (stroke.points) stroke.points.forEach(p => { p.x = mapX(p.x); p.y = mapY(p.y); });
+          if (stroke.foldLine) stroke.foldLine.forEach(p => { p.x = mapX(p.x); p.y = mapY(p.y); });
 
         if (stroke.x !== undefined && stroke.width !== undefined && !isLineType) {
             const center_x = mapX(stroke.x + stroke.width / 2);
@@ -6504,6 +6505,7 @@ function setupConnectionEvents() {
 
         if (stroke.path) stroke.path.forEach(p => { p.x = mapX(p.x); p.y = mapY(p.y); });
         if (stroke.points) stroke.points.forEach(p => { p.x = mapX(p.x); p.y = mapY(p.y); });
+          if (stroke.foldLine) stroke.foldLine.forEach(p => { p.x = mapX(p.x); p.y = mapY(p.y); });
 
         if (stroke.x !== undefined && stroke.width !== undefined) {
             const center_x = mapX(stroke.x + stroke.width / 2);
