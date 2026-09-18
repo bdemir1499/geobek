@@ -646,7 +646,7 @@ function katlanmisBirak(p1, p2) {
           rotation: 0, 
           isBackground: false, 
           isPatch: true,
-          foldLine: [f1, f2],
+          foldLine: [{x: f1.x * dpr, y: f1.y * dpr}, {x: f2.x * dpr, y: f2.y * dpr}],
           id: Date.now() + Math.random().toString() 
       };
     

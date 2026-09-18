@@ -1655,8 +1655,8 @@ function redrawAllStrokes() {
             if (ux !== 0 || uy !== 0) {
                 drawDot(stroke.p1, stroke.color);
                 drawDot(stroke.p2, stroke.color);
-                drawLabel(stroke.label1, stroke.p1, '#FF69B4');
-                drawLabel(stroke.label2, stroke.p2, '#FF69B4');
+                if (stroke.label1) drawLabel(stroke.label1, stroke.p1, '#FF69B4');
+              if (stroke.label2) drawLabel(stroke.label2, stroke.p2, '#FF69B4');
             }
         }
 
@@ -1674,8 +1674,8 @@ function redrawAllStrokes() {
               }
               ctx.stroke();
               ctx.restore();
-            drawLabel(stroke.label1, stroke.p1, '#FF69B4');
-            drawLabel(stroke.label2, stroke.p2, '#FF69B4');
+            if (stroke.label1) drawLabel(stroke.label1, stroke.p1, '#FF69B4');
+              if (stroke.label2) drawLabel(stroke.label2, stroke.p2, '#FF69B4');
             if (stroke.lengthLabel) drawLabel(stroke.lengthLabel, stroke.lengthLabelPos, '#FFFF00');
         }
 
@@ -1685,8 +1685,8 @@ function redrawAllStrokes() {
             if (ux !== 0 || uy !== 0) {
                 drawDot(stroke.p1, stroke.color);
                 drawDot(stroke.p2, stroke.color);
-                drawLabel(stroke.label1, stroke.p1, '#FF69B4');
-                drawLabel(stroke.label2, stroke.p2, '#FF69B4');
+                if (stroke.label1) drawLabel(stroke.label1, stroke.p1, '#FF69B4');
+              if (stroke.label2) drawLabel(stroke.label2, stroke.p2, '#FF69B4');
             }
         }
 
