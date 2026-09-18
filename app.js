@@ -1662,13 +1662,18 @@ function redrawAllStrokes() {
 
         // --- DO�RU PAR�ASI ---
         else if (stroke.type === 'segment') {
-            ctx.beginPath();
+            ctx.save();
+              ctx.beginPath();
             ctx.moveTo(stroke.p1.x, stroke.p1.y);
             ctx.lineTo(stroke.p2.x, stroke.p2.y);
             ctx.strokeStyle = stroke.color;
             ctx.lineWidth = stroke.width || 4;
             ctx.lineCap = 'round';
-            ctx.stroke();
+            if (stroke.isDash) {
+                  ctx.setLineDash(stroke.dashPattern || [5, 5]);
+              }
+              ctx.stroke();
+              ctx.restore();
             drawLabel(stroke.label1, stroke.p1, '#FF69B4');
             drawLabel(stroke.label2, stroke.p2, '#FF69B4');
             if (stroke.lengthLabel) drawLabel(stroke.lengthLabel, stroke.lengthLabelPos, '#FFFF00');
@@ -2272,12 +2277,13 @@ function undoLastStroke() {
             const p2 = popped.foldLine[1];
             // �z stroke'u olu�tur (Daha ince ve daha az dikkat da��t�c�)
             const izStroke = {
-                type: 'line', 
-                points: [p1, p2],
-                color: 'rgba(0, 0, 0, 0.2)', // Daha �effaf (dikkat da��tmaz)
-                width: 1.5, // Daha ince
+                type: 'segment',
+ p1: p1,
+ p2: p2,
+                color: 'rgba(255, 105, 180, 0.7)', // Daha �effaf (dikkat da��tmaz)
+                width: 2.5, // Daha ince
                 isDash: true, 
-                dashPattern: [6, 6], // Kesikli
+                dashPattern: [10, 5], // Kesikli
                 isBackground: false
             };
             drawnStrokes.push(izStroke);
@@ -7294,12 +7300,13 @@ if (!data || !data.type) return;
                 const p1 = popped.foldLine[0];
                 const p2 = popped.foldLine[1];
                 const izStroke = {
-                    type: 'line', 
-                    points: [p1, p2],
-                    color: 'rgba(0, 0, 0, 0.2)',
-                    width: 1.5,
+                    type: 'segment',
+ p1: p1,
+ p2: p2,
+                    color: 'rgba(255, 105, 180, 0.7)',
+                    width: 2.5,
                     isDash: true, 
-                    dashPattern: [6, 6],
+                    dashPattern: [10, 5],
                     isBackground: false
                 };
                 window.drawnStrokes.push(izStroke);
