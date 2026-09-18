@@ -1655,22 +1655,27 @@ function redrawAllStrokes() {
             if (ux !== 0 || uy !== 0) {
                 drawDot(stroke.p1, stroke.color);
                 drawDot(stroke.p2, stroke.color);
-                drawLabel(stroke.label1, stroke.p1, '#FF69B4');
-                drawLabel(stroke.label2, stroke.p2, '#FF69B4');
+                if (stroke.label1) drawLabel(stroke.label1, stroke.p1, '#FF69B4');
+                if (stroke.label2) drawLabel(stroke.label2, stroke.p2, '#FF69B4');
             }
         }
 
         // --- DOÃ¯Â¿Â½RU PARÃ¯Â¿Â½ASI ---
         else if (stroke.type === 'segment') {
+            ctx.save();
             ctx.beginPath();
             ctx.moveTo(stroke.p1.x, stroke.p1.y);
             ctx.lineTo(stroke.p2.x, stroke.p2.y);
             ctx.strokeStyle = stroke.color;
             ctx.lineWidth = stroke.width || 4;
             ctx.lineCap = 'round';
+            if (stroke.isDash) {
+                ctx.setLineDash(stroke.dashPattern || [5, 5]);
+            }
             ctx.stroke();
-            drawLabel(stroke.label1, stroke.p1, '#FF69B4');
-            drawLabel(stroke.label2, stroke.p2, '#FF69B4');
+            ctx.restore();
+            if (stroke.label1) drawLabel(stroke.label1, stroke.p1, '#FF69B4');
+            if (stroke.label2) drawLabel(stroke.label2, stroke.p2, '#FF69B4');
             if (stroke.lengthLabel) drawLabel(stroke.lengthLabel, stroke.lengthLabelPos, '#FFFF00');
         }
 
@@ -1680,8 +1685,8 @@ function redrawAllStrokes() {
             if (ux !== 0 || uy !== 0) {
                 drawDot(stroke.p1, stroke.color);
                 drawDot(stroke.p2, stroke.color);
-                drawLabel(stroke.label1, stroke.p1, '#FF69B4');
-                drawLabel(stroke.label2, stroke.p2, '#FF69B4');
+                if (stroke.label1) drawLabel(stroke.label1, stroke.p1, '#FF69B4');
+                if (stroke.label2) drawLabel(stroke.label2, stroke.p2, '#FF69B4');
             }
         }
 
@@ -2272,12 +2277,13 @@ function undoLastStroke() {
             const p2 = popped.foldLine[1];
             // Ã¯Â¿Â½z stroke'u oluÃ¯Â¿Â½tur (Daha ince ve daha az dikkat daÃ¯Â¿Â½Ã¯Â¿Â½tÃ¯Â¿Â½cÃ¯Â¿Â½)
             const izStroke = {
-                type: 'line', 
-                points: [p1, p2],
-                color: 'rgba(0, 0, 0, 0.2)', // Daha Ã¯Â¿Â½effaf (dikkat daÃ¯Â¿Â½Ã¯Â¿Â½tmaz)
-                width: 1.5, // Daha ince
-                isDash: true, 
-                dashPattern: [6, 6], // Kesikli
+                    type: 'segment',
+                    p1: p1,
+                    p2: p2,
+                    color: 'rgba(255, 105, 180, 0.7)',
+                    width: 2.5,
+                    isDash: true,
+                    dashPattern: [10, 5], // Kesikli
                 isBackground: false
             };
             drawnStrokes.push(izStroke);
@@ -7291,12 +7297,13 @@ if (!data || !data.type) return;
                 const p1 = popped.foldLine[0];
                 const p2 = popped.foldLine[1];
                 const izStroke = {
-                    type: 'line', 
-                    points: [p1, p2],
-                    color: 'rgba(0, 0, 0, 0.2)',
-                    width: 1.5,
-                    isDash: true, 
-                    dashPattern: [6, 6],
+                    type: 'segment',
+                    p1: p1,
+                    p2: p2,
+                    color: 'rgba(255, 105, 180, 0.7)',
+                    width: 2.5,
+                    isDash: true,
+                    dashPattern: [10, 5],
                     isBackground: false
                 };
                 window.drawnStrokes.push(izStroke);
