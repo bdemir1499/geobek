@@ -2183,7 +2183,7 @@ function processLassoCut() {
             }
         }
     } catch (e) {
-        console.warn("Renk okuma hatasÃ¯Â¿Â½", e);
+        console.warn("Renk okuma Hatası", e);
     }
 
     // =======================================================
@@ -4253,7 +4253,7 @@ canvas.addEventListener('pointerup', (e) => {
                             break;
                         }
                     }
-                } catch (e) { console.warn("Renk Ã¯Â¿Â½rnekleme hatasÃ¯Â¿Â½:", e); }
+                } catch (e) { console.warn("Renk Ã¯Â¿Â½rnekleme Hatası:", e); }
 
                 const maskStroke = { type: 'lasso-mask', points: lassoPoints.map(p => ({ x: p.x, y: p.y })), fillColor: detectedColor, id: Date.now() + Math.random() };
                 drawnStrokes.push(maskStroke);
@@ -4511,7 +4511,7 @@ window.renderPDFPage = async function(num) {
         if (e.name === 'RenderingCancelledException') {
             console.log("HÃ¯Â¿Â½zlÃ¯Â¿Â½ sayfa deÃ¯Â¿Â½iÃ¯Â¿Â½imi nedeniyle Ã¯Â¿Â½nceki Ã¯Â¿Â½izim iptal edildi.");
         } else {
-            console.warn("PDF Render hatasÃ¯Â¿Â½:", e);
+            console.warn("PDF Render Hatası:", e);
         }
     }
 }
@@ -5155,7 +5155,7 @@ function olusturYuzenKopya(imgSrc, startX, startY, width, height) {
 
     window.addEventListener('pointermove', onMove, { passive: false });
     window.addEventListener('pointerup', onUp);
-    window.addEventListener('pointercancel', onUp); // TarayÃ¯Â¿Â½cÃ¯Â¿Â½ hatasÃ¯Â¿Â½nda da bÃ¯Â¿Â½rak
+    window.addEventListener('pointercancel', onUp); // TarayÃ¯Â¿Â½cÃ¯Â¿Â½ Hatasında da bÃ¯Â¿Â½rak
 
     // --- BOÃ¯Â¿Â½LUÃ¯Â¿Â½A TIKLAYINCA ANA KANVASA MÃ¯Â¿Â½HÃ¯Â¿Â½RLE (TABLET Ã¯Â¿Â½OKLU KOPYA Ã¯Â¿Â½NLEYÃ¯Â¿Â½CÃ¯Â¿Â½) ---
     setTimeout(() => {
@@ -6121,7 +6121,7 @@ if (isTablet) {
     myPeer.on('error', (err) => { 
         if (idSaha) idSaha.innerText = "Sunucu Hatası!";
         console.warn("PeerJS Arka Plan Hatası (Gözardı edilebilir): " + err.type);
-        console.warn("PeerJS Arka Plan HatasÃ¯Â¿Â½ (GÃ¯Â¿Â½zardÃ¯Â¿Â½ edilebilir): " + err.type); 
+        console.warn("PeerJS Arka Plan Hatası (Gözardı edilebilir): " + err.type); 
     });
 }
 // --- 3. BAÃ¯Â¿Â½LANTI Ã¯Â¿Â½STEK DÃ¯Â¿Â½NLEYÃ¯Â¿Â½CÃ¯Â¿Â½SÃ¯Â¿Â½ (KAPI ZÃ¯Â¿Â½LÃ¯Â¿Â½) ---
@@ -6133,7 +6133,7 @@ myPeer.on('connection', function (conn) {
     }
     // EÃ¯Â¿Â½ER ZATEN AKTÃ¯Â¿Â½F BÃ¯Â¿Â½R Ã¯Â¿Â½Ã¯Â¿Â½RETMEN BAÃ¯Â¿Â½LIYSA, YENÃ¯Â¿Â½ Ã¯Â¿Â½STEKLERÃ¯Â¿Â½ EKRANA BÃ¯Â¿Â½LE GETÃ¯Â¿Â½RMEDEN REDDET!
     if (window.authorizedTeacherId && typeof myConnection !== 'undefined' && myConnection && myConnection.open) {
-        console.warn("Zaten aktif bir Ã¯Â¿Â½Ã¯Â¿Â½retmen cihazÃ¯Â¿Â½ baÃ¯Â¿Â½lÃ¯Â¿Â½. Yeni baÃ¯Â¿Â½lantÃ¯Â¿Â½ isteÃ¯Â¿Â½i reddedildi:", conn.peer);
+        console.warn("Zaten aktif bir Ã¯Â¿Â½Ã¯Â¿Â½retmen cihazÃ¯Â¿Â½ baÃ¯Â¿Â½lÃ¯Â¿Â½. Yeni Bağlantı isteÃ¯Â¿Â½i reddedildi:", conn.peer);
         setTimeout(() => conn.close(), 100);
         return;
     }
@@ -6180,7 +6180,7 @@ myPeer.on('connection', function (conn) {
             console.warn(`?? GÃ¯Â¿Â½venlik Ã¯Â¿Â½hlali: ${peerId} 3 hatalÃ¯Â¿Â½ deneme yaptÃ¯Â¿Â½. 5 DAKÃ¯Â¿Â½KA ENGELLENDÃ¯Â¿Â½!`);
         }
 
-        // KarÃ¯Â¿Â½Ã¯Â¿Â½ tarafa hemen red gÃ¯Â¿Â½nderip baÃ¯Â¿Â½lantÃ¯Â¿Â½yÃ¯Â¿Â½ kopartÃ¯Â¿Â½yoruz
+        // KarÃ¯Â¿Â½Ã¯Â¿Â½ tarafa hemen red gÃ¯Â¿Â½nderip BağlantıyÃ¯Â¿Â½ kopartÃ¯Â¿Â½yoruz
         setTimeout(() => conn.close(), 500);
         return; // Modal penceresini bile gÃ¯Â¿Â½sterme (Ã¯Â¿Â½Ã¯Â¿Â½retmeni rahatsÃ¯Â¿Â½z etme)
     }
@@ -6243,7 +6243,7 @@ myPeer.on('connection', function (conn) {
                     setupConnectionEvents();
                     console.log("Cihaz baÅŸarÄ±yla baÄŸlandÄ±:", conn.peer);
 
-                    // ?? KESÃ¯Â¿Â½N Ã¯Â¿Â½Ã¯Â¿Â½ZÃ¯Â¿Â½M: PC baÃ¯Â¿Â½lantÃ¯Â¿Â½yÃ¯Â¿Â½ onayladÃ¯Â¿Â½Ã¯Â¿Â½Ã¯Â¿Â½ an, dinlemeye baÃ¯Â¿Â½lar baÃ¯Â¿Â½lamaz tabletten 
+                    // ?? KESÃ¯Â¿Â½N Ã¯Â¿Â½Ã¯Â¿Â½ZÃ¯Â¿Â½M: PC BağlantıyÃ¯Â¿Â½ onayladÃ¯Â¿Â½Ã¯Â¿Â½Ã¯Â¿Â½ an, dinlemeye baÃ¯Â¿Â½lar baÃ¯Â¿Â½lamaz tabletten 
                     // "Ekran durumunu" zorla talep eder. BÃ¯Â¿Â½ylece kayÃ¯Â¿Â½p mesajlar tamamen Ã¯Â¿Â½nlenir!
                     setTimeout(() => {
                         if (typeof window.sendNetworkData === 'function') {
@@ -6258,7 +6258,7 @@ myPeer.on('connection', function (conn) {
                     conn.on('open', baglantiHazir);
                 }
             } catch (err) {
-                console.error("BaÃ¯Â¿Â½lantÃ¯Â¿Â½ hatasÃ¯Â¿Â½:", err);
+                console.error("Bağlantı Hatası:", err);
             } finally {
                 requestModal.classList.add('hidden');
                 requestModal.style.display = 'none';
@@ -6305,14 +6305,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             if (targetCode.length === 5 && (passwordInput.length > 0 || teacherTokenFromUrl)) {
                 if (!myPeer || myPeer.destroyed) {
-                    alert("AÃ¯Â¿Â½ baÃ¯Â¿Â½lantÃ¯Â¿Â½sÃ¯Â¿Â½ henÃ¯Â¿Â½z kurulmadÃ¯Â¿Â½, lÃ¯Â¿Â½tfen 2 saniye bekleyip tekrar dene.");
+                    alert("AÃ¯Â¿Â½ BağlantısÃ¯Â¿Â½ henÃ¯Â¿Â½z kurulmadÃ¯Â¿Â½, lÃ¯Â¿Â½tfen 2 saniye bekleyip tekrar dene.");
                     return;
                 }
 
                 window.sessionPassword = passwordInput;
-                document.getElementById('connection-status').innerText = "BaÃ¯Â¿Â½lanÃ¯Â¿Â½yor ?";
+                document.getElementById('connection-status').innerText = "Bağlanıyor ?";
 
-                // BaÃ¯Â¿Â½lantÃ¯Â¿Â½yÃ¯Â¿Â½ baÃ¯Â¿Â½lat (Ã¯Â¿Â½ifreyi kriptografik metadata olarak gÃ¯Â¿Â½nderiyoruz)
+                // BağlantıyÃ¯Â¿Â½ baÃ¯Â¿Â½lat (Ã¯Â¿Â½ifreyi kriptografik metadata olarak gÃ¯Â¿Â½nderiyoruz)
                 myConnection = myPeer.connect(targetCode, {
                     metadata: {
                         password: window.sessionPassword,
@@ -6340,7 +6340,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     document.getElementById('connect-input').style.display = "none";
                     document.getElementById('connect-btn').style.display = "none";
 
-                    // ?? YENÃ¯Â¿Â½: BaÃ¯Â¿Â½lantÃ¯Â¿Â½ kurulunca oda/Ã¯Â¿Â½ifre panelini otomatik kÃ¯Â¿Â½Ã¯Â¿Â½Ã¯Â¿Â½lt ??
+                    // ?? YENÃ¯Â¿Â½: Bağlantı kurulunca oda/Ã¯Â¿Â½ifre panelini otomatik kÃ¯Â¿Â½Ã¯Â¿Â½Ã¯Â¿Â½lt ??
                     if (typeof window.kucultPanel === 'function') {
                         window.kucultPanel();
                     }
@@ -6374,7 +6374,7 @@ function setupConnectionEvents() {
 
     // --- 1. GÃ¯Â¿Â½VENLÃ¯Â¿Â½K ONAYI ---
     // GitHub Pages akÃ¯Â¿Â½Ã¯Â¿Â½Ã¯Â¿Â½nda signaling metadata'sÃ¯Â¿Â½ public servisten geÃ¯Â¿Â½ebilir;
-    // ders iÃ¯Â¿Â½eriÃ¯Â¿Â½i yalnÃ¯Â¿Â½zca kabul edilmiÃ¯Â¿Â½ P2P baÃ¯Â¿Â½lantÃ¯Â¿Â½da iÃ¯Â¿Â½lenir.
+    // ders iÃ¯Â¿Â½eriÃ¯Â¿Â½i yalnÃ¯Â¿Â½zca kabul edilmiÃ¯Â¿Â½ P2P Bağlantıda iÃ¯Â¿Â½lenir.
     const pc = myConnection.peerConnection;
     // =========================================================
     // EKRANLAR ARASI ORANTISAL ADAPTASYON (Ã¯Â¿Â½Ã¯Â¿Â½ZÃ¯Â¿Â½NÃ¯Â¿Â½RLÃ¯Â¿Â½K SENKRONU)
@@ -6922,7 +6922,7 @@ function setupConnectionEvents() {
 if (!data || !data.type) return;
         if (!window.drawnStrokes) window.drawnStrokes = [];
 
-// ?? KESÃ¯Â¿Â½N Ã¯Â¿Â½Ã¯Â¿Â½ZÃ¯Â¿Â½M: PC hazÃ¯Â¿Â½r olduÃ¯Â¿Â½unu bildirdiÃ¯Â¿Â½inde, Tablet zaten Ã¯Â¿Â½izim alanÃ¯Â¿Â½na geÃ¯Â¿Â½miÃ¯Â¿Â½se durumunu PC'ye zorla fÃ¯Â¿Â½rlatÃ¯Â¿Â½r!
+// ?? KESÃ¯Â¿Â½N Ã¯Â¿Â½Ã¯Â¿Â½ZÃ¯Â¿Â½M: PC Hazır olduÃ¯Â¿Â½unu bildirdiÃ¯Â¿Â½inde, Tablet zaten Ã¯Â¿Â½izim alanÃ¯Â¿Â½na geÃ¯Â¿Â½miÃ¯Â¿Â½se durumunu PC'ye zorla fÃ¯Â¿Â½rlatÃ¯Â¿Â½r!
         if (data.type === 'pc_hazir_durum_talep_et') {
             if (window.acilisPenceresiKapatildi && typeof currentLang !== 'undefined' && currentLang) {
                 const firlatici = (typeof window.sendNetworkData === 'function') ? window.sendNetworkData : (typeof sendNetworkData === 'function' ? sendNetworkData : null);
@@ -7322,7 +7322,7 @@ if (!data || !data.type) return;
             }
         }
         else if (data.type === 'hepsini_sil') {
-            // PC Ã¯Â¿Â½Ã¯Â¿Â½Ã¯Â¿Â½N KESÃ¯Â¿Â½N Ã¯Â¿Â½Ã¯Â¿Â½ZÃ¯Â¿Â½M: HafÃ¯Â¿Â½za baÃ¯Â¿Â½lantÃ¯Â¿Â½sÃ¯Â¿Â½nÃ¯Â¿Â½ koparmadan filtreleme yapÃ¯Â¿Â½yoruz!
+            // PC Ã¯Â¿Â½Ã¯Â¿Â½Ã¯Â¿Â½N KESÃ¯Â¿Â½N Ã¯Â¿Â½Ã¯Â¿Â½ZÃ¯Â¿Â½M: HafÃ¯Â¿Â½za BağlantısÃ¯Â¿Â½nÃ¯Â¿Â½ koparmadan filtreleme yapÃ¯Â¿Â½yoruz!
             const korunacakZeminler = window.drawnStrokes.filter(stroke => stroke.isBackground === true);
 
             window.drawnStrokes.length = 0; // 1. Orijinal hafÃ¯Â¿Â½zanÃ¯Â¿Â½n iÃ¯Â¿Â½ini tamamen boÃ¯Â¿Â½alt
@@ -7371,7 +7371,7 @@ if (!data || !data.type) return;
                         if (typeof window.renderPDFPage === 'function') window.renderPDFPage(1);
                     });
                 }
-            } catch (e) { console.error("PDF HatasÃ¯Â¿Â½:", e); }
+            } catch (e) { console.error("PDF Hatası:", e); }
         }
 
         if (data.type === 'pdf_sayfa_degis') { window.currentPDFPage = data.sayfa; if (typeof window.renderPDFPage === 'function') window.renderPDFPage(window.currentPDFPage); }
@@ -7645,7 +7645,7 @@ if (!data || !data.type) return;
             statusEl.innerText = "BAÄLANDI ğŸ¤";
             statusEl.style.color = "#ff4444";
         }
-        // BaÃ¯Â¿Â½lantÃ¯Â¿Â½ koptuÃ¯Â¿Â½unda sayfayÃ¯Â¿Â½ yenilemek en garantili Ã¯Â¿Â½Ã¯Â¿Â½zÃ¯Â¿Â½mdÃ¯Â¿Â½r:
+        // Bağlantı koptuÃ¯Â¿Â½unda sayfayÃ¯Â¿Â½ yenilemek en garantili Ã¯Â¿Â½Ã¯Â¿Â½zÃ¯Â¿Â½mdÃ¯Â¿Â½r:
         setTimeout(() => { location.reload(); }, 2000);
     });
 
@@ -9186,7 +9186,7 @@ function calculateDistance(p1, p2) {
             tonyActive = true;
 
         } catch (e) {
-            console.error('Tony Stark Modu HatasÃ¯Â¿Â½:', e);
+            console.error('Tony Stark Modu Hatası:', e);
             tonyBtn.innerHTML = '? Hata';
             tonyBtn.style.borderColor = '#ff0000';
             tonyBtn.style.boxShadow = '0 0 10px rgba(255,0,0,0.5)';
