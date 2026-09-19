@@ -9,9 +9,22 @@
   },
   "dependencies": {
     "express": "^5.1.0",
+    "javascript-obfuscator": "^5.7.0",
     "peer": "^1.0.2"
   },
   "overrides": {
     "qs": "^6.16.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bdemir1499/geobek.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bdemir1499/geobek/issues"
+  },
+  "homepage": "https://github.com/bdemir1499/geobek#readme"
 }
