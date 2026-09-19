@@ -6052,6 +6052,9 @@ if (!isTablet) {
 // GitHub Pages'te PeerJS varsayÃ¯Â¿Â½lan signaling servisi kullanÃ¯Â¿Â½lÃ¯Â¿Â½r.
 // Sadece localhost/yerel HTTP Ã¯Â¿Â½alÃ¯Â¿Â½Ã¯Â¿Â½tÃ¯Â¿Â½rmasÃ¯Â¿Â½nda proje iÃ¯Â¿Â½indeki signaling sunucusuna baÃ¯Â¿Â½lanÃ¯Â¿Â½lÃ¯Â¿Â½r.
 const isGitHubPages = window.location.hostname.endsWith('.github.io');
+// --- AYN W-F KORUMASI ---
+window.myPublicIp = 'unknown';
+fetch('https://api.ipify.org?format=json').then(r => r.json()).then(d => { window.myPublicIp = d.ip; }).catch(e => console.warn('IP alinamadi'));
 const isLocalPeerServer = !isGitHubPages &&
     (window.location.hostname === 'localhost' ||
         window.location.hostname === '127.0.0.1' ||
@@ -6062,7 +6065,7 @@ const localPeerOptions = {
     port: 9000,
     path: '/peerjs',
     secure: false,
-    config: { iceServers: [] }
+    config: { iceServers: [ { urls: 'stun:stun.l.google.com:19302' }, { urls: 'stun:stun1.l.google.com:19302' } ] }
 };
 
 function createPeer(id) {
@@ -6072,7 +6075,7 @@ function createPeer(id) {
     // Public GitHub bağlantısı için standart Google STUN sunucuları (mDNS engelini aşmak için)
     const publicIce = {
         config: {
-            iceServers: []
+            iceServers: [ { urls: 'stun:stun.l.google.com:19302' }, { urls: 'stun:stun1.l.google.com:19302' } ]
         }
     };
     return id ? new Peer(id, publicIce) : new Peer(publicIce);
@@ -6171,7 +6174,7 @@ myPeer.on('connection', function (conn) {
         }
         window.pendingTeacherConnections.add(peerId);
         conn.isTeacherCandidate = true;
-    } else if (!conn.metadata || conn.metadata.password !== window.sessionPassword) {
+    } else if (!conn.metadata || conn.metadata.password !== window.sessionPassword || (window.myPublicIp !== 'unknown' && conn.metadata.publicIp !== 'unknown' && conn.metadata.publicIp !== window.myPublicIp)) {
         console.warn("?? GÃ¯Â¿Â½venlik Ã¯Â¿Â½hlali: HatalÃ¯Â¿Â½ Ã¯Â¿Â½ifre denemesi reddedildi!", conn.peer);
         
         window.failedAttempts[peerId] = (window.failedAttempts[peerId] || 0) + 1;
@@ -6315,7 +6318,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 // BağlantıyÃ¯Â¿Â½ baÃ¯Â¿Â½lat (Ã¯Â¿Â½ifreyi kriptografik metadata olarak gÃ¯Â¿Â½nderiyoruz)
                 myConnection = myPeer.connect(targetCode, {
                     metadata: {
-                        password: window.sessionPassword,
+                        password: window.sessionPassword, publicIp: window.myPublicIp,
                         teacherToken: teacherTokenFromUrl || undefined
                     }
                 });
