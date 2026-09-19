@@ -6098,8 +6098,8 @@ function renderTeacherPairingQr(peerId) {
 
 if (isTablet) {
     myPeer = createPeer();
-    myPeer.on('open', (id) => { console.log("Tablet Peer HazÃ¯Â¿Â½r. KimliÃ¯Â¿Â½im:", id); });
-    myPeer.on('error', (err) => { alert("Tablet BaÃ¯Â¿Â½lantÃ¯Â¿Â½ HatasÃ¯Â¿Â½: " + err); });
+    myPeer.on('open', (id) => { console.log("Tablet Peer Hazır. Kimliğim:", id); });
+    myPeer.on('error', (err) => { alert("Tablet Bağlantı Hatası: " + err); });
 } else {
     myPeer = createPeer(myRoomCode);
     
@@ -6107,20 +6107,20 @@ if (isTablet) {
     const idSaha = document.getElementById('my-peer-id');
     const pinSaha = document.getElementById('my-pin-code');
     const teacherTokenSaha = document.getElementById('teacher-pairing-token');
-    if (idSaha) idSaha.innerText = "BaÃ¯Â¿Â½lanÃ¯Â¿Â½yor...";
+    if (idSaha) idSaha.innerText = "Bağlanıyor...";
     if (pinSaha) pinSaha.innerText = "...";
-    if (teacherTokenSaha) teacherTokenSaha.innerText = "Ã¯Â¿Â½retiliyor...";
+    if (teacherTokenSaha) teacherTokenSaha.innerText = "Üretiliyor...";
 
     myPeer.on('open', (id) => {
-        console.log("Tahta Peer HazÃ¯Â¿Â½r. Oda Kodu:", id);
+        console.log("Tahta Peer Hazır. Oda Kodu:", id);
         if (idSaha) idSaha.innerText = id;
         if (pinSaha) pinSaha.innerText = window.sessionPassword;
         if (teacherTokenSaha) teacherTokenSaha.innerText = window.teacherPairingToken;
         renderTeacherPairingQr(id);
     });
-    
     myPeer.on('error', (err) => { 
-        if (idSaha) idSaha.innerText = "Sunucu HatasÃ¯Â¿Â½!"; 
+        if (idSaha) idSaha.innerText = "Sunucu Hatası!";
+        console.warn("PeerJS Arka Plan Hatası (Gözardı edilebilir): " + err.type);
         console.warn("PeerJS Arka Plan HatasÃ¯Â¿Â½ (GÃ¯Â¿Â½zardÃ¯Â¿Â½ edilebilir): " + err.type); 
     });
 }
