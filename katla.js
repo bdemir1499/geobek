@@ -1,1 +1,795 @@
-const _0x56051e=(function(){let _0x725bdf=!![];return function(_0x323842,_0x3cd294){const _0x3b335e=_0x725bdf?function(){if(_0x3cd294){const _0x2f7bd6=_0x3cd294['\x61\x70\x70\x6c\x79'](_0x323842,arguments);return _0x3cd294=null,_0x2f7bd6;}}:function(){};return _0x725bdf=![],_0x3b335e;};}()),_0x356454=_0x56051e(this,function(){if(_0x356454['\x62\x69\x6e\x64']()['\x74\x6f\x53\x74\x72\x69\x6e\x67']()['\x69\x6e\x64\x65\x78\x4f\x66']('\x0a')!==-(-0x176d+-0xc2f+0x239d))return;return _0x356454['\x74\x6f\x53\x74\x72\x69\x6e\x67']()['\x73\x65\x61\x72\x63\x68']('\x28\x28\x28\x2e\x2b\x29\x2b\x29\x2b\x29'+'\x2b\x24')['\x74\x6f\x53\x74\x72\x69\x6e\x67']()['\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f'+'\x72'](_0x356454)['\x73\x65\x61\x72\x63\x68']('\x28\x28\x28\x2e\x2b\x29\x2b\x29\x2b\x29'+'\x2b\x24');});_0x356454(),window['\x69\x73\x4b\x61\x74\x6c\x61\x41\x63\x74'+'\x69\x76\x65']=![];let katlamaOverlayCanvas=null,katlamaOverlayCtx=null,currentBgImg=null,currentFgImg=null,currentCaptureRect=null,isDrawingBox=![],isFolding=![],startX,startY,currentBox=null,foldStart=null,foldCurrent=null,syncImgId=null;function screenToCanvasCoords(_0x217aa6){const _0x4f13d7=document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74'+'\x42\x79\x49\x64']('\x64\x72\x61\x77\x69\x6e\x67\x2d\x63\x61'+'\x6e\x76\x61\x73');if(!_0x4f13d7)return _0x217aa6;const _0x46bce0=window['\x64\x72\x61\x77\x6e\x53\x74\x72\x6f\x6b'+'\x65\x73']?window['\x64\x72\x61\x77\x6e\x53\x74\x72\x6f\x6b'+'\x65\x73']['\x66\x69\x6e\x64'](_0x889b16=>_0x889b16['\x69\x73\x42\x61\x63\x6b\x67\x72\x6f\x75'+'\x6e\x64']===!![]&&!_0x889b16['\x69\x73\x50\x61\x74\x63\x68']):null,_0x3c9bab=window['\x64\x65\x76\x69\x63\x65\x50\x69\x78\x65'+'\x6c\x52\x61\x74\x69\x6f']||-0x1c+0x26df+-0x26c2;if(_0x46bce0&&_0x46bce0['\x77\x69\x64\x74\x68']>0x47b*-0x4+0x1e*0x109+-0xd22){const _0x1e068d=_0x46bce0['\x78']/_0x3c9bab,_0x5335ac=_0x46bce0['\x79']/_0x3c9bab,_0x4fb523=_0x46bce0['\x77\x69\x64\x74\x68']/_0x3c9bab,_0x29419c=_0x46bce0['\x68\x65\x69\x67\x68\x74']/_0x3c9bab,_0x5e9b7f={};_0x5e9b7f['\x72\x65\x6c\x58']=(_0x217aa6['\x78']-_0x1e068d)/_0x4fb523,_0x5e9b7f['\x72\x65\x6c\x59']=(_0x217aa6['\x79']-_0x5335ac)/_0x29419c,_0x5e9b7f['\x69\x73\x52\x65\x6c']=!![];let _0x3819a2=_0x5e9b7f;return _0x217aa6['\x77']!==undefined&&(_0x3819a2['\x72\x65\x6c\x57']=_0x217aa6['\x77']/_0x4fb523,_0x3819a2['\x72\x65\x6c\x48']=_0x217aa6['\x68']/_0x29419c),_0x3819a2;}else{const _0x313e1f={};_0x313e1f['\x78']=_0x217aa6['\x78'],_0x313e1f['\x79']=_0x217aa6['\x79'],_0x313e1f['\x69\x73\x52\x65\x6c']=![];let _0x27386c=_0x313e1f;return _0x217aa6['\x77']!==undefined&&(_0x27386c['\x77']=_0x217aa6['\x77'],_0x27386c['\x68']=_0x217aa6['\x68']),_0x27386c;}}function canvasToScreenCoords(_0x179eea){const _0x7ccb10=document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74'+'\x42\x79\x49\x64']('\x64\x72\x61\x77\x69\x6e\x67\x2d\x63\x61'+'\x6e\x76\x61\x73');if(!_0x7ccb10)return _0x179eea;const _0x351f10=window['\x64\x72\x61\x77\x6e\x53\x74\x72\x6f\x6b'+'\x65\x73']?window['\x64\x72\x61\x77\x6e\x53\x74\x72\x6f\x6b'+'\x65\x73']['\x66\x69\x6e\x64'](_0x3d07ca=>_0x3d07ca['\x69\x73\x42\x61\x63\x6b\x67\x72\x6f\x75'+'\x6e\x64']===!![]&&!_0x3d07ca['\x69\x73\x50\x61\x74\x63\x68']):null,_0x220ffa=window['\x64\x65\x76\x69\x63\x65\x50\x69\x78\x65'+'\x6c\x52\x61\x74\x69\x6f']||0x309+0x119*0xd+-0x67*0x2b;if(_0x179eea['\x69\x73\x52\x65\x6c']&&_0x351f10&&_0x351f10['\x77\x69\x64\x74\x68']>0x2*0xbdc+-0xbd7+-0xbe1){const _0x49b446=_0x351f10['\x78']/_0x220ffa,_0x4c8171=_0x351f10['\x79']/_0x220ffa,_0x267935=_0x351f10['\x77\x69\x64\x74\x68']/_0x220ffa,_0x25ec72=_0x351f10['\x68\x65\x69\x67\x68\x74']/_0x220ffa,_0x55b5b1={};_0x55b5b1['\x78']=_0x49b446+_0x179eea['\x72\x65\x6c\x58']*_0x267935,_0x55b5b1['\x79']=_0x4c8171+_0x179eea['\x72\x65\x6c\x59']*_0x25ec72;let _0x38afd7=_0x55b5b1;return _0x179eea['\x72\x65\x6c\x57']!==undefined&&(_0x38afd7['\x77']=_0x179eea['\x72\x65\x6c\x57']*_0x267935,_0x38afd7['\x68']=_0x179eea['\x72\x65\x6c\x48']*_0x25ec72),_0x38afd7;}else{const _0x435c30={};_0x435c30['\x78']=_0x179eea['\x78']||-0xd*-0x60+-0x1*-0x24e9+-0x29c9,_0x435c30['\x79']=_0x179eea['\x79']||-0x7bf*-0x2+-0x1*0x100d+0x1*0x8f;let _0x843a8e=_0x435c30;return _0x179eea['\x77']!==undefined&&(_0x843a8e['\x77']=_0x179eea['\x77'],_0x843a8e['\x68']=_0x179eea['\x68']),_0x843a8e;}}document['\x61\x64\x64\x45\x76\x65\x6e\x74\x4c\x69'+'\x73\x74\x65\x6e\x65\x72']('\x44\x4f\x4d\x43\x6f\x6e\x74\x65\x6e\x74'+'\x4c\x6f\x61\x64\x65\x64',()=>{const _0x580566=document['\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d'+'\x65\x6e\x74']('\x62\x75\x74\x74\x6f\x6e');_0x580566['\x69\x64']='\x62\x74\x6e\x2d\x6b\x61\x74\x6c\x61',_0x580566['\x63\x6c\x61\x73\x73\x4e\x61\x6d\x65']='\x74\x6f\x6f\x6c\x2d\x62\x75\x74\x74\x6f'+'\x6e\x2d\x73\x75\x62',_0x580566['\x74\x69\x74\x6c\x65']='\x41\x6b\u0131\x6c\x6c\u0131\x20\x4b\x61\x74'+'\x6c\x61\x6d\x61',_0x580566['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c']='\x4b\x61\x74\x6c\x61\x20\u2702\ufe0f';const _0x54fbea=document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74'+'\x42\x79\x49\x64']('\x73\x6e\x61\x70\x73\x68\x6f\x74\x2d\x6f'+'\x70\x74\x69\x6f\x6e\x73');_0x54fbea&&_0x54fbea['\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c'+'\x64'](_0x580566);const _0x10dc77=document['\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d'+'\x65\x6e\x74']('\x73\x74\x79\x6c\x65');_0x10dc77['\x74\x65\x78\x74\x43\x6f\x6e\x74\x65\x6e'+'\x74']='\x0a\x20\x20\x20\x20\x20\x20\x20\x20\x23'+'\x6b\x61\x74\x6c\x61\x2d\x62\x6f\x78\x20'+'\x7b\x20\x70\x6f\x73\x69\x74\x69\x6f\x6e'+'\x3a\x20\x61\x62\x73\x6f\x6c\x75\x74\x65'+'\x3b\x20\x62\x6f\x72\x64\x65\x72\x3a\x20'+'\x32\x70\x78\x20\x64\x61\x73\x68\x65\x64'+'\x20\x23\x66\x66\x30\x30\x66\x66\x3b\x20'+'\x62\x61\x63\x6b\x67\x72\x6f\x75\x6e\x64'+'\x3a\x20\x72\x67\x62\x61\x28\x32\x35\x35'+'\x2c\x30\x2c\x32\x35\x35\x2c\x30\x2e\x31'+'\x29\x3b\x20\x70\x6f\x69\x6e\x74\x65\x72'+'\x2d\x65\x76\x65\x6e\x74\x73\x3a\x20\x6e'+'\x6f\x6e\x65\x3b\x20\x7a\x2d\x69\x6e\x64'+'\x65\x78\x3a\x20\x39\x39\x39\x39\x3b\x20'+'\x7d\x0a\x20\x20\x20\x20\x20\x20\x20\x20'+'\x2e\x6b\x61\x74\x6c\x61\x2d\x61\x63\x74'+'\x69\x76\x65\x20\x7b\x20\x63\x75\x72\x73'+'\x6f\x72\x3a\x20\x63\x72\x6f\x73\x73\x68'+'\x61\x69\x72\x20\x21\x69\x6d\x70\x6f\x72'+'\x74\x61\x6e\x74\x3b\x20\x7d\x0a\x20\x20'+'\x20\x20\x20\x20\x20\x20\x2e\x62\x74\x6e'+'\x2d\x6b\x61\x74\x6c\x61\x2d\x61\x63\x74'+'\x69\x76\x65\x20\x7b\x20\x62\x61\x63\x6b'+'\x67\x72\x6f\x75\x6e\x64\x2d\x63\x6f\x6c'+'\x6f\x72\x3a\x20\x23\x66\x66\x30\x30\x66'+'\x66\x20\x21\x69\x6d\x70\x6f\x72\x74\x61'+'\x6e\x74\x3b\x20\x63\x6f\x6c\x6f\x72\x3a'+'\x20\x77\x68\x69\x74\x65\x3b\x20\x7d\x0a'+'\x20\x20\x20\x20\x20\x20\x20\x20\x23\x6b'+'\x61\x74\x6c\x61\x6d\x61\x2d\x6f\x76\x65'+'\x72\x6c\x61\x79\x20\x7b\x20\x70\x6f\x73'+'\x69\x74\x69\x6f\x6e\x3a\x20\x61\x62\x73'+'\x6f\x6c\x75\x74\x65\x3b\x20\x74\x6f\x70'+'\x3a\x20\x30\x3b\x20\x6c\x65\x66\x74\x3a'+'\x20\x30\x3b\x20\x77\x69\x64\x74\x68\x3a'+'\x20\x31\x30\x30\x76\x77\x3b\x20\x68\x65'+'\x69\x67\x68\x74\x3a\x20\x31\x30\x30\x76'+'\x68\x3b\x20\x7a\x2d\x69\x6e\x64\x65\x78'+'\x3a\x20\x31\x30\x30\x30\x30\x3b\x20\x74'+'\x6f\x75\x63\x68\x2d\x61\x63\x74\x69\x6f'+'\x6e\x3a\x20\x6e\x6f\x6e\x65\x3b\x20\x70'+'\x6f\x69\x6e\x74\x65\x72\x2d\x65\x76\x65'+'\x6e\x74\x73\x3a\x20\x61\x75\x74\x6f\x3b'+'\x20\x7d\x0a\x20\x20\x20\x20\x20\x20\x20'+'\x20\x2e\x6b\x61\x74\x6c\x61\x6d\x61\x2d'+'\x75\x69\x20\x7b\x20\x70\x6f\x73\x69\x74'+'\x69\x6f\x6e\x3a\x20\x61\x62\x73\x6f\x6c'+'\x75\x74\x65\x3b\x20\x74\x6f\x70\x3a\x20'+'\x32\x30\x70\x78\x3b\x20\x6c\x65\x66\x74'+'\x3a\x20\x35\x30\x25\x3b\x20\x74\x72\x61'+'\x6e\x73\x66\x6f\x72\x6d\x3a\x20\x74\x72'+'\x61\x6e\x73\x6c\x61\x74\x65\x58\x28\x2d'+'\x35\x30\x25\x29\x3b\x20\x7a\x2d\x69\x6e'+'\x64\x65\x78\x3a\x20\x31\x30\x30\x30\x31'+'\x3b\x20\x64\x69\x73\x70\x6c\x61\x79\x3a'+'\x20\x66\x6c\x65\x78\x3b\x20\x67\x61\x70'+'\x3a\x20\x31\x30\x70\x78\x3b\x20\x7d\x0a'+'\x20\x20\x20\x20\x20\x20\x20\x20\x2e\x6b'+'\x61\x74\x6c\x61\x6d\x61\x2d\x75\x69\x20'+'\x62\x75\x74\x74\x6f\x6e\x20\x7b\x20\x70'+'\x61\x64\x64\x69\x6e\x67\x3a\x20\x31\x30'+'\x70\x78\x20\x32\x30\x70\x78\x3b\x20\x66'+'\x6f\x6e\x74\x2d\x73\x69\x7a\x65\x3a\x20'+'\x31\x36\x70\x78\x3b\x20\x66\x6f\x6e\x74'+'\x2d\x77\x65\x69\x67\x68\x74\x3a\x20\x62'+'\x6f\x6c\x64\x3b\x20\x62\x6f\x72\x64\x65'+'\x72\x2d\x72\x61\x64\x69\x75\x73\x3a\x20'+'\x38\x70\x78\x3b\x20\x62\x6f\x72\x64\x65'+'\x72\x3a\x20\x6e\x6f\x6e\x65\x3b\x20\x63'+'\x75\x72\x73\x6f\x72\x3a\x20\x70\x6f\x69'+'\x6e\x74\x65\x72\x3b\x20\x62\x6f\x78\x2d'+'\x73\x68\x61\x64\x6f\x77\x3a\x20\x30\x20'+'\x34\x70\x78\x20\x36\x70\x78\x20\x72\x67'+'\x62\x61\x28\x30\x2c\x30\x2c\x30\x2c\x30'+'\x2e\x33\x29\x3b\x20\x7d\x0a\x20\x20\x20'+'\x20\x20\x20\x20\x20\x23\x62\x74\x6e\x2d'+'\x6b\x61\x74\x6c\x61\x2d\x69\x70\x74\x61'+'\x6c\x20\x7b\x20\x62\x61\x63\x6b\x67\x72'+'\x6f\x75\x6e\x64\x2d\x63\x6f\x6c\x6f\x72'+'\x3a\x20\x23\x66\x66\x34\x34\x34\x34\x3b'+'\x20\x63\x6f\x6c\x6f\x72\x3a\x20\x77\x68'+'\x69\x74\x65\x3b\x20\x7d\x0a\x20\x20\x20'+'\x20\x20\x20\x20\x20\x23\x62\x74\x6e\x2d'+'\x6b\x61\x74\x6c\x61\x2d\x74\x61\x6d\x61'+'\x6d\x20\x7b\x20\x62\x61\x63\x6b\x67\x72'+'\x6f\x75\x6e\x64\x2d\x63\x6f\x6c\x6f\x72'+'\x3a\x20\x23\x34\x34\x63\x63\x34\x34\x3b'+'\x20\x63\x6f\x6c\x6f\x72\x3a\x20\x77\x68'+'\x69\x74\x65\x3b\x20\x7d\x0a\x20\x20\x20'+'\x20',document['\x68\x65\x61\x64']['\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c'+'\x64'](_0x10dc77);if(typeof window['\x73\x65\x74\x41\x63\x74\x69\x76\x65\x54'+'\x6f\x6f\x6c']==='\x66\x75\x6e\x63\x74\x69\x6f\x6e'&&!window['\x6b\x61\x74\x6c\x61\x48\x6f\x6f\x6b\x65'+'\x64']){const _0x55cc77=window['\x73\x65\x74\x41\x63\x74\x69\x76\x65\x54'+'\x6f\x6f\x6c'];window['\x73\x65\x74\x41\x63\x74\x69\x76\x65\x54'+'\x6f\x6f\x6c']=function(_0x58aecd){if(_0x58aecd!=='\x6e\x6f\x6e\x65'&&_0x58aecd!=='\x73\x6e\x61\x70\x73\x68\x6f\x74'&&window['\x69\x73\x4b\x61\x74\x6c\x61\x41\x63\x74'+'\x69\x76\x65']){if(typeof foldStart!=='\x75\x6e\x64\x65\x66\x69\x6e\x65\x64'&&foldStart&&typeof foldCurrent!=='\x75\x6e\x64\x65\x66\x69\x6e\x65\x64'&&foldCurrent){katlanmisBirak(foldStart,foldCurrent);if(typeof agSenkronizeEt==='\x66\x75\x6e\x63\x74\x69\x6f\x6e')agSenkronizeEt('\x69\x70\x74\x61\x6c');}iptalEt();}_0x55cc77(_0x58aecd);},window['\x6b\x61\x74\x6c\x61\x48\x6f\x6f\x6b\x65'+'\x64']=!![];}typeof seffafBtn!=='\x75\x6e\x64\x65\x66\x69\x6e\x65\x64'&&seffafBtn['\x61\x64\x64\x45\x76\x65\x6e\x74\x4c\x69'+'\x73\x74\x65\x6e\x65\x72']('\x63\x6c\x69\x63\x6b',()=>{!window['\x69\x73\x4b\x61\x74\x6c\x61\x41\x63\x74'+'\x69\x76\x65']&&typeof window['\x73\x65\x74\x41\x63\x74\x69\x76\x65\x54'+'\x6f\x6f\x6c']==='\x66\x75\x6e\x63\x74\x69\x6f\x6e'&&window['\x73\x65\x74\x41\x63\x74\x69\x76\x65\x54'+'\x6f\x6f\x6c']('\x73\x6e\x61\x70\x73\x68\x6f\x74');window['\x69\x73\x4b\x61\x74\x6c\x61\x41\x63\x74'+'\x69\x76\x65']=!window['\x69\x73\x4b\x61\x74\x6c\x61\x41\x63\x74'+'\x69\x76\x65'];if(window['\x69\x73\x4b\x61\x74\x6c\x61\x41\x63\x74'+'\x69\x76\x65']){seffafBtn['\x63\x6c\x61\x73\x73\x4c\x69\x73\x74']['\x61\x64\x64']('\x62\x74\x6e\x2d\x6b\x61\x74\x6c\x61\x2d'+'\x61\x63\x74\x69\x76\x65'),_0x580566['\x63\x6c\x61\x73\x73\x4c\x69\x73\x74']['\x72\x65\x6d\x6f\x76\x65']('\x62\x74\x6e\x2d\x6b\x61\x74\x6c\x61\x2d'+'\x61\x63\x74\x69\x76\x65'),document['\x62\x6f\x64\x79']['\x63\x6c\x61\x73\x73\x4c\x69\x73\x74']['\x61\x64\x64']('\x6b\x61\x74\x6c\x61\x2d\x61\x63\x74\x69'+'\x76\x65');if(typeof window['\x73\x65\x74\x41\x63\x74\x69\x76\x65\x54'+'\x6f\x6f\x6c']==='\x66\x75\x6e\x63\x74\x69\x6f\x6e')window['\x73\x65\x74\x41\x63\x74\x69\x76\x65\x54'+'\x6f\x6f\x6c']('\x6e\x6f\x6e\x65');}else iptalEt();});_0x580566['\x61\x64\x64\x45\x76\x65\x6e\x74\x4c\x69'+'\x73\x74\x65\x6e\x65\x72']('\x63\x6c\x69\x63\x6b',()=>{typeof seffafBtn!=='\x75\x6e\x64\x65\x66\x69\x6e\x65\x64'&&seffafBtn['\x63\x6c\x61\x73\x73\x4c\x69\x73\x74']['\x72\x65\x6d\x6f\x76\x65']('\x62\x74\x6e\x2d\x6b\x61\x74\x6c\x61\x2d'+'\x61\x63\x74\x69\x76\x65');!window['\x69\x73\x4b\x61\x74\x6c\x61\x41\x63\x74'+'\x69\x76\x65']&&typeof window['\x73\x65\x74\x41\x63\x74\x69\x76\x65\x54'+'\x6f\x6f\x6c']==='\x66\x75\x6e\x63\x74\x69\x6f\x6e'&&window['\x73\x65\x74\x41\x63\x74\x69\x76\x65\x54'+'\x6f\x6f\x6c']('\x73\x6e\x61\x70\x73\x68\x6f\x74');window['\x69\x73\x4b\x61\x74\x6c\x61\x41\x63\x74'+'\x69\x76\x65']=!window['\x69\x73\x4b\x61\x74\x6c\x61\x41\x63\x74'+'\x69\x76\x65'];if(window['\x69\x73\x4b\x61\x74\x6c\x61\x41\x63\x74'+'\x69\x76\x65']){_0x580566['\x63\x6c\x61\x73\x73\x4c\x69\x73\x74']['\x61\x64\x64']('\x62\x74\x6e\x2d\x6b\x61\x74\x6c\x61\x2d'+'\x61\x63\x74\x69\x76\x65'),document['\x62\x6f\x64\x79']['\x63\x6c\x61\x73\x73\x4c\x69\x73\x74']['\x61\x64\x64']('\x6b\x61\x74\x6c\x61\x2d\x61\x63\x74\x69'+'\x76\x65');if(typeof window['\x73\x65\x74\x41\x63\x74\x69\x76\x65\x54'+'\x6f\x6f\x6c']==='\x66\x75\x6e\x63\x74\x69\x6f\x6e')window['\x73\x65\x74\x41\x63\x74\x69\x76\x65\x54'+'\x6f\x6f\x6c']('\x6e\x6f\x6e\x65');}else iptalEt(),_0x580566['\x63\x6c\x61\x73\x73\x4c\x69\x73\x74']['\x72\x65\x6d\x6f\x76\x65']('\x62\x74\x6e\x2d\x6b\x61\x74\x6c\x61\x2d'+'\x61\x63\x74\x69\x76\x65'),document['\x62\x6f\x64\x79']['\x63\x6c\x61\x73\x73\x4c\x69\x73\x74']['\x72\x65\x6d\x6f\x76\x65']('\x6b\x61\x74\x6c\x61\x2d\x61\x63\x74\x69'+'\x76\x65');});const _0x5451af={};_0x5451af['\x63\x61\x70\x74\x75\x72\x65']=!![],document['\x61\x64\x64\x45\x76\x65\x6e\x74\x4c\x69'+'\x73\x74\x65\x6e\x65\x72']('\x70\x6f\x69\x6e\x74\x65\x72\x64\x6f\x77'+'\x6e',_0x5aaed6=>{if(!window['\x69\x73\x4b\x61\x74\x6c\x61\x41\x63\x74'+'\x69\x76\x65']||_0x5aaed6['\x74\x61\x72\x67\x65\x74']['\x63\x6c\x6f\x73\x65\x73\x74']('\x2e\x75\x69\x2d\x63\x6f\x6e\x74\x61\x69'+'\x6e\x65\x72')||_0x5aaed6['\x74\x61\x72\x67\x65\x74']['\x63\x6c\x6f\x73\x65\x73\x74']('\x2e\x70\x61\x6e\x65\x6c')||_0x5aaed6['\x74\x61\x72\x67\x65\x74']['\x63\x6c\x6f\x73\x65\x73\x74']('\x2e\x6b\x61\x74\x6c\x61\x6d\x61\x2d\x75'+'\x69'))return;if(katlamaOverlayCanvas){_0x5aaed6['\x73\x74\x6f\x70\x50\x72\x6f\x70\x61\x67'+'\x61\x74\x69\x6f\x6e'](),isFolding=!![];const _0x568624={};_0x568624['\x78']=_0x5aaed6['\x63\x6c\x69\x65\x6e\x74\x58'],_0x568624['\x79']=_0x5aaed6['\x63\x6c\x69\x65\x6e\x74\x59'],foldStart=_0x568624;const _0x371920={};_0x371920['\x78']=_0x5aaed6['\x63\x6c\x69\x65\x6e\x74\x58'],_0x371920['\x79']=_0x5aaed6['\x63\x6c\x69\x65\x6e\x74\x59'],foldCurrent=_0x371920;return;}_0x5aaed6['\x73\x74\x6f\x70\x50\x72\x6f\x70\x61\x67'+'\x61\x74\x69\x6f\x6e'](),isDrawingBox=!![],startX=_0x5aaed6['\x63\x6c\x69\x65\x6e\x74\x58'],startY=_0x5aaed6['\x63\x6c\x69\x65\x6e\x74\x59'],currentBox=document['\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d'+'\x65\x6e\x74']('\x64\x69\x76'),currentBox['\x69\x64']='\x6b\x61\x74\x6c\x61\x2d\x62\x6f\x78',currentBox['\x73\x74\x79\x6c\x65']['\x6c\x65\x66\x74']=startX+'\x70\x78',currentBox['\x73\x74\x79\x6c\x65']['\x74\x6f\x70']=startY+'\x70\x78',document['\x62\x6f\x64\x79']['\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c'+'\x64'](currentBox);},_0x5451af);const _0x3584e9={};_0x3584e9['\x63\x61\x70\x74\x75\x72\x65']=!![],document['\x61\x64\x64\x45\x76\x65\x6e\x74\x4c\x69'+'\x73\x74\x65\x6e\x65\x72']('\x70\x6f\x69\x6e\x74\x65\x72\x6d\x6f\x76'+'\x65',_0x1536d9=>{if(isFolding&&katlamaOverlayCanvas){_0x1536d9['\x73\x74\x6f\x70\x50\x72\x6f\x70\x61\x67'+'\x61\x74\x69\x6f\x6e']();const _0xdeaafe={};_0xdeaafe['\x78']=_0x1536d9['\x63\x6c\x69\x65\x6e\x74\x58'],_0xdeaafe['\x79']=_0x1536d9['\x63\x6c\x69\x65\x6e\x74\x59'],foldCurrent=_0xdeaafe,cizKatlamaAnimasyonu(currentBgImg,currentFgImg,currentCaptureRect,foldStart,foldCurrent),agSenkronizeEt('\x67\x75\x6e\x63\x65\x6c\x6c\x65',foldStart,foldCurrent);return;}if(!isDrawingBox||!currentBox)return;_0x1536d9['\x73\x74\x6f\x70\x50\x72\x6f\x70\x61\x67'+'\x61\x74\x69\x6f\x6e']();const _0x588609=Math['\x61\x62\x73'](_0x1536d9['\x63\x6c\x69\x65\x6e\x74\x58']-startX),_0x13f8b6=Math['\x61\x62\x73'](_0x1536d9['\x63\x6c\x69\x65\x6e\x74\x59']-startY);currentBox['\x73\x74\x79\x6c\x65']['\x77\x69\x64\x74\x68']=_0x588609+'\x70\x78',currentBox['\x73\x74\x79\x6c\x65']['\x68\x65\x69\x67\x68\x74']=_0x13f8b6+'\x70\x78',currentBox['\x73\x74\x79\x6c\x65']['\x6c\x65\x66\x74']=Math['\x6d\x69\x6e'](startX,_0x1536d9['\x63\x6c\x69\x65\x6e\x74\x58'])+'\x70\x78',currentBox['\x73\x74\x79\x6c\x65']['\x74\x6f\x70']=Math['\x6d\x69\x6e'](startY,_0x1536d9['\x63\x6c\x69\x65\x6e\x74\x59'])+'\x70\x78';},_0x3584e9);const _0x27b695={};_0x27b695['\x63\x61\x70\x74\x75\x72\x65']=!![],document['\x61\x64\x64\x45\x76\x65\x6e\x74\x4c\x69'+'\x73\x74\x65\x6e\x65\x72']('\x70\x6f\x69\x6e\x74\x65\x72\x75\x70',async _0x5ec906=>{if(isFolding){_0x5ec906['\x73\x74\x6f\x70\x50\x72\x6f\x70\x61\x67'+'\x61\x74\x69\x6f\x6e'](),isFolding=![];if(foldStart&&foldCurrent){katlanmisBirak(foldStart,foldCurrent);if(typeof agSenkronizeEt==='\x66\x75\x6e\x63\x74\x69\x6f\x6e')agSenkronizeEt('\x69\x70\x74\x61\x6c');sifirlaKatlama();}else iptalEt();return;}if(!isDrawingBox||!currentBox)return;_0x5ec906['\x73\x74\x6f\x70\x50\x72\x6f\x70\x61\x67'+'\x61\x74\x69\x6f\x6e'](),isDrawingBox=![];const _0x401a2c=currentBox['\x67\x65\x74\x42\x6f\x75\x6e\x64\x69\x6e'+'\x67\x43\x6c\x69\x65\x6e\x74\x52\x65\x63'+'\x74']();currentBox['\x72\x65\x6d\x6f\x76\x65'](),currentBox=null;if(_0x401a2c['\x77\x69\x64\x74\x68']<0x1994+0xcdb+-0x263d||_0x401a2c['\x68\x65\x69\x67\x68\x74']<0xdb2+-0x6d*0x3+-0xc39)return;const _0x53a46b=document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74'+'\x42\x79\x49\x64']('\x64\x72\x61\x77\x69\x6e\x67\x2d\x63\x61'+'\x6e\x76\x61\x73'),_0x212064=document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74'+'\x42\x79\x49\x64']('\x62\x67\x2d\x63\x61\x6e\x76\x61\x73');if(!_0x53a46b)return;try{const _0x2ff21d=document['\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d'+'\x65\x6e\x74']('\x63\x61\x6e\x76\x61\x73');_0x2ff21d['\x77\x69\x64\x74\x68']=_0x401a2c['\x77\x69\x64\x74\x68'],_0x2ff21d['\x68\x65\x69\x67\x68\x74']=_0x401a2c['\x68\x65\x69\x67\x68\x74'];const _0x118fe1=document['\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d'+'\x65\x6e\x74']('\x63\x61\x6e\x76\x61\x73');_0x118fe1['\x77\x69\x64\x74\x68']=_0x401a2c['\x77\x69\x64\x74\x68'],_0x118fe1['\x68\x65\x69\x67\x68\x74']=_0x401a2c['\x68\x65\x69\x67\x68\x74'];const _0x859445=_0x53a46b['\x67\x65\x74\x42\x6f\x75\x6e\x64\x69\x6e'+'\x67\x43\x6c\x69\x65\x6e\x74\x52\x65\x63'+'\x74'](),_0x5402d3=_0x53a46b['\x77\x69\x64\x74\x68']/_0x859445['\x77\x69\x64\x74\x68'],_0x2284af=_0x53a46b['\x68\x65\x69\x67\x68\x74']/_0x859445['\x68\x65\x69\x67\x68\x74'],_0x571c7a=(_0x401a2c['\x6c\x65\x66\x74']-_0x859445['\x6c\x65\x66\x74'])*_0x5402d3,_0x40151b=(_0x401a2c['\x74\x6f\x70']-_0x859445['\x74\x6f\x70'])*_0x2284af,_0x54058e=_0x401a2c['\x77\x69\x64\x74\x68']*_0x5402d3,_0x5a33b2=_0x401a2c['\x68\x65\x69\x67\x68\x74']*_0x2284af;let _0x13cb95=document['\x62\x6f\x64\x79']['\x73\x74\x79\x6c\x65']['\x62\x61\x63\x6b\x67\x72\x6f\x75\x6e\x64'+'\x43\x6f\x6c\x6f\x72']||'\x23\x66\x66\x66\x66\x66\x66';try{const _0x3b7653=_0x53a46b['\x67\x65\x74\x43\x6f\x6e\x74\x65\x78\x74']('\x32\x64'),_0xfa9b9e={};_0xfa9b9e['\x78']=_0x401a2c['\x6c\x65\x66\x74']+_0x401a2c['\x77\x69\x64\x74\x68']/(0x787+-0xc2*-0x2e+-0x2a61),_0xfa9b9e['\x79']=_0x401a2c['\x74\x6f\x70']-(-0x2*0xbe9+-0x264c+0x1*0x3e23);const _0x13c126={};_0x13c126['\x78']=_0x401a2c['\x6c\x65\x66\x74']+_0x401a2c['\x77\x69\x64\x74\x68']/(-0x329*-0x8+0x1a41*-0x1+0xfb),_0x13c126['\x79']=_0x401a2c['\x74\x6f\x70']+_0x401a2c['\x68\x65\x69\x67\x68\x74']+(-0x999+0x2599+0x1d*-0xf7);const _0x13062f={};_0x13062f['\x78']=_0x401a2c['\x6c\x65\x66\x74']-(-0x24f+-0x382*0x3+0xcda),_0x13062f['\x79']=_0x401a2c['\x74\x6f\x70']+_0x401a2c['\x68\x65\x69\x67\x68\x74']/(0x1a8*-0x16+-0xce6*-0x1+0x178c);const _0x54c2cb={};_0x54c2cb['\x78']=_0x401a2c['\x6c\x65\x66\x74']+_0x401a2c['\x77\x69\x64\x74\x68']+(0x3bf+0x1e39+-0x21f3),_0x54c2cb['\x79']=_0x401a2c['\x74\x6f\x70']+_0x401a2c['\x68\x65\x69\x67\x68\x74']/(0x57*-0x52+-0xf*-0x17b+-0x5ab*-0x1);const _0x5d4ae8=[_0xfa9b9e,_0x13c126,_0x13062f,_0x54c2cb];for(let _0x53af24 of _0x5d4ae8){const _0x44a7e3=(_0x53af24['\x78']-_0x859445['\x6c\x65\x66\x74'])*_0x5402d3*dpr,_0x23c092=(_0x53af24['\x79']-_0x859445['\x74\x6f\x70'])*_0x2284af*dpr;if(_0x44a7e3>=-0x275*-0xd+-0xf+-0xe*0x247&&_0x44a7e3<_0x53a46b['\x77\x69\x64\x74\x68']&&_0x23c092>=-0x2018+-0xb*-0x2dc+-0x4*-0x29&&_0x23c092<_0x53a46b['\x68\x65\x69\x67\x68\x74']){const _0x1c99c4=_0x3b7653['\x67\x65\x74\x49\x6d\x61\x67\x65\x44\x61'+'\x74\x61'](_0x44a7e3,_0x23c092,-0x1*0x1a7d+0xbe9+-0x1*-0xe95,-0x36a+-0xba5+0xf10)['\x64\x61\x74\x61'];if(_0x1c99c4[0x1e*0x127+0x1*-0x1426+-0xe69]>0x1e0d*0x1+-0x22c2+0x5af){_0x13cb95='\x72\x67\x62\x61\x28'+_0x1c99c4[-0x2*-0xacf+0x14d6+0x16*-0x1ee]+'\x2c\x20'+_0x1c99c4[0x1*-0x158b+-0x2566+-0x2*-0x1d79]+'\x2c\x20'+_0x1c99c4[0x15c+0x2168+-0x22c2]+'\x2c\x20\x31\x29';break;}else{if(_0x212064){const _0x534a95=_0x212064['\x67\x65\x74\x43\x6f\x6e\x74\x65\x78\x74']('\x32\x64')['\x67\x65\x74\x49\x6d\x61\x67\x65\x44\x61'+'\x74\x61'](_0x44a7e3,_0x23c092,0x3*0x43c+-0x2588+0x27*0xa3,-0x1fc8+-0x1ba+-0x1*-0x2183)['\x64\x61\x74\x61'];if(_0x534a95[-0x1dde+-0x99f+-0x4f*-0x80]>-0x1*0xc9a+-0x11ed*-0x1+0x3*-0x173){_0x13cb95='\x72\x67\x62\x61\x28'+_0x534a95[0x1ce9+0x1c93+-0x397c]+'\x2c\x20'+_0x534a95[0xb9c+0x2*0x496+-0x14c7]+'\x2c\x20'+_0x534a95[0xcfa+0x2454+-0x314c]+'\x2c\x20\x31\x29';break;}}}}}}catch(_0x3dee3b){console['\x77\x61\x72\x6e']('\x41\x6b\u0131\x6c\x6c\u0131\x20\x72\x65\x6e'+'\x6b\x20\x6f\x6b\x75\x6d\x61\x20\x62\x61'+'\u015f\x61\x72\u0131\x73\u0131\x7a\x3a',_0x3dee3b);}{_0x2ff21d['\x67\x65\x74\x43\x6f\x6e\x74\x65\x78\x74']('\x32\x64')['\x66\x69\x6c\x6c\x53\x74\x79\x6c\x65']=_0x13cb95,_0x2ff21d['\x67\x65\x74\x43\x6f\x6e\x74\x65\x78\x74']('\x32\x64')['\x66\x69\x6c\x6c\x52\x65\x63\x74'](0x1*0x1105+0x15b4+-0x26b9*0x1,-0x14cc+-0x13*0x1bc+-0x6b8*-0x8,_0x401a2c['\x77\x69\x64\x74\x68'],_0x401a2c['\x68\x65\x69\x67\x68\x74']);}{_0x118fe1['\x67\x65\x74\x43\x6f\x6e\x74\x65\x78\x74']('\x32\x64')['\x66\x69\x6c\x6c\x53\x74\x79\x6c\x65']=_0x13cb95,_0x118fe1['\x67\x65\x74\x43\x6f\x6e\x74\x65\x78\x74']('\x32\x64')['\x66\x69\x6c\x6c\x52\x65\x63\x74'](0x996+0x71d*-0x5+-0x1*-0x19fb,-0xb1a+-0x2119+0x2c33,_0x401a2c['\x77\x69\x64\x74\x68'],_0x401a2c['\x68\x65\x69\x67\x68\x74']),_0x212064&&_0x118fe1['\x67\x65\x74\x43\x6f\x6e\x74\x65\x78\x74']('\x32\x64')['\x64\x72\x61\x77\x49\x6d\x61\x67\x65'](_0x212064,_0x571c7a,_0x40151b,_0x54058e,_0x5a33b2,-0x1*0x2459+-0x16ae+0x3b07,0x3d*0x61+0x6dd*0x1+-0x1dfa*0x1,_0x401a2c['\x77\x69\x64\x74\x68'],_0x401a2c['\x68\x65\x69\x67\x68\x74']);}_0x118fe1['\x67\x65\x74\x43\x6f\x6e\x74\x65\x78\x74']('\x32\x64')['\x64\x72\x61\x77\x49\x6d\x61\x67\x65'](_0x53a46b,_0x571c7a,_0x40151b,_0x54058e,_0x5a33b2,0x1f56+0x2645+-0x459b,0x7db*-0x1+0x1c35+-0x1*0x145a,_0x401a2c['\x77\x69\x64\x74\x68'],_0x401a2c['\x68\x65\x69\x67\x68\x74']);const _0x5d7d55=_0x2ff21d['\x74\x6f\x44\x61\x74\x61\x55\x52\x4c']('\x69\x6d\x61\x67\x65\x2f\x70\x6e\x67'),_0x564e6e=_0x118fe1['\x74\x6f\x44\x61\x74\x61\x55\x52\x4c']('\x69\x6d\x61\x67\x65\x2f\x70\x6e\x67'),_0x5106bf={};_0x5106bf['\x78']=_0x401a2c['\x6c\x65\x66\x74'],_0x5106bf['\x79']=_0x401a2c['\x74\x6f\x70'],_0x5106bf['\x77']=_0x401a2c['\x77\x69\x64\x74\x68'],_0x5106bf['\x68']=_0x401a2c['\x68\x65\x69\x67\x68\x74'],currentCaptureRect=_0x5106bf,Promise['\x61\x6c\x6c']([new Promise(_0x5974c2=>{currentBgImg=new Image(),currentBgImg['\x6f\x6e\x6c\x6f\x61\x64']=_0x5974c2,currentBgImg['\x73\x72\x63']=_0x5d7d55;}),new Promise(_0x1336d9=>{currentFgImg=new Image(),currentFgImg['\x6f\x6e\x6c\x6f\x61\x64']=_0x1336d9,currentFgImg['\x73\x72\x63']=_0x564e6e;})])['\x74\x68\x65\x6e'](()=>{baslatKatlamaEkrani(),agSenkronizeEt('\x62\x61\x73\x6c\x61',null,null,_0x5d7d55,_0x564e6e,currentCaptureRect);});}catch(_0x17e85a){console['\x65\x72\x72\x6f\x72']('\x4b\x65\x73\x69\x6d\x20\x68\x61\x74\x61'+'\x73\u0131\x3a',_0x17e85a);}},_0x27b695),window['\x61\x64\x64\x45\x76\x65\x6e\x74\x4c\x69'+'\x73\x74\x65\x6e\x65\x72']('\x6b\x61\x74\x6c\x61\x6d\x61\x5f\x73\x69'+'\x73\x74\x65\x6d\x69',_0x3cd7e7=>{const _0x2452c9=_0x3cd7e7['\x64\x65\x74\x61\x69\x6c'];if(!_0x2452c9||_0x2452c9['\x73\x65\x6e\x64\x65\x72\x49\x64']&&window['\x6d\x79\x53\x65\x73\x73\x69\x6f\x6e\x49'+'\x64']&&_0x2452c9['\x73\x65\x6e\x64\x65\x72\x49\x64']===window['\x6d\x79\x53\x65\x73\x73\x69\x6f\x6e\x49'+'\x64'])return;if(_0x2452c9['\x74\x79\x70\x65']==='\x6b\x61\x74\x6c\x61\x6d\x61\x5f\x62\x61'+'\x73\x6c\x61\x5f\x63\x68\x75\x6e\x6b'){if(!window['\x6b\x43\x68\x75\x6e\x6b\x73'])window['\x6b\x43\x68\x75\x6e\x6b\x73']={};if(!window['\x6b\x43\x68\x75\x6e\x6b\x73'][_0x2452c9['\x69\x6d\x67\x49\x64']])window['\x6b\x43\x68\x75\x6e\x6b\x73'][_0x2452c9['\x69\x6d\x67\x49\x64']]={'\x63\x68\x75\x6e\x6b\x73':new Array(_0x2452c9['\x74\x6f\x74\x61\x6c']),'\x63\x6f\x75\x6e\x74':0x0,'\x69\x73\x42\x67':_0x2452c9['\x69\x73\x42\x67'],'\x69\x73\x46\x67':_0x2452c9['\x69\x73\x46\x67']};const _0x1dcd94=window['\x6b\x43\x68\x75\x6e\x6b\x73'][_0x2452c9['\x69\x6d\x67\x49\x64']];!_0x1dcd94['\x63\x68\x75\x6e\x6b\x73'][_0x2452c9['\x69\x6e\x64\x65\x78']]&&(_0x1dcd94['\x63\x68\x75\x6e\x6b\x73'][_0x2452c9['\x69\x6e\x64\x65\x78']]=_0x2452c9['\x63\x68\x75\x6e\x6b'],_0x1dcd94['\x63\x6f\x75\x6e\x74']++);if(_0x1dcd94['\x63\x6f\x75\x6e\x74']===_0x2452c9['\x74\x6f\x74\x61\x6c']){const _0x1730f4=_0x1dcd94['\x63\x68\x75\x6e\x6b\x73']['\x6a\x6f\x69\x6e']('');delete window['\x6b\x43\x68\x75\x6e\x6b\x73'][_0x2452c9['\x69\x6d\x67\x49\x64']];if(_0x1dcd94['\x69\x73\x42\x67'])currentBgImg=new Image(),currentBgImg['\x73\x72\x63']=_0x1730f4;else _0x1dcd94['\x69\x73\x46\x67']&&(currentFgImg=new Image(),currentFgImg['\x6f\x6e\x6c\x6f\x61\x64']=()=>{currentCaptureRect=canvasToScreenCoords(_0x2452c9['\x72\x65\x63\x74']),baslatKatlamaEkrani(!![]);},currentFgImg['\x73\x72\x63']=_0x1730f4);}}else{if(_0x2452c9['\x74\x79\x70\x65']==='\x6b\x61\x74\x6c\x61\x6d\x61\x5f\x67\x75'+'\x6e\x63\x65\x6c\x6c\x65')katlamaOverlayCanvas&&cizKatlamaAnimasyonu(currentBgImg,currentFgImg,currentCaptureRect,canvasToScreenCoords(_0x2452c9['\x66\x6f\x6c\x64\x53\x74\x61\x72\x74']),canvasToScreenCoords(_0x2452c9['\x66\x6f\x6c\x64\x43\x75\x72\x72\x65\x6e'+'\x74']));else{if(_0x2452c9['\x74\x79\x70\x65']==='\x6b\x61\x74\x6c\x61\x6d\x61\x5f\x69\x70'+'\x74\x61\x6c')iptalEt(!![]);else _0x2452c9['\x74\x79\x70\x65']==='\x6b\x61\x74\x6c\x61\x6d\x61\x5f\x74\x61'+'\x6d\x61\x6d\x6c\x61'&&(katIziBirak(canvasToScreenCoords(_0x2452c9['\x66\x6f\x6c\x64\x53\x74\x61\x72\x74']),canvasToScreenCoords(_0x2452c9['\x66\x6f\x6c\x64\x43\x75\x72\x72\x65\x6e'+'\x74'])),iptalEt(!![]));}}});});function baslatKatlamaEkrani(_0x2420b2=![]){if(katlamaOverlayCanvas)katlamaOverlayCanvas['\x72\x65\x6d\x6f\x76\x65']();const _0x3e5ef6=document['\x71\x75\x65\x72\x79\x53\x65\x6c\x65\x63'+'\x74\x6f\x72']('\x2e\x6b\x61\x74\x6c\x61\x6d\x61\x2d\x75'+'\x69');if(_0x3e5ef6)_0x3e5ef6['\x72\x65\x6d\x6f\x76\x65']();katlamaOverlayCanvas=document['\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d'+'\x65\x6e\x74']('\x63\x61\x6e\x76\x61\x73'),katlamaOverlayCanvas['\x69\x64']='\x6b\x61\x74\x6c\x61\x6d\x61\x2d\x6f\x76'+'\x65\x72\x6c\x61\x79';const _0x3c3552=window['\x64\x65\x76\x69\x63\x65\x50\x69\x78\x65'+'\x6c\x52\x61\x74\x69\x6f']||-0x1992+-0x3*-0x419+-0xd48*-0x1;katlamaOverlayCanvas['\x77\x69\x64\x74\x68']=window['\x69\x6e\x6e\x65\x72\x57\x69\x64\x74\x68']*_0x3c3552,katlamaOverlayCanvas['\x68\x65\x69\x67\x68\x74']=window['\x69\x6e\x6e\x65\x72\x48\x65\x69\x67\x68'+'\x74']*_0x3c3552,katlamaOverlayCanvas['\x73\x74\x79\x6c\x65']['\x70\x6f\x73\x69\x74\x69\x6f\x6e']='\x61\x62\x73\x6f\x6c\x75\x74\x65',katlamaOverlayCanvas['\x73\x74\x79\x6c\x65']['\x74\x6f\x70']='\x30',katlamaOverlayCanvas['\x73\x74\x79\x6c\x65']['\x6c\x65\x66\x74']='\x30',katlamaOverlayCanvas['\x73\x74\x79\x6c\x65']['\x77\x69\x64\x74\x68']=window['\x69\x6e\x6e\x65\x72\x57\x69\x64\x74\x68']+'\x70\x78',katlamaOverlayCanvas['\x73\x74\x79\x6c\x65']['\x68\x65\x69\x67\x68\x74']=window['\x69\x6e\x6e\x65\x72\x48\x65\x69\x67\x68'+'\x74']+'\x70\x78',katlamaOverlayCanvas['\x73\x74\x79\x6c\x65']['\x7a\x49\x6e\x64\x65\x78']='\x31\x30\x30\x30\x30',katlamaOverlayCanvas['\x73\x74\x79\x6c\x65']['\x70\x6f\x69\x6e\x74\x65\x72\x45\x76\x65'+'\x6e\x74\x73']='\x61\x75\x74\x6f',katlamaOverlayCanvas['\x73\x74\x79\x6c\x65']['\x74\x6f\x75\x63\x68\x41\x63\x74\x69\x6f'+'\x6e']='\x6e\x6f\x6e\x65',document['\x62\x6f\x64\x79']['\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c'+'\x64'](katlamaOverlayCanvas),katlamaOverlayCtx=katlamaOverlayCanvas['\x67\x65\x74\x43\x6f\x6e\x74\x65\x78\x74']('\x32\x64'),katlamaOverlayCtx['\x73\x63\x61\x6c\x65'](_0x3c3552,_0x3c3552);}function sifirlaKatlama(){katlamaOverlayCanvas&&(katlamaOverlayCanvas['\x72\x65\x6d\x6f\x76\x65'](),katlamaOverlayCanvas=null),currentBgImg=null,currentFgImg=null,currentCaptureRect=null,foldStart=null,foldCurrent=null,isFolding=![],isDrawingBox=![],currentBox&&(currentBox['\x72\x65\x6d\x6f\x76\x65'](),currentBox=null);}function iptalEt(_0x4b6fe2=![]){window['\x69\x73\x4b\x61\x74\x6c\x61\x41\x63\x74'+'\x69\x76\x65']=![];const _0x5d2426=document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74'+'\x42\x79\x49\x64']('\x62\x74\x6e\x2d\x6b\x61\x74\x6c\x61');if(_0x5d2426)_0x5d2426['\x63\x6c\x61\x73\x73\x4c\x69\x73\x74']['\x72\x65\x6d\x6f\x76\x65']('\x62\x74\x6e\x2d\x6b\x61\x74\x6c\x61\x2d'+'\x61\x63\x74\x69\x76\x65');const _0x57e382=document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74'+'\x42\x79\x49\x64']('\x62\x74\x6e\x2d\x73\x65\x66\x66\x61\x66'+'\x2d\x6b\x61\x74\x6c\x61');if(_0x57e382)_0x57e382['\x63\x6c\x61\x73\x73\x4c\x69\x73\x74']['\x72\x65\x6d\x6f\x76\x65']('\x62\x74\x6e\x2d\x6b\x61\x74\x6c\x61\x2d'+'\x61\x63\x74\x69\x76\x65');document['\x62\x6f\x64\x79']['\x63\x6c\x61\x73\x73\x4c\x69\x73\x74']['\x72\x65\x6d\x6f\x76\x65']('\x6b\x61\x74\x6c\x61\x2d\x61\x63\x74\x69'+'\x76\x65');katlamaOverlayCanvas&&(katlamaOverlayCanvas['\x72\x65\x6d\x6f\x76\x65'](),katlamaOverlayCanvas=null);const _0x4e8808=document['\x71\x75\x65\x72\x79\x53\x65\x6c\x65\x63'+'\x74\x6f\x72']('\x2e\x6b\x61\x74\x6c\x61\x6d\x61\x2d\x75'+'\x69');if(_0x4e8808)_0x4e8808['\x72\x65\x6d\x6f\x76\x65']();currentBgImg=null,currentFgImg=null,currentCaptureRect=null,foldStart=null,foldCurrent=null,isFolding=![],isDrawingBox=![],currentBox&&(currentBox['\x72\x65\x6d\x6f\x76\x65'](),currentBox=null);}function katIziBirak(_0x557f5b,_0x4935f1){const _0x9edda2=_0x4935f1['\x78']-_0x557f5b['\x78'],_0x5e3e1a=_0x4935f1['\x79']-_0x557f5b['\x79'];if(Math['\x61\x62\x73'](_0x9edda2)<-0x2b3*0x7+0x9df*-0x3+0x3087&&Math['\x61\x62\x73'](_0x5e3e1a)<0x1341+0x22bd*-0x1+0xf81)return;const _0x3af206=(_0x557f5b['\x78']+_0x4935f1['\x78'])/(0x225d+0x1*-0x254f+0xbd*0x4),_0x283c3b=(_0x557f5b['\x79']+_0x4935f1['\x79'])/(-0xa*-0xcf+0x1bf5+-0x2409),_0x3bc13e=-_0x5e3e1a,_0x24dd98=_0x9edda2;let _0x54756a=_0x3af206+_0x3bc13e*(-0xf8a+-0x2389+0x36fb),_0x26f27a=_0x283c3b+_0x24dd98*(-0x1*-0x2151+0x22e6+-0x1*0x404f),_0xd1008=_0x3af206-_0x3bc13e*(-0x1ee8+-0x23fb*0x1+0x46cb),_0x3c40e3=_0x283c3b-_0x24dd98*(0x1*0x87d+-0x4fa+0x1*0x65);if(currentCaptureRect){const _0x5beb75=currentCaptureRect['\x78'],_0x25acb0=currentCaptureRect['\x78']+currentCaptureRect['\x77'],_0x180a7a=currentCaptureRect['\x79'],_0x303a4e=currentCaptureRect['\x79']+currentCaptureRect['\x68'];let _0x4cebdc=[];if(_0x3bc13e!==0x478+-0x64f+0x1d7){let _0x77a342=(_0x5beb75-_0x3af206)/_0x3bc13e,_0x28a352=_0x283c3b+_0x24dd98*_0x77a342;if(_0x28a352>=_0x180a7a&&_0x28a352<=_0x303a4e)_0x4cebdc['\x70\x75\x73\x68']({'\x78':_0x5beb75,'\x79':_0x28a352});}if(_0x3bc13e!==-0x2518+-0x97*-0x17+0x1787){let _0x1b349c=(_0x25acb0-_0x3af206)/_0x3bc13e,_0x33a503=_0x283c3b+_0x24dd98*_0x1b349c;if(_0x33a503>=_0x180a7a&&_0x33a503<=_0x303a4e)_0x4cebdc['\x70\x75\x73\x68']({'\x78':_0x25acb0,'\x79':_0x33a503});}if(_0x24dd98!==-0x2c*0xb6+-0x65*-0x15+0x16ff){let _0x4c25d6=(_0x180a7a-_0x283c3b)/_0x24dd98,_0xbe76d1=_0x3af206+_0x3bc13e*_0x4c25d6;if(_0xbe76d1>=_0x5beb75&&_0xbe76d1<=_0x25acb0)_0x4cebdc['\x70\x75\x73\x68']({'\x78':_0xbe76d1,'\x79':_0x180a7a});}if(_0x24dd98!==0x1*0x3a+0x53b*0x7+-0x24d7){let _0x2dbb0a=(_0x303a4e-_0x283c3b)/_0x24dd98,_0x38907d=_0x3af206+_0x3bc13e*_0x2dbb0a;if(_0x38907d>=_0x5beb75&&_0x38907d<=_0x25acb0)_0x4cebdc['\x70\x75\x73\x68']({'\x78':_0x38907d,'\x79':_0x303a4e});}let _0x1a02fe=[];for(let _0x3103a9 of _0x4cebdc){!_0x1a02fe['\x73\x6f\x6d\x65'](_0x3366b3=>Math['\x61\x62\x73'](_0x3366b3['\x78']-_0x3103a9['\x78'])<0x23e3+0xd30+-0x11*0x2e3+0.1&&Math['\x61\x62\x73'](_0x3366b3['\x79']-_0x3103a9['\x79'])<-0x1*-0x12ec+-0x24*0x27+-0xd70*0x1+0.1)&&_0x1a02fe['\x70\x75\x73\x68'](_0x3103a9);}if(_0x1a02fe['\x6c\x65\x6e\x67\x74\x68']===0x1*-0x93a+0x20c7*0x1+-0x178b)_0x54756a=_0x1a02fe[0x1*0x1a2d+0x1cd2*0x1+-0x27*0x169]['\x78'],_0x26f27a=_0x1a02fe[0x2*-0x1013+-0x672+0x2698]['\x79'],_0xd1008=_0x1a02fe[0x2c*0x92+0xeae+0x1*-0x27c5]['\x78'],_0x3c40e3=_0x1a02fe[-0x1803+0x57d*0x2+-0xd0a*-0x1]['\x79'];else return;}if(window['\x64\x72\x61\x77\x6e\x53\x74\x72\x6f\x6b'+'\x65\x73']){const _0x3812c4=window['\x64\x65\x76\x69\x63\x65\x50\x69\x78\x65'+'\x6c\x52\x61\x74\x69\x6f']||0x1*-0x5a1+-0x312*-0xa+-0x1912,_0x4340b8={};_0x4340b8['\x78']=_0x54756a*_0x3812c4,_0x4340b8['\x79']=_0x26f27a*_0x3812c4;const _0x1aac0f={};_0x1aac0f['\x78']=_0xd1008*_0x3812c4,_0x1aac0f['\x79']=_0x3c40e3*_0x3812c4;const _0x3b0076={'\x74\x79\x70\x65':'\x73\x65\x67\x6d\x65\x6e\x74','\x70\x31':_0x4340b8,'\x70\x32':_0x1aac0f,'\x63\x6f\x6c\x6f\x72':'\x23\x61\x61\x61\x61\x61\x61','\x77\x69\x64\x74\x68':(-0x377*0xa+0x7f*0xa+0x1db3)*_0x3812c4,'\x6c\x61\x62\x65\x6c\x31':'','\x6c\x61\x62\x65\x6c\x32':'','\x69\x64':Date['\x6e\x6f\x77']()+Math['\x72\x61\x6e\x64\x6f\x6d']()};window['\x64\x72\x61\x77\x6e\x53\x74\x72\x6f\x6b'+'\x65\x73']['\x70\x75\x73\x68'](_0x3b0076),typeof window['\x72\x65\x64\x72\x61\x77\x41\x6c\x6c\x53'+'\x74\x72\x6f\x6b\x65\x73']==='\x66\x75\x6e\x63\x74\x69\x6f\x6e'&&window['\x72\x65\x64\x72\x61\x77\x41\x6c\x6c\x53'+'\x74\x72\x6f\x6b\x65\x73']();}}function katlanmisBirak(_0x1a02b7,_0x595f2a){if(!katlamaOverlayCanvas||!window['\x64\x72\x61\x77\x6e\x53\x74\x72\x6f\x6b'+'\x65\x73'])return;let _0x2efaa6=-0x1f2d+0x1*0x2309+-0x3dc,_0xbaaa15=0x7b9+0x1920+0xaf3*-0x3,_0x3e286e=window['\x69\x6e\x6e\x65\x72\x57\x69\x64\x74\x68'],_0x286a57=window['\x69\x6e\x6e\x65\x72\x48\x65\x69\x67\x68'+'\x74'];if(currentCaptureRect&&_0x1a02b7&&_0x595f2a){const _0x5aeb34=(_0x1b752c,_0x4229cc,_0x5594d8,_0x102568)=>{const _0x4fd681=_0x102568['\x78']-_0x5594d8['\x78'],_0x12bd00=_0x102568['\x79']-_0x5594d8['\x79'],_0x5bce34=(_0x4fd681*_0x4fd681-_0x12bd00*_0x12bd00)/(_0x4fd681*_0x4fd681+_0x12bd00*_0x12bd00),_0x1ec1cc=(-0x175f+0x1f*0x5d+0x16*0x8d)*_0x4fd681*_0x12bd00/(_0x4fd681*_0x4fd681+_0x12bd00*_0x12bd00),_0xcbcb76={};return _0xcbcb76['\x78']=_0x5bce34*(_0x1b752c-_0x5594d8['\x78'])+_0x1ec1cc*(_0x4229cc-_0x5594d8['\x79'])+_0x5594d8['\x78'],_0xcbcb76['\x79']=_0x1ec1cc*(_0x1b752c-_0x5594d8['\x78'])-_0x5bce34*(_0x4229cc-_0x5594d8['\x79'])+_0x5594d8['\x79'],_0xcbcb76;},_0xa32cf4=currentCaptureRect,_0x3ae813={};_0x3ae813['\x78']=_0xa32cf4['\x78'],_0x3ae813['\x79']=_0xa32cf4['\x79'];const _0x59967f={};_0x59967f['\x78']=_0xa32cf4['\x78']+_0xa32cf4['\x77'],_0x59967f['\x79']=_0xa32cf4['\x79'];const _0x3bb0c7={};_0x3bb0c7['\x78']=_0xa32cf4['\x78']+_0xa32cf4['\x77'],_0x3bb0c7['\x79']=_0xa32cf4['\x79']+_0xa32cf4['\x68'];const _0x2c0009={};_0x2c0009['\x78']=_0xa32cf4['\x78'],_0x2c0009['\x79']=_0xa32cf4['\x79']+_0xa32cf4['\x68'];const _0x35d96a=[_0x3ae813,_0x59967f,_0x3bb0c7,_0x2c0009];for(let _0x251d0c=0x1b31+0xe*-0x12e+-0x38f*0x3;_0x251d0c<-0x8f*0x18+0x2*0x8e2+0x8*-0x8b;_0x251d0c++){_0x35d96a['\x70\x75\x73\x68'](_0x5aeb34(_0x35d96a[_0x251d0c]['\x78'],_0x35d96a[_0x251d0c]['\x79'],_0x1a02b7,_0x595f2a));}let _0x392f29=Math['\x6d\x69\x6e'](..._0x35d96a['\x6d\x61\x70'](_0x16d3bf=>_0x16d3bf['\x78'])),_0x310e0e=Math['\x6d\x61\x78'](..._0x35d96a['\x6d\x61\x70'](_0x7a7ac8=>_0x7a7ac8['\x78'])),_0x51db76=Math['\x6d\x69\x6e'](..._0x35d96a['\x6d\x61\x70'](_0x5050d8=>_0x5050d8['\x79'])),_0x3502aa=Math['\x6d\x61\x78'](..._0x35d96a['\x6d\x61\x70'](_0x34c512=>_0x34c512['\x79']));_0x392f29=Math['\x66\x6c\x6f\x6f\x72'](Math['\x6d\x61\x78'](0x4*-0x653+0x1eb*0x5+0xfb5,_0x392f29-(-0x588*-0x7+-0x106*-0xd+0x1*-0x33f2))),_0x51db76=Math['\x66\x6c\x6f\x6f\x72'](Math['\x6d\x61\x78'](-0x1d27*-0x1+-0x824+-0x1503*0x1,_0x51db76-(-0x19*0x32+0xe3*-0xf+0x1243*0x1))),_0x310e0e=Math['\x63\x65\x69\x6c'](Math['\x6d\x69\x6e'](window['\x69\x6e\x6e\x65\x72\x57\x69\x64\x74\x68'],_0x310e0e+(-0x2*0x229+0x37d+0xe9))),_0x3502aa=Math['\x63\x65\x69\x6c'](Math['\x6d\x69\x6e'](window['\x69\x6e\x6e\x65\x72\x48\x65\x69\x67\x68'+'\x74'],_0x3502aa+(-0x1249+0x11a2+-0x1*-0xbb))),_0x2efaa6=_0x392f29,_0xbaaa15=_0x51db76,_0x3e286e=_0x310e0e-_0x392f29,_0x286a57=_0x3502aa-_0x51db76;}const _0x2e324f=window['\x64\x65\x76\x69\x63\x65\x50\x69\x78\x65'+'\x6c\x52\x61\x74\x69\x6f']||0x978+0x10d*0x5+-0xeb8,_0x15febc=document['\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d'+'\x65\x6e\x74']('\x63\x61\x6e\x76\x61\x73');_0x15febc['\x77\x69\x64\x74\x68']=_0x3e286e*_0x2e324f,_0x15febc['\x68\x65\x69\x67\x68\x74']=_0x286a57*_0x2e324f;const _0x50f773=_0x15febc['\x67\x65\x74\x43\x6f\x6e\x74\x65\x78\x74']('\x32\x64');_0x50f773['\x73\x63\x61\x6c\x65'](_0x2e324f,_0x2e324f),_0x50f773['\x64\x72\x61\x77\x49\x6d\x61\x67\x65'](katlamaOverlayCanvas,-_0x2efaa6,-_0xbaaa15,window['\x69\x6e\x6e\x65\x72\x57\x69\x64\x74\x68'],window['\x69\x6e\x6e\x65\x72\x48\x65\x69\x67\x68'+'\x74']);const _0x6c7d4=_0x15febc['\x74\x6f\x44\x61\x74\x61\x55\x52\x4c']('\x69\x6d\x61\x67\x65\x2f\x70\x6e\x67'),_0x6550db={};_0x6550db['\x78']=_0x1a02b7['\x78'],_0x6550db['\x79']=_0x1a02b7['\x79'];let _0x1c4f54=_0x6550db;const _0x4d4f29={};_0x4d4f29['\x78']=_0x595f2a['\x78'],_0x4d4f29['\x79']=_0x595f2a['\x79'];let _0x1c7405=_0x4d4f29;if(currentCaptureRect&&_0x1a02b7&&_0x595f2a){const _0x1da7b3=_0x595f2a['\x78']-_0x1a02b7['\x78'],_0x5a8385=_0x595f2a['\x79']-_0x1a02b7['\x79'];if(Math['\x61\x62\x73'](_0x1da7b3)>0x266b+-0x14b7*-0x1+-0x57*0xae+0.1||Math['\x61\x62\x73'](_0x5a8385)>0xf3f*0x2+0x19ac+-0x229*0x1a+0.1){const _0x49a147=(_0x1a02b7['\x78']+_0x595f2a['\x78'])/(0xce+-0x25b1+-0x1*-0x24e5),_0x431267=(_0x1a02b7['\x79']+_0x595f2a['\x79'])/(-0x6aa+-0xaa*0x35+-0x1d2*-0x17),_0x5724b7=-_0x5a8385,_0x30f043=_0x1da7b3,_0x35fdf6=currentCaptureRect['\x78'],_0x8d0bd5=currentCaptureRect['\x78']+currentCaptureRect['\x77'],_0x2a91cc=currentCaptureRect['\x79'],_0x142689=currentCaptureRect['\x79']+currentCaptureRect['\x68'];let _0x1de3d2=[];if(_0x5724b7!==0x1aa8+-0x332*0x9+0x21a){let _0x28c0c8=(_0x35fdf6-_0x49a147)/_0x5724b7,_0x435c76=_0x431267+_0x30f043*_0x28c0c8;if(_0x435c76>=_0x2a91cc&&_0x435c76<=_0x142689)_0x1de3d2['\x70\x75\x73\x68']({'\x78':_0x35fdf6,'\x79':_0x435c76});_0x28c0c8=(_0x8d0bd5-_0x49a147)/_0x5724b7,_0x435c76=_0x431267+_0x30f043*_0x28c0c8;if(_0x435c76>=_0x2a91cc&&_0x435c76<=_0x142689)_0x1de3d2['\x70\x75\x73\x68']({'\x78':_0x8d0bd5,'\x79':_0x435c76});}if(_0x30f043!==0x114d+-0x45d*0x1+-0xcf0){let _0x444a4a=(_0x2a91cc-_0x431267)/_0x30f043,_0x102798=_0x49a147+_0x5724b7*_0x444a4a;if(_0x102798>=_0x35fdf6&&_0x102798<=_0x8d0bd5)_0x1de3d2['\x70\x75\x73\x68']({'\x78':_0x102798,'\x79':_0x2a91cc});_0x444a4a=(_0x142689-_0x431267)/_0x30f043,_0x102798=_0x49a147+_0x5724b7*_0x444a4a;if(_0x102798>=_0x35fdf6&&_0x102798<=_0x8d0bd5)_0x1de3d2['\x70\x75\x73\x68']({'\x78':_0x102798,'\x79':_0x142689});}let _0x3e5fdf=[];for(let _0x110b5f of _0x1de3d2){if(!_0x3e5fdf['\x73\x6f\x6d\x65'](_0x467171=>Math['\x61\x62\x73'](_0x467171['\x78']-_0x110b5f['\x78'])<-0x1c39+0x1*0x5db+0x165e*0x1+0.1&&Math['\x61\x62\x73'](_0x467171['\x79']-_0x110b5f['\x79'])<0x1567*0x1+0x12f8+-0x285f+0.1))_0x3e5fdf['\x70\x75\x73\x68'](_0x110b5f);}_0x3e5fdf['\x6c\x65\x6e\x67\x74\x68']===0xc*0x19c+0x1a*-0x151+0xeec&&(_0x1c4f54=_0x3e5fdf[-0x73f+0x29d*-0x1+-0x9dc*-0x1],_0x1c7405=_0x3e5fdf[0x629*-0x5+0x8*0xef+0x1756]);}}const _0x31303d={'\x74\x79\x70\x65':'\x69\x6d\x61\x67\x65','\x69\x6d\x67\x44\x61\x74\x61':_0x6c7d4,'\x78':_0x2efaa6*_0x2e324f,'\x79':_0xbaaa15*_0x2e324f,'\x77\x69\x64\x74\x68':_0x3e286e*_0x2e324f,'\x68\x65\x69\x67\x68\x74':_0x286a57*_0x2e324f,'\x72\x6f\x74\x61\x74\x69\x6f\x6e':0x0,'\x69\x73\x42\x61\x63\x6b\x67\x72\x6f\x75\x6e\x64':![],'\x69\x73\x50\x61\x74\x63\x68':!![],'\x66\x6f\x6c\x64\x4c\x69\x6e\x65':[{'\x78':_0x1c4f54['\x78']*_0x2e324f,'\x79':_0x1c4f54['\x79']*_0x2e324f},{'\x78':_0x1c7405['\x78']*_0x2e324f,'\x79':_0x1c7405['\x79']*_0x2e324f}],'\x69\x64':Date['\x6e\x6f\x77']()+Math['\x72\x61\x6e\x64\x6f\x6d']()['\x74\x6f\x53\x74\x72\x69\x6e\x67']()};window['\x64\x72\x61\x77\x6e\x53\x74\x72\x6f\x6b'+'\x65\x73']['\x70\x75\x73\x68'](_0x31303d);if(typeof window['\x73\x65\x6e\x64\x4e\x65\x74\x77\x6f\x72'+'\x6b\x44\x61\x74\x61']==='\x66\x75\x6e\x63\x74\x69\x6f\x6e'){const _0x3cfce3={};_0x3cfce3['\x74\x79\x70\x65']='\x79\x65\x6e\x69\x5f\x63\x69\x7a\x69\x6d',_0x3cfce3['\x73\x74\x72\x6f\x6b\x65']=_0x31303d,window['\x73\x65\x6e\x64\x4e\x65\x74\x77\x6f\x72'+'\x6b\x44\x61\x74\x61'](_0x3cfce3);}typeof window['\x72\x65\x64\x72\x61\x77\x41\x6c\x6c\x53'+'\x74\x72\x6f\x6b\x65\x73']==='\x66\x75\x6e\x63\x74\x69\x6f\x6e'&&window['\x72\x65\x64\x72\x61\x77\x41\x6c\x6c\x53'+'\x74\x72\x6f\x6b\x65\x73']();}function getReflectionMatrix(_0x189188,_0x26714f){const _0x1c9fa7=_0x26714f['\x78']-_0x189188['\x78'],_0x3f40ad=_0x26714f['\x79']-_0x189188['\x79'],_0xb7634d=_0x1c9fa7*_0x1c9fa7+_0x3f40ad*_0x3f40ad;if(_0xb7634d===-0x21b9+-0xab+0x2264)return[0x6a8*0x2+-0x11be*-0x1+-0x1f0d*0x1,-0x119e+0x12b*0x17+-0x93f,-0x17ca+0x1*-0x989+-0x1c1*-0x13,-0x16bb+0x3e2*0x3+0xb16,0x12de+0x207a+-0x3358,-0x24d9*-0x1+0x3d*0x4f+0x1bd6*-0x2];const _0x43f720=_0x1c9fa7,_0x6c59b0=_0x3f40ad,_0x2c2d01=(_0x189188['\x78']+_0x26714f['\x78'])/(0x11d7+-0x258a+-0x13b5*-0x1),_0x780687=(_0x189188['\x79']+_0x26714f['\x79'])/(-0x46*0x15+0x10*-0xc2+-0x4*-0x478),_0x41e845=(_0x6c59b0*_0x6c59b0-_0x43f720*_0x43f720)/_0xb7634d,_0x2e8d66=-(-0x13ae+0x18c5+-0x515)*_0x43f720*_0x6c59b0/_0xb7634d,_0x18cda4=_0x2c2d01-_0x2c2d01*_0x41e845-_0x780687*_0x2e8d66,_0x54e990=_0x780687-_0x2c2d01*_0x2e8d66+_0x780687*_0x41e845;return[_0x41e845,_0x2e8d66,_0x2e8d66,-_0x41e845,_0x18cda4,_0x54e990];}function cizKatlamaAnimasyonu(_0x2236f5,_0x1eceab,_0x290de6,_0x412041,_0x11cd81){if(!katlamaOverlayCtx)return;const _0x444662=katlamaOverlayCtx,_0xf9b6eb=katlamaOverlayCanvas['\x77\x69\x64\x74\x68'],_0x1884f0=katlamaOverlayCanvas['\x68\x65\x69\x67\x68\x74'];_0x444662['\x63\x6c\x65\x61\x72\x52\x65\x63\x74'](0x1209*0x2+0x1ac3+-0x3ed5*0x1,0x2115*-0x1+-0x10ff+0x3214,_0xf9b6eb,_0x1884f0);const _0x2b5398=_0x11cd81['\x78']-_0x412041['\x78'],_0x28b713=_0x11cd81['\x79']-_0x412041['\x79'],_0x10d7bf=Math['\x73\x71\x72\x74'](_0x2b5398*_0x2b5398+_0x28b713*_0x28b713);if(_0x10d7bf<-0x86b+-0x3*-0x586+-0x95*0xe){_0x444662['\x64\x72\x61\x77\x49\x6d\x61\x67\x65'](_0x1eceab,_0x290de6['\x78'],_0x290de6['\x79'],_0x290de6['\x77'],_0x290de6['\x68']);return;}const _0x42a889=_0x412041['\x78']+_0x2b5398/(-0x146f+0x12ff*-0x2+-0x3a6f*-0x1),_0x9a44e3=_0x412041['\x79']+_0x28b713/(0x1e23+0x1c28+-0x2b*0x15b),_0x4341fb=_0x2b5398/_0x10d7bf,_0xb77f24=_0x28b713/_0x10d7bf,_0xa75ff1=Math['\x61\x74\x61\x6e\x32'](_0xb77f24,_0x4341fb);_0x444662['\x73\x61\x76\x65'](),_0x444662['\x62\x65\x67\x69\x6e\x50\x61\x74\x68'](),_0x444662['\x74\x72\x61\x6e\x73\x6c\x61\x74\x65'](_0x42a889,_0x9a44e3),_0x444662['\x72\x6f\x74\x61\x74\x65'](_0xa75ff1),_0x444662['\x72\x65\x63\x74'](-_0xf9b6eb*(0x5*-0x2bb+-0x172a+0xb*0x359),-_0x1884f0*(0x568+-0x11d7*0x1+0xc71),_0xf9b6eb*(-0x102d+0x868+0x7c7),_0x1884f0*(-0x2571+0x1286*-0x2+0x4a81)),_0x444662['\x63\x6c\x69\x70'](),_0x444662['\x72\x6f\x74\x61\x74\x65'](-_0xa75ff1),_0x444662['\x74\x72\x61\x6e\x73\x6c\x61\x74\x65'](-_0x42a889,-_0x9a44e3),_0x444662['\x64\x72\x61\x77\x49\x6d\x61\x67\x65'](_0x2236f5,_0x290de6['\x78'],_0x290de6['\x79'],_0x290de6['\x77'],_0x290de6['\x68']),_0x444662['\x72\x65\x73\x74\x6f\x72\x65'](),_0x444662['\x73\x61\x76\x65'](),_0x444662['\x62\x65\x67\x69\x6e\x50\x61\x74\x68'](),_0x444662['\x74\x72\x61\x6e\x73\x6c\x61\x74\x65'](_0x42a889,_0x9a44e3),_0x444662['\x72\x6f\x74\x61\x74\x65'](_0xa75ff1),_0x444662['\x72\x65\x63\x74'](0x16ed+0x2358+-0x7*0x853,-_0x1884f0*(0x376*-0x2+0x1a26+-0x1338),_0xf9b6eb*(0x265e+-0x11bb+-0x14a1),_0x1884f0*(0x19f2+-0x2346+0x2e*0x34)),_0x444662['\x63\x6c\x69\x70'](),_0x444662['\x72\x6f\x74\x61\x74\x65'](-_0xa75ff1),_0x444662['\x74\x72\x61\x6e\x73\x6c\x61\x74\x65'](-_0x42a889,-_0x9a44e3);const [_0x483eaa,_0x1821e0,_0x37ff08,_0x5b0e36,_0x16a00f,_0x527c2c]=getReflectionMatrix(_0x412041,_0x11cd81);_0x444662['\x74\x72\x61\x6e\x73\x66\x6f\x72\x6d'](_0x483eaa,_0x1821e0,_0x37ff08,_0x5b0e36,_0x16a00f,_0x527c2c),_0x444662['\x73\x68\x61\x64\x6f\x77\x43\x6f\x6c\x6f'+'\x72']='\x72\x67\x62\x61\x28\x30\x2c\x20\x30\x2c'+'\x20\x30\x2c\x20\x30\x2e\x35\x29',_0x444662['\x73\x68\x61\x64\x6f\x77\x42\x6c\x75\x72']=-0x7*-0x577+0x112d+-0x1a*0x221,_0x444662['\x73\x68\x61\x64\x6f\x77\x4f\x66\x66\x73'+'\x65\x74\x58']=-_0x4341fb*(-0x36c*-0xa+-0x1*0x22d4+-0x2*-0x53),_0x444662['\x73\x68\x61\x64\x6f\x77\x4f\x66\x66\x73'+'\x65\x74\x59']=-_0xb77f24*(-0xeda+0x1f3a+0x1056*-0x1),_0x444662['\x64\x72\x61\x77\x49\x6d\x61\x67\x65'](_0x1eceab,_0x290de6['\x78'],_0x290de6['\x79'],_0x290de6['\x77'],_0x290de6['\x68']),_0x444662['\x73\x68\x61\x64\x6f\x77\x43\x6f\x6c\x6f'+'\x72']='\x74\x72\x61\x6e\x73\x70\x61\x72\x65\x6e'+'\x74',_0x444662['\x67\x6c\x6f\x62\x61\x6c\x43\x6f\x6d\x70'+'\x6f\x73\x69\x74\x65\x4f\x70\x65\x72\x61'+'\x74\x69\x6f\x6e']='\x73\x6f\x75\x72\x63\x65\x2d\x61\x74\x6f'+'\x70',_0x444662['\x66\x69\x6c\x6c\x53\x74\x79\x6c\x65']='\x72\x67\x62\x61\x28\x32\x35\x35\x2c\x20'+'\x32\x35\x35\x2c\x20\x32\x35\x35\x2c\x20'+'\x30\x2e\x36\x29',_0x444662['\x66\x69\x6c\x6c\x52\x65\x63\x74'](_0x290de6['\x78'],_0x290de6['\x79'],_0x290de6['\x77'],_0x290de6['\x68']),_0x444662['\x67\x6c\x6f\x62\x61\x6c\x43\x6f\x6d\x70'+'\x6f\x73\x69\x74\x65\x4f\x70\x65\x72\x61'+'\x74\x69\x6f\x6e']='\x73\x6f\x75\x72\x63\x65\x2d\x6f\x76\x65'+'\x72',_0x444662['\x72\x65\x73\x74\x6f\x72\x65']();}function agSenkronizeEt(_0x2e4deb,_0x503d44=null,_0x382a27=null,_0x1c2918=null,_0x168cc5=null,_0x7f1ad0=null){if(typeof isConnected!=='\x75\x6e\x64\x65\x66\x69\x6e\x65\x64'&&isConnected&&typeof sendNetworkData==='\x66\x75\x6e\x63\x74\x69\x6f\x6e'){let _0x8781cf=_0x503d44?screenToCanvasCoords(_0x503d44):null,_0x4042cf=_0x382a27?screenToCanvasCoords(_0x382a27):null,_0x393484=_0x7f1ad0?screenToCanvasCoords(_0x7f1ad0):null;if(_0x2e4deb==='\x62\x61\x73\x6c\x61'&&_0x1c2918&&_0x168cc5){const _0x5492dd=-0x9*0x66b+-0x5d*-0x86+0x2dd*0x19;let _0x42f40a='\x62\x67\x5f'+Date['\x6e\x6f\x77'](),_0x262fdd=Math['\x63\x65\x69\x6c'](_0x1c2918['\x6c\x65\x6e\x67\x74\x68']/_0x5492dd);for(let _0x4abcb2=0x22bf+-0x18*0xc+-0x219f;_0x4abcb2<_0x262fdd;_0x4abcb2++){window['\x73\x65\x6e\x64\x4e\x65\x74\x77\x6f\x72'+'\x6b\x44\x61\x74\x61']({'\x74\x79\x70\x65':'\x6b\x61\x74\x6c\x61\x6d\x61\x5f\x62\x61'+'\x73\x6c\x61\x5f\x63\x68\x75\x6e\x6b','\x69\x6d\x67\x49\x64':_0x42f40a,'\x63\x68\x75\x6e\x6b':_0x1c2918['\x73\x75\x62\x73\x74\x72\x69\x6e\x67'](_0x4abcb2*_0x5492dd,(_0x4abcb2+(-0x15*-0x3d+0x2049+-0x2549))*_0x5492dd),'\x69\x6e\x64\x65\x78':_0x4abcb2,'\x74\x6f\x74\x61\x6c':_0x262fdd,'\x72\x65\x63\x74':_0x393484,'\x69\x73\x42\x67':!![]});}let _0x54e0bc='\x66\x67\x5f'+Date['\x6e\x6f\x77'](),_0x39803d=Math['\x63\x65\x69\x6c'](_0x168cc5['\x6c\x65\x6e\x67\x74\x68']/_0x5492dd);for(let _0x74c226=-0x20fe+0x1*-0x1d23+0x3e21;_0x74c226<_0x39803d;_0x74c226++){window['\x73\x65\x6e\x64\x4e\x65\x74\x77\x6f\x72'+'\x6b\x44\x61\x74\x61']({'\x74\x79\x70\x65':'\x6b\x61\x74\x6c\x61\x6d\x61\x5f\x62\x61'+'\x73\x6c\x61\x5f\x63\x68\x75\x6e\x6b','\x69\x6d\x67\x49\x64':_0x54e0bc,'\x63\x68\x75\x6e\x6b':_0x168cc5['\x73\x75\x62\x73\x74\x72\x69\x6e\x67'](_0x74c226*_0x5492dd,(_0x74c226+(-0x71e+-0x64*-0x34+-0xd31))*_0x5492dd),'\x69\x6e\x64\x65\x78':_0x74c226,'\x74\x6f\x74\x61\x6c':_0x39803d,'\x72\x65\x63\x74':_0x393484,'\x69\x73\x46\x67':!![]});}}else{const _0x5f1898={};_0x5f1898['\x74\x79\x70\x65']='\x6b\x61\x74\x6c\x61\x6d\x61\x5f'+_0x2e4deb,_0x5f1898['\x66\x6f\x6c\x64\x53\x74\x61\x72\x74']=_0x8781cf,_0x5f1898['\x66\x6f\x6c\x64\x43\x75\x72\x72\x65\x6e'+'\x74']=_0x4042cf,window['\x73\x65\x6e\x64\x4e\x65\x74\x77\x6f\x72'+'\x6b\x44\x61\x74\x61'](_0x5f1898);}}}
+﻿// Akıllı Katlama v3.1 - Geobek
+// Çapraz Katlama, Arka Plan / Ön Plan Ayrımı ve Gerçek Zamanlı Senkronizasyon
+
+window.isKatlaActive = false;
+let katlamaOverlayCanvas = null;
+let katlamaOverlayCtx = null;
+let currentBgImg = null;
+let currentFgImg = null;
+let currentCaptureRect = null;
+
+let isDrawingBox = false;
+let isFolding = false;
+let startX, startY, currentBox = null;
+let foldStart = null;
+let foldCurrent = null;
+
+// Ağ parçalama (chunking) için ID
+let syncImgId = null;
+
+function screenToCanvasCoords(screenObj) {
+    const canvasElm = document.getElementById('drawing-canvas');
+    if (!canvasElm) return screenObj;
+    
+    // AĞ SENKRONİZASYONU İÇİN NİHAİ KUSURSUZ ÇÖZÜM:
+    // Geobek, PC ve Tablet'te resmi farklı x,y noktalarına merkezler. 
+    // Bu yüzden koordinatları ekranın sol üst köşesine göre değil, 
+    // ARKA PLAN RESMİNE (Zemine) göre hesaplamalıyız!
+    const myBg = window.drawnStrokes ? window.drawnStrokes.find(s => s.isBackground === true && !s.isPatch) : null;
+    const dpr = window.devicePixelRatio || 1;
+    
+    if (myBg && myBg.width > 0) {
+        // Çizim tuvalindeki değerler dpr ile çarpılmış halde tutuluyor, bu yüzden dpr'a bölerek CSS piksellerini buluyoruz:
+        const bgX = myBg.x / dpr;
+        const bgY = myBg.y / dpr;
+        const bgW = myBg.width / dpr;
+        const bgH = myBg.height / dpr;
+        
+        let netObj = {
+            relX: (screenObj.x - bgX) / bgW,
+            relY: (screenObj.y - bgY) / bgH,
+            isRel: true
+        };
+        if (screenObj.w !== undefined) {
+            netObj.relW = screenObj.w / bgW;
+            netObj.relH = screenObj.h / bgH;
+        }
+        return netObj;
+    } else {
+        // Arka plan yoksa, zorunlu olarak doğrudan CSS piksellerini gönder
+        let netObj = { x: screenObj.x, y: screenObj.y, isRel: false };
+        if (screenObj.w !== undefined) {
+            netObj.w = screenObj.w;
+            netObj.h = screenObj.h;
+        }
+        return netObj;
+    }
+}
+
+function canvasToScreenCoords(networkObj) {
+    const canvasElm = document.getElementById('drawing-canvas');
+    if (!canvasElm) return networkObj;
+    
+    const myBg = window.drawnStrokes ? window.drawnStrokes.find(s => s.isBackground === true && !s.isPatch) : null;
+    const dpr = window.devicePixelRatio || 1;
+    
+    if (networkObj.isRel && myBg && myBg.width > 0) {
+        const bgX = myBg.x / dpr;
+        const bgY = myBg.y / dpr;
+        const bgW = myBg.width / dpr;
+        const bgH = myBg.height / dpr;
+        
+        let screenObj = {
+            x: bgX + (networkObj.relX * bgW),
+            y: bgY + (networkObj.relY * bgH)
+        };
+        if (networkObj.relW !== undefined) {
+            screenObj.w = networkObj.relW * bgW;
+            screenObj.h = networkObj.relH * bgH;
+        }
+        return screenObj;
+    } else {
+        let screenObj = { x: networkObj.x || 0, y: networkObj.y || 0 };
+        if (networkObj.w !== undefined) {
+            screenObj.w = networkObj.w;
+            screenObj.h = networkObj.h;
+        }
+        return screenObj;
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    // 1. Katla Butonunu Ekle
+    // (Kaldırıldı)
+    // 1. Katla Butonunu Canlandır Menüsüne Ekle
+    const katlaBtn = document.createElement('button');
+    katlaBtn.id = 'btn-katla';
+    katlaBtn.className = 'tool-button-sub';
+    katlaBtn.title = 'Akıllı Katlama';
+    katlaBtn.innerHTML = 'Katla ✂️';
+    
+    const snapshotOptions = document.getElementById('snapshot-options');
+    if (snapshotOptions) {
+        snapshotOptions.appendChild(katlaBtn);
+        }
+
+    // 2. Stilleri Ekle
+    const style = document.createElement('style');
+    style.textContent = `
+        #katla-box { position: absolute; border: 2px dashed #ff00ff; background: rgba(255,0,255,0.1); pointer-events: none; z-index: 9999; }
+        .katla-active { cursor: crosshair !important; }
+        .btn-katla-active { background-color: #ff00ff !important; color: white; }
+        #katlama-overlay { position: absolute; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 10000; touch-action: none; pointer-events: auto; }
+        .katlama-ui { position: absolute; top: 20px; left: 50%; transform: translateX(-50%); z-index: 10001; display: flex; gap: 10px; }
+        .katlama-ui button { padding: 10px 20px; font-size: 16px; font-weight: bold; border-radius: 8px; border: none; cursor: pointer; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+        #btn-katla-iptal { background-color: #ff4444; color: white; }
+        #btn-katla-tamam { background-color: #44cc44; color: white; }
+    `;
+    document.head.appendChild(style);
+
+    // 1.5. Geobek araç değişimini dinleyip Katla'yı kapatma (Başka araca geçilirse Katla iptal olsun)
+    if (typeof window.setActiveTool === 'function' && !window.katlaHooked) {
+        const originalSetActiveTool = window.setActiveTool;
+        window.setActiveTool = function(toolId) {
+            if (toolId !== 'none' && toolId !== 'snapshot' && window.isKatlaActive) {
+                // Kullanıcı katlamayı bitirmeden (örn: Serbest Kesim) başka araca geçerse, otomatik olarak 'Katlanmış Bırak' yap.
+                if (typeof foldStart !== 'undefined' && foldStart && typeof foldCurrent !== 'undefined' && foldCurrent) {
+                    katlanmisBirak(foldStart, foldCurrent);
+                    if (typeof agSenkronizeEt === 'function') agSenkronizeEt('iptal');
+                }
+                iptalEt();
+            }
+            originalSetActiveTool(toolId);
+        };
+        window.katlaHooked = true;
+    }
+
+    if (typeof seffafBtn !== 'undefined') {
+        seffafBtn.addEventListener('click', () => {
+            if (!window.isKatlaActive && typeof window.setActiveTool === 'function') {
+                window.setActiveTool('snapshot');
+            }
+            window.isKatlaActive = !window.isKatlaActive;
+                        
+            if (window.isKatlaActive) {
+                seffafBtn.classList.add('btn-katla-active');
+                katlaBtn.classList.remove('btn-katla-active');
+                document.body.classList.add('katla-active');
+                if (typeof window.setActiveTool === 'function') window.setActiveTool('none');
+            } else {
+                iptalEt();
+            }
+        });
+    }
+
+    katlaBtn.addEventListener('click', () => {
+                if (typeof seffafBtn !== 'undefined') {
+            seffafBtn.classList.remove('btn-katla-active');
+        }
+        if (!window.isKatlaActive && typeof window.setActiveTool === 'function') {
+            window.setActiveTool('snapshot');
+        }
+        window.isKatlaActive = !window.isKatlaActive;
+        if (window.isKatlaActive) {
+            katlaBtn.classList.add('btn-katla-active');
+            document.body.classList.add('katla-active');
+            if (typeof window.setActiveTool === 'function') window.setActiveTool('none');
+        } else {
+            iptalEt();
+            katlaBtn.classList.remove('btn-katla-active');
+            document.body.classList.remove('katla-active');
+        }
+    });
+
+    // 3. Etkileşimler (Kutu Çizimi)
+    document.addEventListener('pointerdown', (e) => {
+        if (!window.isKatlaActive || e.target.closest('.ui-container') || e.target.closest('.panel') || e.target.closest('.katlama-ui')) return;
+        
+        // Eğer zaten katlama ekranındaysak, katlama hareketini başlat
+        if (katlamaOverlayCanvas) {
+            e.stopPropagation();
+            isFolding = true;
+            foldStart = { x: e.clientX, y: e.clientY };
+            foldCurrent = { x: e.clientX, y: e.clientY };
+            return;
+        }
+
+        e.stopPropagation(); 
+        isDrawingBox = true;
+        startX = e.clientX;
+        startY = e.clientY;
+        
+        currentBox = document.createElement('div');
+        currentBox.id = 'katla-box';
+        currentBox.style.left = startX + 'px';
+        currentBox.style.top = startY + 'px';
+        document.body.appendChild(currentBox);
+    }, { capture: true });
+
+    document.addEventListener('pointermove', (e) => {
+        if (isFolding && katlamaOverlayCanvas) {
+            e.stopPropagation();
+            foldCurrent = { x: e.clientX, y: e.clientY };
+            cizKatlamaAnimasyonu(currentBgImg, currentFgImg, currentCaptureRect, foldStart, foldCurrent);
+            agSenkronizeEt('guncelle', foldStart, foldCurrent);
+            return;
+        }
+
+        if (!isDrawingBox || !currentBox) return;
+        e.stopPropagation();
+        const width = Math.abs(e.clientX - startX);
+        const height = Math.abs(e.clientY - startY);
+        currentBox.style.width = width + 'px';
+        currentBox.style.height = height + 'px';
+        currentBox.style.left = Math.min(startX, e.clientX) + 'px';
+        currentBox.style.top = Math.min(startY, e.clientY) + 'px';
+    }, { capture: true });
+
+    document.addEventListener('pointerup', async (e) => {
+        if (isFolding) {
+            e.stopPropagation();
+            isFolding = false;
+            // KULLANICI İSTEĞİ: Kalemi kaldırdığı an onay beklemeden doğrudan katlanmış bırak ve art arda katlama için sıfırla!
+            if (foldStart && foldCurrent) {
+                katlanmisBirak(foldStart, foldCurrent);
+                if (typeof agSenkronizeEt === 'function') agSenkronizeEt('iptal');
+                // Art arda katlama yapabilmesi için tool'u kapatmadan sadece overlay'i sıfırla
+                sifirlaKatlama();
+            } else {
+                iptalEt();
+            }
+            return;
+        }
+
+        if (!isDrawingBox || !currentBox) return;
+        e.stopPropagation();
+        isDrawingBox = false;
+        
+        const rect = currentBox.getBoundingClientRect();
+        currentBox.remove();
+        currentBox = null;
+
+        if (rect.width < 50 || rect.height < 50) return;
+
+        // Html2Canvas yerine anında Canvas Cropping kullanıyoruz (Çok daha performanslı ve Katmanları ayırabiliyoruz!)
+        const canvasElm = document.getElementById('drawing-canvas');
+        const bgCanvas = document.getElementById('bg-canvas');
+        if (!canvasElm) return;
+
+        try {
+            const tempBg = document.createElement('canvas');
+            tempBg.width = rect.width; tempBg.height = rect.height;
+            const tempFg = document.createElement('canvas');
+            tempFg.width = rect.width; tempFg.height = rect.height;
+
+            const canvasRect = canvasElm.getBoundingClientRect();
+            // CROP FIX: Zoom ve Pan durumlarında doğru pikseli almak için dpr yerine gerçek canvas oranını (scaleX/Y) kullanıyoruz!
+            const scaleX = canvasElm.width / canvasRect.width;
+            const scaleY = canvasElm.height / canvasRect.height;
+            
+            const sx = (rect.left - canvasRect.left) * scaleX;
+            const sy = (rect.top - canvasRect.top) * scaleY;
+            const sw = rect.width * scaleX;
+            const sh = rect.height * scaleY;
+
+            // AKILLI BAKMA (Smart Sampling): Zemin rengini bulmak için kutunun 5px dışından 4 farklı noktaya bak!
+            let detectedBgColor = document.body.style.backgroundColor || '#ffffff';
+            try {
+                const ctxD = canvasElm.getContext('2d');
+                const pts = [
+                    { x: rect.left + rect.width / 2, y: rect.top - 5 }, // Üst orta
+                    { x: rect.left + rect.width / 2, y: rect.top + rect.height + 5 }, // Alt orta
+                    { x: rect.left - 5, y: rect.top + rect.height / 2 }, // Sol orta
+                    { x: rect.left + rect.width + 5, y: rect.top + rect.height / 2 } // Sağ orta
+                ];
+                
+                for (let pt of pts) {
+                    const sx_s = (pt.x - canvasRect.left) * scaleX * dpr;
+                    const sy_s = (pt.y - canvasRect.top) * scaleY * dpr;
+                    if (sx_s >= 0 && sx_s < canvasElm.width && sy_s >= 0 && sy_s < canvasElm.height) {
+                        const p = ctxD.getImageData(sx_s, sy_s, 1, 1).data;
+                        if (p[3] > 250) { 
+                            detectedBgColor = `rgba(${p[0]}, ${p[1]}, ${p[2]}, 1)`;
+                            break;
+                        } else if (bgCanvas) {
+                            const bgP = bgCanvas.getContext('2d').getImageData(sx_s, sy_s, 1, 1).data;
+                            if (bgP[3] > 250) {
+                                detectedBgColor = `rgba(${bgP[0]}, ${bgP[1]}, ${bgP[2]}, 1)`;
+                                break;
+                            }
+                        }
+                    }
+                }
+            } catch (e) {
+                console.warn("Akıllı renk okuma başarısız:", e);
+            }
+
+            // ZEMİNİ (Delik kısmını) AKILLI RENK İLE DOLDUR
+            {
+                tempBg.getContext('2d').fillStyle = detectedBgColor;
+            tempBg.getContext('2d').fillRect(0, 0, rect.width, rect.height);
+            }
+            // PDF vs. çizmeyi iptal ediyoruz çünkü kullanıcı "o renge boyasın" dedi, yani DÜZ RENK istiyor!
+            
+            // OPAQUE FLAP: Kağıdın arkasını görebilmemiz için şeffaf değil, opak olması lazım!
+            // Zemin rengini kağıdın bazı olarak alıyoruz (beyaz/akıllı renk):
+            {
+                tempFg.getContext('2d').fillStyle = detectedBgColor;
+            tempFg.getContext('2d').fillRect(0, 0, rect.width, rect.height);
+            
+            // Eğer varsa, PDF kalıntılarını (veya arka planı) yaprağa bas (sadece yaprakta kalsın)
+            if (bgCanvas) {
+                tempFg.getContext('2d').drawImage(bgCanvas, sx, sy, sw, sh, 0, 0, rect.width, rect.height);
+            }
+            // Sonra üzerine çizimleri ekliyoruz:
+                        }
+            tempFg.getContext('2d').drawImage(canvasElm, sx, sy, sw, sh, 0, 0, rect.width, rect.height);
+
+            const bgStr = tempBg.toDataURL('image/png');
+            const fgStr = tempFg.toDataURL('image/png');
+            
+            currentCaptureRect = { x: rect.left, y: rect.top, w: rect.width, h: rect.height };
+
+            // İki resmi paralel yükle
+            Promise.all([
+                new Promise(res => { currentBgImg = new Image(); currentBgImg.onload = res; currentBgImg.src = bgStr; }),
+                new Promise(res => { currentFgImg = new Image(); currentFgImg.onload = res; currentFgImg.src = fgStr; })
+            ]).then(() => {
+                baslatKatlamaEkrani();
+                agSenkronizeEt('basla', null, null, bgStr, fgStr, currentCaptureRect);
+            });
+        } catch (err) {
+            console.error("Kesim hatası:", err);
+        }
+    }, { capture: true });
+
+    // 4. Ağ Dinleyicisi (PC veya diğer tabletler için)
+    window.addEventListener('katlama_sistemi', (e) => {
+        const d = e.detail;
+        // YANKI (ECHO) KORUMASI: Kendi gönderdiğimiz veriyi işlemeyiz!
+        if (!d || (d.senderId && window.mySessionId && d.senderId === window.mySessionId)) return;
+        
+        if (d.type === 'katlama_basla_chunk') {
+            if (!window.kChunks) window.kChunks = {};
+            if (!window.kChunks[d.imgId]) window.kChunks[d.imgId] = { chunks: new Array(d.total), count: 0, isBg: d.isBg, isFg: d.isFg };
+            const cObj = window.kChunks[d.imgId];
+            if (!cObj.chunks[d.index]) {
+                cObj.chunks[d.index] = d.chunk;
+                cObj.count++;
+            }
+            if (cObj.count === d.total) {
+                const fullImg = cObj.chunks.join('');
+                delete window.kChunks[d.imgId];
+                
+                if (cObj.isBg) {
+                    currentBgImg = new Image();
+                    currentBgImg.src = fullImg;
+                } else if (cObj.isFg) {
+                    currentFgImg = new Image();
+                    currentFgImg.onload = () => {
+                        currentCaptureRect = canvasToScreenCoords(d.rect);
+                        // Fg (ön plan) en son gelir, gelince ekranı başlat
+                        baslatKatlamaEkrani(true); 
+                    };
+                    currentFgImg.src = fullImg;
+                }
+            }
+        }
+        else if (d.type === 'katlama_guncelle') {
+            if (katlamaOverlayCanvas) {
+                cizKatlamaAnimasyonu(currentBgImg, currentFgImg, currentCaptureRect, canvasToScreenCoords(d.foldStart), canvasToScreenCoords(d.foldCurrent));
+            }
+        }
+        else if (d.type === 'katlama_iptal') {
+            iptalEt(true);
+        }
+        else if (d.type === 'katlama_tamamla') {
+            katIziBirak(canvasToScreenCoords(d.foldStart), canvasToScreenCoords(d.foldCurrent));
+            iptalEt(true);
+        }
+    });
+});
+
+function baslatKatlamaEkrani(isRemote = false) {
+    if (katlamaOverlayCanvas) katlamaOverlayCanvas.remove();
+    const ui = document.querySelector('.katlama-ui');
+    if (ui) ui.remove();
+
+    katlamaOverlayCanvas = document.createElement('canvas');
+    katlamaOverlayCanvas.id = 'katlama-overlay';
+    
+    const dpr = window.devicePixelRatio || 1;
+    katlamaOverlayCanvas.width = window.innerWidth * dpr;
+    katlamaOverlayCanvas.height = window.innerHeight * dpr;
+    
+    // PDF ve diğer nesnelerin altında kalmaması için css z-index ayarı:
+    katlamaOverlayCanvas.style.position = 'absolute';
+    katlamaOverlayCanvas.style.top = '0';
+    katlamaOverlayCanvas.style.left = '0';
+    katlamaOverlayCanvas.style.width = window.innerWidth + 'px';
+    katlamaOverlayCanvas.style.height = window.innerHeight + 'px';
+    katlamaOverlayCanvas.style.zIndex = '10000';
+    katlamaOverlayCanvas.style.pointerEvents = 'auto';
+    katlamaOverlayCanvas.style.touchAction = 'none';
+    
+    document.body.appendChild(katlamaOverlayCanvas);
+    katlamaOverlayCtx = katlamaOverlayCanvas.getContext('2d');
+    katlamaOverlayCtx.scale(dpr, dpr);
+
+    // İlk anda hiçbir şey çizmene gerek yok, çünkü alttaki canvaslar zaten gösteriyor.
+    // Kullanıcı ekrana dokunup hareket ettirdiğinde cizKatlamaAnimasyonu çağrılacak.
+    // DİKKAT: Yeni UI kuralları gereği, onay ekranı (.katlama-ui) oluşturulmuyor. 
+    // Katlama doğrudan pointerup ile uygulanacak.
+}
+
+function sifirlaKatlama() {
+    if (katlamaOverlayCanvas) {
+        katlamaOverlayCanvas.remove();
+        katlamaOverlayCanvas = null;
+    }
+    currentBgImg = null;
+    currentFgImg = null;
+    currentCaptureRect = null;
+    foldStart = null;
+    foldCurrent = null;
+    isFolding = false;
+    isDrawingBox = false;
+    if (currentBox) {
+        currentBox.remove();
+        currentBox = null;
+    }
+}
+
+function iptalEt(isRemote = false) {
+    window.isKatlaActive = false;
+    const katlaBtn = document.getElementById('btn-katla');
+    if (katlaBtn) katlaBtn.classList.remove('btn-katla-active');
+    const seffafBtn = document.getElementById('btn-seffaf-katla');
+    if (seffafBtn) seffafBtn.classList.remove('btn-katla-active');
+        document.body.classList.remove('katla-active');
+
+    if (katlamaOverlayCanvas) {
+        katlamaOverlayCanvas.remove();
+        katlamaOverlayCanvas = null;
+    }
+    const ui = document.querySelector('.katlama-ui');
+    if (ui) ui.remove();
+    currentBgImg = null;
+    currentFgImg = null;
+    currentCaptureRect = null;
+    foldStart = null;
+    foldCurrent = null;
+    
+    // GÜVENLİK (KİLİTLENMEYİ ÖNLEME): Katlama işlemi bittiğinde veya iptal edildiğinde state değişkenlerini sıfırla.
+    // Aksi halde pointerup event'leri e.stopPropagation() ile yutulur ve "tüm butonlar kilitlenir".
+    isFolding = false;
+    isDrawingBox = false;
+    if (currentBox) {
+        currentBox.remove();
+        currentBox = null;
+    }
+}
+
+function katIziBirak(p1, p2) {
+    const dx = p2.x - p1.x;
+    const dy = p2.y - p1.y;
+    if (Math.abs(dx) < 5 && Math.abs(dy) < 5) return;
+
+    const midX = (p1.x + p2.x) / 2;
+    const midY = (p1.y + p2.y) / 2;
+
+    // Perpendicular vector
+    const nx = -dy;
+    const ny = dx;
+
+    let lineStartX = midX + nx * 1000;
+    let lineStartY = midY + ny * 1000;
+    let lineEndX = midX - nx * 1000;
+    let lineEndY = midY - ny * 1000;
+
+    // KESİN ÇÖZÜM: Kat izini sadece seçili alanın (currentCaptureRect) içinde kalacak şekilde sınırla!
+    if (currentCaptureRect) {
+        const left = currentCaptureRect.x;
+        const right = currentCaptureRect.x + currentCaptureRect.w;
+        const top = currentCaptureRect.y;
+        const bottom = currentCaptureRect.y + currentCaptureRect.h;
+
+        let points = [];
+        
+        // 1. Sol kenar kesişimi (x = left)
+        if (nx !== 0) {
+            let t = (left - midX) / nx;
+            let y = midY + ny * t;
+            if (y >= top && y <= bottom) points.push({x: left, y: y});
+        }
+        // 2. Sağ kenar kesişimi (x = right)
+        if (nx !== 0) {
+            let t = (right - midX) / nx;
+            let y = midY + ny * t;
+            if (y >= top && y <= bottom) points.push({x: right, y: y});
+        }
+        // 3. Üst kenar kesişimi (y = top)
+        if (ny !== 0) {
+            let t = (top - midY) / ny;
+            let x = midX + nx * t;
+            if (x >= left && x <= right) points.push({x: x, y: top});
+        }
+        // 4. Alt kenar kesişimi (y = bottom)
+        if (ny !== 0) {
+            let t = (bottom - midY) / ny;
+            let x = midX + nx * t;
+            if (x >= left && x <= right) points.push({x: x, y: bottom});
+        }
+
+        // Aynı noktaları temizle (köşelerden geçerse çift nokta çıkabilir)
+        let uniquePoints = [];
+        for (let p of points) {
+            if (!uniquePoints.some(up => Math.abs(up.x - p.x) < 0.1 && Math.abs(up.y - p.y) < 0.1)) {
+                uniquePoints.push(p);
+            }
+        }
+
+        if (uniquePoints.length === 2) {
+            lineStartX = uniquePoints[0].x;
+            lineStartY = uniquePoints[0].y;
+            lineEndX = uniquePoints[1].x;
+            lineEndY = uniquePoints[1].y;
+        } else {
+            return; // Eğer çizgi kutunun dışındaysa (veya kesişmiyorsa) hiç iz çizme!
+        }
+    }
+
+    // Çizgiyi sisteme stroke olarak ekle
+    if (window.drawnStrokes) {
+        const dpr = window.devicePixelRatio || 1;
+        const bgLayerObj = {
+            type: 'segment',
+            p1: {x: lineStartX * dpr, y: lineStartY * dpr},
+            p2: {x: lineEndX * dpr, y: lineEndY * dpr},
+            color: '#aaaaaa',
+            width: 3 * dpr, // Çizgi kalınlığını da dpr ile çarpalım ki tablette ince kalmasın
+            label1: '',
+            label2: '',
+            id: Date.now() + Math.random()
+        };
+        window.drawnStrokes.push(bgLayerObj);
+        if (typeof window.redrawAllStrokes === 'function') {
+            window.redrawAllStrokes();
+        }
+    }
+}
+
+function katlanmisBirak(p1, p2) {
+    if (!katlamaOverlayCanvas || !window.drawnStrokes) return;
+    
+    let cropX = 0;
+    let cropY = 0;
+    let cropW = window.innerWidth;
+    let cropH = window.innerHeight;
+
+    // Kırpma alanı hesapla: Orijinal kutu ve katlama eksenine göre yansımasının sınırlarını bul
+    if (currentCaptureRect && p1 && p2) {
+        const reflectPoint = (x, y, pA, pB) => {
+            const dx = pB.x - pA.x;
+            const dy = pB.y - pA.y;
+            const a = (dx * dx - dy * dy) / (dx * dx + dy * dy);
+            const b = 2 * dx * dy / (dx * dx + dy * dy);
+            return {
+                x: a * (x - pA.x) + b * (y - pA.y) + pA.x,
+                y: b * (x - pA.x) - a * (y - pA.y) + pA.y
+            };
+        };
+
+        const r = currentCaptureRect;
+        const pts = [
+            {x: r.x, y: r.y}, {x: r.x + r.w, y: r.y},
+            {x: r.x + r.w, y: r.y + r.h}, {x: r.x, y: r.y + r.h}
+        ];
+
+        for (let i = 0; i < 4; i++) {
+            pts.push(reflectPoint(pts[i].x, pts[i].y, p1, p2));
+        }
+
+        let minX = Math.min(...pts.map(p => p.x));
+        let maxX = Math.max(...pts.map(p => p.x));
+        let minY = Math.min(...pts.map(p => p.y));
+        let maxY = Math.max(...pts.map(p => p.y));
+
+        minX = Math.floor(Math.max(0, minX - 20)); // Padding
+        minY = Math.floor(Math.max(0, minY - 20));
+        maxX = Math.ceil(Math.min(window.innerWidth, maxX + 20));
+        maxY = Math.ceil(Math.min(window.innerHeight, maxY + 20));
+
+        cropX = minX;
+        cropY = minY;
+        cropW = maxX - minX;
+        cropH = maxY - minY;
+    }
+
+    // YENİ: Sadece katlanan bölgeyi (crop box) kapsayan minik bir canvas oluştur
+    const dpr = window.devicePixelRatio || 1;
+    const cropCanvas = document.createElement('canvas');
+    cropCanvas.width = cropW * dpr;
+    cropCanvas.height = cropH * dpr;
+    const cCtx = cropCanvas.getContext('2d');
+    cCtx.scale(dpr, dpr);
+    
+    // Tüm ekranı çiz ama -cropX ve -cropY ofseti ile kaydır, böylece sadece istediğimiz alan canvas'a sığar
+    cCtx.drawImage(katlamaOverlayCanvas, -cropX, -cropY, window.innerWidth, window.innerHeight);
+    const dataUrl = cropCanvas.toDataURL('image/png');
+
+    // Resim yaması (patch) oluştur
+          let f1 = {x: p1.x, y: p1.y};
+      let f2 = {x: p2.x, y: p2.y};
+      if (currentCaptureRect && p1 && p2) {
+          const dx = p2.x - p1.x;
+          const dy = p2.y - p1.y;
+          if (Math.abs(dx) > 0.1 || Math.abs(dy) > 0.1) {
+              const midX = (p1.x + p2.x) / 2;
+              const midY = (p1.y + p2.y) / 2;
+              const nx = -dy; const ny = dx;
+              const left = currentCaptureRect.x; const right = currentCaptureRect.x + currentCaptureRect.w;
+              const top = currentCaptureRect.y; const bottom = currentCaptureRect.y + currentCaptureRect.h;
+              let pts = [];
+              if (nx !== 0) {
+                  let t = (left - midX) / nx; let y = midY + ny * t; if (y >= top && y <= bottom) pts.push({x: left, y: y});
+                  t = (right - midX) / nx; y = midY + ny * t; if (y >= top && y <= bottom) pts.push({x: right, y: y});
+              }
+              if (ny !== 0) {
+                  let t = (top - midY) / ny; let x = midX + nx * t; if (x >= left && x <= right) pts.push({x: x, y: top});
+                  t = (bottom - midY) / ny; x = midX + nx * t; if (x >= left && x <= right) pts.push({x: x, y: bottom});
+              }
+              let uPts = [];
+              for (let p of pts) {
+                  if (!uPts.some(up => Math.abs(up.x - p.x) < 0.1 && Math.abs(up.y - p.y) < 0.1)) uPts.push(p);
+              }
+              if (uPts.length === 2) { f1 = uPts[0]; f2 = uPts[1]; }
+          }
+      }
+      
+      const patchObj = { 
+          type: 'image', imgData: dataUrl, 
+          x: cropX * dpr, 
+          y: cropY * dpr, 
+          width: cropW * dpr, 
+          height: cropH * dpr, 
+          rotation: 0, 
+          isBackground: false, 
+          isPatch: true,
+          foldLine: [{x: f1.x * dpr, y: f1.y * dpr}, {x: f2.x * dpr, y: f2.y * dpr}],
+          id: Date.now() + Math.random().toString() 
+      };
+    
+    // Geobek çizim geçmişine ekle
+    window.drawnStrokes.push(patchObj);
+    
+    // Diğer cihazlarla senkronize et
+    if (typeof window.sendNetworkData === 'function') {
+        window.sendNetworkData({ type: 'yeni_cizim', stroke: patchObj });
+    }
+    
+    // Ekranı tazele
+    if (typeof window.redrawAllStrokes === 'function') {
+        window.redrawAllStrokes();
+    }
+}
+
+function getReflectionMatrix(p1, p2) {
+    const dx = p2.x - p1.x;
+    const dy = p2.y - p1.y;
+    const len2 = dx * dx + dy * dy;
+    if (len2 === 0) return [1, 0, 0, 1, 0, 0];
+
+    const nx = dx;
+    const ny = dy;
+    const px = (p1.x + p2.x) / 2;
+    const py = (p1.y + p2.y) / 2;
+
+    const a = (ny * ny - nx * nx) / len2;
+    const b = (-2 * nx * ny) / len2;
+    
+    const tx = px - px * a - py * b;
+    const ty = py - px * b + py * a;
+
+    return [a, b, b, -a, tx, ty];
+}
+
+function cizKatlamaAnimasyonu(bgImg, fgImg, rect, foldStart, foldCurrent) {
+    if (!katlamaOverlayCtx) return;
+    const ctx = katlamaOverlayCtx;
+    const cw = katlamaOverlayCanvas.width;
+    const ch = katlamaOverlayCanvas.height;
+
+    ctx.clearRect(0, 0, cw, ch);
+    
+    const dx = foldCurrent.x - foldStart.x;
+    const dy = foldCurrent.y - foldStart.y;
+    const dist = Math.sqrt(dx*dx + dy*dy);
+    if (dist < 1) {
+        ctx.drawImage(fgImg, rect.x, rect.y, rect.w, rect.h);
+        return;
+    }
+
+    const midX = foldStart.x + dx / 2;
+    const midY = foldStart.y + dy / 2;
+    const nx = dx / dist;
+    const ny = dy / dist;
+    const angle = Math.atan2(ny, nx);
+    
+    // 1. ZEMİN (Delik / P1 Tarafı)
+    ctx.save();
+    ctx.beginPath();
+    ctx.translate(midX, midY);
+    ctx.rotate(angle);
+    ctx.rect(-cw*2, -ch*2, cw*2, ch*4); // P1 (kalkan kısım boşluğu)
+    ctx.clip();
+    ctx.rotate(-angle);
+    ctx.translate(-midX, -midY);
+    ctx.drawImage(bgImg, rect.x, rect.y, rect.w, rect.h);
+    ctx.restore();
+
+    // 2. KATLANAN YAPRAK (Flap / P2 Tarafı)
+    ctx.save();
+    ctx.beginPath();
+    ctx.translate(midX, midY);
+    ctx.rotate(angle);
+    ctx.rect(0, -ch*2, cw*2, ch*4); // P2 (yaprağın düştüğü kısım)
+    ctx.clip();
+    ctx.rotate(-angle);
+    ctx.translate(-midX, -midY);
+
+    // Yansıma (Flip)
+    const [a, b, c, d, tx, ty] = getReflectionMatrix(foldStart, foldCurrent);
+    ctx.transform(a, b, c, d, tx, ty);
+    
+    // 3D Gölge (Katlanan yaprağın havada durduğunu belli eder)
+    ctx.shadowColor = "rgba(0, 0, 0, 0.5)";
+    ctx.shadowBlur = 20;
+    ctx.shadowOffsetX = -nx * 10;
+    ctx.shadowOffsetY = -ny * 10;
+    
+    ctx.drawImage(fgImg, rect.x, rect.y, rect.w, rect.h);
+    
+    // Gölgeyi kapat (sonraki çizimleri etkilememesi için)
+    ctx.shadowColor = "transparent";
+    
+    // SİYAH KUTU HATASI ÇÖZÜMÜ: fillRect'in rengini vermediğim için varsayılan siyaha boyuyordu!
+    // Arka yüz buzlu cam efekti (Sadece kağıdın arka yüzeyine uygulanır)
+    ctx.globalCompositeOperation = 'source-atop';
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+    ctx.fillRect(rect.x, rect.y, rect.w, rect.h);
+    ctx.globalCompositeOperation = 'source-over'; // Eski haline getir
+    
+    ctx.restore();
+}
+
+function agSenkronizeEt(action, p1 = null, p2 = null, bgStr = null, fgStr = null, rect = null) {
+    if (typeof isConnected !== 'undefined' && isConnected && typeof sendNetworkData === 'function') {
+        let logicalP1 = p1 ? screenToCanvasCoords(p1) : null;
+        let logicalP2 = p2 ? screenToCanvasCoords(p2) : null;
+        let logicalRect = rect ? screenToCanvasCoords(rect) : null;
+
+        if (action === 'basla' && bgStr && fgStr) {
+            const chunkSize = 16000;
+            
+            // BG Gönder
+            let bgId = 'bg_' + Date.now();
+            let totalBg = Math.ceil(bgStr.length / chunkSize);
+            for (let i = 0; i < totalBg; i++) {
+                window.sendNetworkData({
+                    type: 'katlama_basla_chunk', imgId: bgId,
+                    chunk: bgStr.substring(i * chunkSize, (i + 1) * chunkSize),
+                    index: i, total: totalBg, rect: logicalRect, isBg: true
+                });
+            }
+            
+            // FG Gönder
+            let fgId = 'fg_' + Date.now();
+            let totalFg = Math.ceil(fgStr.length / chunkSize);
+            for (let i = 0; i < totalFg; i++) {
+                window.sendNetworkData({
+                    type: 'katlama_basla_chunk', imgId: fgId,
+                    chunk: fgStr.substring(i * chunkSize, (i + 1) * chunkSize),
+                    index: i, total: totalFg, rect: logicalRect, isFg: true
+                });
+            }
+        } else {
+            window.sendNetworkData({
+                type: 'katlama_' + action,
+                foldStart: logicalP1,
+                foldCurrent: logicalP2
+            });
+        }
+    }
+}
+

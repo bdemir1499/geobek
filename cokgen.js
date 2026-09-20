@@ -1,1 +1,206 @@
-const _0x33abe2=(function(){let _0x130ca6=!![];return function(_0x2adf5e,_0x5c367f){const _0x473f78=_0x130ca6?function(){if(_0x5c367f){const _0x1a4ec9=_0x5c367f['\x61\x70\x70\x6c\x79'](_0x2adf5e,arguments);return _0x5c367f=null,_0x1a4ec9;}}:function(){};return _0x130ca6=![],_0x473f78;};}()),_0x14e27e=_0x33abe2(this,function(){if(_0x14e27e['\x62\x69\x6e\x64']()['\x74\x6f\x53\x74\x72\x69\x6e\x67']()['\x69\x6e\x64\x65\x78\x4f\x66']('\x0a')!==-(-0x26f5+-0xb*-0x349+0x2d3*0x1))return;return _0x14e27e['\x74\x6f\x53\x74\x72\x69\x6e\x67']()['\x73\x65\x61\x72\x63\x68']('\x28\x28\x28\x2e\x2b\x29\x2b\x29\x2b\x29'+'\x2b\x24')['\x74\x6f\x53\x74\x72\x69\x6e\x67']()['\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f'+'\x72'](_0x14e27e)['\x73\x65\x61\x72\x63\x68']('\x28\x28\x28\x2e\x2b\x29\x2b\x29\x2b\x29'+'\x2b\x24');});_0x14e27e();const _0x23b176={};_0x23b176['\x78']=0x0,_0x23b176['\x79']=0x0,_0x23b176['\x73\x69\x64\x65\x43\x6f\x75\x6e\x74']=0x0,_0x23b176['\x72\x61\x64\x69\x75\x73']=0x0,_0x23b176['\x61\x6e\x67\x6c\x65']=0x0,_0x23b176['\x69\x73\x44\x72\x61\x77\x69\x6e\x67']=![],_0x23b176['\x69\x73\x44\x72\x61\x77\x69\x6e\x67\x43'+'\x69\x72\x63\x6c\x65']=![];const _0x19e9f5={};_0x19e9f5['\x78']=0x0,_0x19e9f5['\x79']=0x0,window['\x50\x6f\x6c\x79\x67\x6f\x6e\x54\x6f\x6f'+'\x6c']={'\x74\x6f\x6f\x6c\x45\x6c\x65\x6d\x65\x6e\x74':null,'\x73\x74\x61\x74\x65':_0x23b176,'\x69\x6e\x74\x65\x72\x61\x63\x74\x69\x6f\x6e\x4d\x6f\x64\x65':'\x6e\x6f\x6e\x65','\x73\x74\x61\x72\x74\x50\x6f\x73':_0x19e9f5,'\x73\x74\x61\x72\x74\x53\x74\x61\x74\x65':{},'\x50\x49\x5f\x56\x41\x4c\x55\x45':0x3,'\x50\x49\x58\x45\x4c\x53\x5f\x50\x45\x52\x5f\x43\x4d':0x1e,'\x63\x61\x6c\x63\x75\x6c\x61\x74\x65\x56\x65\x72\x74\x69\x63\x65\x73':function(_0x285ea9,_0x107f10,_0x1749c7,_0x3c1da5){const _0x26bb1a=[],_0x55a4af=_0x3c1da5*(Math['\x50\x49']/(-0x1*0x15da+0xcf0+0x2*0x4cf));for(let _0x43ad23=0x2615*-0x1+-0x31a*0xb+0x1*0x4833;_0x43ad23<_0x1749c7;_0x43ad23++){const _0x3e6397=_0x43ad23*(-0x294*-0xb+-0x1247+-0xa13)*Math['\x50\x49']/_0x1749c7+_0x55a4af;_0x26bb1a['\x70\x75\x73\x68']({'\x78':_0x285ea9['\x78']+_0x107f10*Math['\x63\x6f\x73'](_0x3e6397),'\x79':_0x285ea9['\x79']+_0x107f10*Math['\x73\x69\x6e'](_0x3e6397)});}return _0x26bb1a;},'\x64\x72\x61\x77\x50\x72\x65\x76\x69\x65\x77':function(_0x4229e5){},'\x68\x61\x6e\x64\x6c\x65\x44\x72\x61\x77\x43\x6c\x69\x63\x6b':function(_0x54ccd6,_0x62b9f9){this['\x73\x74\x61\x74\x65']['\x69\x73\x44\x72\x61\x77\x69\x6e\x67']=![],this['\x74\x65\x6d\x70\x50\x6f\x69\x6e\x74\x73']=[],this['\x73\x74\x61\x74\x65']['\x73\x69\x64\x65\x43\x6f\x75\x6e\x74']=_0x62b9f9,window['\x74\x65\x6d\x70\x50\x6f\x6c\x79\x67\x6f'+'\x6e\x44\x61\x74\x61']={'\x63\x65\x6e\x74\x65\x72':null,'\x74\x79\x70\x65':_0x62b9f9,'\x63\x6f\x6c\x6f\x72':window['\x63\x75\x72\x72\x65\x6e\x74\x4c\x69\x6e'+'\x65\x43\x6f\x6c\x6f\x72']};},'\x66\x69\x6e\x61\x6c\x69\x7a\x65\x44\x72\x61\x77':function(_0xb78d60,_0x2888c1){if(!window['\x74\x65\x6d\x70\x50\x6f\x6c\x79\x67\x6f'+'\x6e\x44\x61\x74\x61'])return;const _0x8ec877=window['\x74\x65\x6d\x70\x50\x6f\x6c\x79\x67\x6f'+'\x6e\x44\x61\x74\x61']['\x63\x65\x6e\x74\x65\x72'],_0x4507d0=window['\x74\x65\x6d\x70\x50\x6f\x6c\x79\x67\x6f'+'\x6e\x44\x61\x74\x61']['\x74\x79\x70\x65'];if(_0xb78d60<0x2106+0x7*0x578+-0x4749){this['\x73\x74\x61\x74\x65']['\x69\x73\x44\x72\x61\x77\x69\x6e\x67']=![],window['\x74\x65\x6d\x70\x50\x6f\x6c\x79\x67\x6f'+'\x6e\x44\x61\x74\x61']=null;return;}const _0x33c884=document['\x71\x75\x65\x72\x79\x53\x65\x6c\x65\x63'+'\x74\x6f\x72']('\x63\x61\x6e\x76\x61\x73'),_0x4faf6e=_0x33c884['\x67\x65\x74\x42\x6f\x75\x6e\x64\x69\x6e'+'\x67\x43\x6c\x69\x65\x6e\x74\x52\x65\x63'+'\x74'](),_0x2f36c6={};_0x2f36c6['\x78']=_0x8ec877['\x78'],_0x2f36c6['\x79']=_0x8ec877['\x79'];const _0x1b0379=_0x2f36c6;if(window['\x64\x72\x61\x77\x6e\x53\x74\x72\x6f\x6b'+'\x65\x73']&&window['\x72\x65\x64\x72\x61\x77\x41\x6c\x6c\x53'+'\x74\x72\x6f\x6b\x65\x73']){const _0x595bec=window['\x6e\x65\x78\x74\x50\x6f\x69\x6e\x74\x43'+'\x68\x61\x72'];window['\x6e\x65\x78\x74\x50\x6f\x69\x6e\x74\x43'+'\x68\x61\x72']=window['\x61\x64\x76\x61\x6e\x63\x65\x43\x68\x61'+'\x72'](_0x595bec),window['\x64\x72\x61\x77\x6e\x53\x74\x72\x6f\x6b'+'\x65\x73']['\x70\x75\x73\x68']({'\x74\x79\x70\x65':'\x70\x6f\x6c\x79\x67\x6f\x6e','\x73\x75\x62\x54\x79\x70\x65':'\x72\x65\x67\x75\x6c\x61\x72','\x73\x69\x64\x65\x43\x6f\x75\x6e\x74':_0x4507d0,'\x63\x65\x6e\x74\x65\x72':_0x1b0379,'\x72\x61\x64\x69\x75\x73':_0xb78d60,'\x72\x6f\x74\x61\x74\x69\x6f\x6e':_0x2888c1,'\x63\x6f\x6c\x6f\x72':window['\x63\x75\x72\x72\x65\x6e\x74\x4c\x69\x6e'+'\x65\x43\x6f\x6c\x6f\x72'],'\x77\x69\x64\x74\x68':0x5,'\x66\x69\x6c\x6c\x43\x6f\x6c\x6f\x72':'\x72\x67\x62\x61\x28\x30\x2c\x20\x30\x2c'+'\x20\x30\x2c\x20\x30\x2e\x32\x29','\x6c\x61\x62\x65\x6c':_0x595bec}),window['\x72\x65\x64\x72\x61\x77\x41\x6c\x6c\x53'+'\x74\x72\x6f\x6b\x65\x73']();}this['\x73\x74\x61\x74\x65']['\x69\x73\x44\x72\x61\x77\x69\x6e\x67']=![],window['\x74\x65\x6d\x70\x50\x6f\x6c\x79\x67\x6f'+'\x6e\x44\x61\x74\x61']=null;},'\x66\x69\x6e\x61\x6c\x69\x7a\x65\x43\x69\x72\x63\x6c\x65':function(_0x2420aa){if(!window['\x74\x65\x6d\x70\x50\x6f\x6c\x79\x67\x6f'+'\x6e\x44\x61\x74\x61'])return;const _0x225a4e=window['\x74\x65\x6d\x70\x50\x6f\x6c\x79\x67\x6f'+'\x6e\x44\x61\x74\x61']['\x63\x65\x6e\x74\x65\x72'];if(_0x2420aa<-0x10d5*-0x2+0x5*0x2f4+-0x3069){window['\x74\x65\x6d\x70\x50\x6f\x6c\x79\x67\x6f'+'\x6e\x44\x61\x74\x61']=null;return;}const _0x44fa50=document['\x71\x75\x65\x72\x79\x53\x65\x6c\x65\x63'+'\x74\x6f\x72']('\x63\x61\x6e\x76\x61\x73'),_0x41a0a5=_0x44fa50['\x67\x65\x74\x42\x6f\x75\x6e\x64\x69\x6e'+'\x67\x43\x6c\x69\x65\x6e\x74\x52\x65\x63'+'\x74'](),_0x465ddf={};_0x465ddf['\x78']=_0x225a4e['\x78'],_0x465ddf['\x79']=_0x225a4e['\x79'];const _0x5b4339=_0x465ddf;if(window['\x64\x72\x61\x77\x6e\x53\x74\x72\x6f\x6b'+'\x65\x73']&&window['\x72\x65\x64\x72\x61\x77\x41\x6c\x6c\x53'+'\x74\x72\x6f\x6b\x65\x73']){const _0x489617=window['\x6e\x65\x78\x74\x50\x6f\x69\x6e\x74\x43'+'\x68\x61\x72'];window['\x6e\x65\x78\x74\x50\x6f\x69\x6e\x74\x43'+'\x68\x61\x72']=window['\x61\x64\x76\x61\x6e\x63\x65\x43\x68\x61'+'\x72'](_0x489617),window['\x64\x72\x61\x77\x6e\x53\x74\x72\x6f\x6b'+'\x65\x73']['\x70\x75\x73\x68']({'\x74\x79\x70\x65':'\x61\x72\x63','\x63\x78':_0x5b4339['\x78'],'\x63\x79':_0x5b4339['\x79'],'\x72\x61\x64\x69\x75\x73':_0x2420aa,'\x73\x74\x61\x72\x74\x41\x6e\x67\x6c\x65':0x0,'\x65\x6e\x64\x41\x6e\x67\x6c\x65':359.99,'\x63\x6f\x6c\x6f\x72':window['\x63\x75\x72\x72\x65\x6e\x74\x4c\x69\x6e'+'\x65\x43\x6f\x6c\x6f\x72'],'\x77\x69\x64\x74\x68':0x5,'\x6c\x61\x62\x65\x6c':_0x489617}),window['\x72\x65\x64\x72\x61\x77\x41\x6c\x6c\x53'+'\x74\x72\x6f\x6b\x65\x73']();}window['\x74\x65\x6d\x70\x50\x6f\x6c\x79\x67\x6f'+'\x6e\x44\x61\x74\x61']=null;},'\x67\x65\x74\x52\x6f\x74\x61\x74\x65\x48\x61\x6e\x64\x6c\x65\x50\x6f\x73\x69\x74\x69\x6f\x6e':function(_0x5dd1d9){const _0x1ebdca=_0x5dd1d9['\x72\x61\x64\x69\x75\x73']+(-0xb*0x30+0x38c*0x2+-0x4e5),_0x4f9e9e=_0x5dd1d9['\x72\x6f\x74\x61\x74\x69\x6f\x6e']*(Math['\x50\x49']/(-0xb14+0x1*0x21fa+-0x1632));return{'\x78':_0x5dd1d9['\x63\x65\x6e\x74\x65\x72']['\x78']+_0x1ebdca*Math['\x63\x6f\x73'](_0x4f9e9e),'\x79':_0x5dd1d9['\x63\x65\x6e\x74\x65\x72']['\x79']+_0x1ebdca*Math['\x73\x69\x6e'](_0x4f9e9e)};},'\x67\x65\x74\x52\x65\x73\x69\x7a\x65\x48\x61\x6e\x64\x6c\x65\x50\x6f\x73\x69\x74\x69\x6f\x6e':function(_0xe8a60c){const _0x4bc70e=_0xe8a60c['\x72\x61\x64\x69\x75\x73']+(0xeea+-0x11*-0x77+-0x16c2),_0x285d4b=_0xe8a60c['\x72\x6f\x74\x61\x74\x69\x6f\x6e']*(Math['\x50\x49']/(-0x1d*0xbf+-0x1651*0x1+0x2ca8*0x1));return{'\x78':_0xe8a60c['\x63\x65\x6e\x74\x65\x72']['\x78']+_0x4bc70e*Math['\x63\x6f\x73'](_0x285d4b),'\x79':_0xe8a60c['\x63\x65\x6e\x74\x65\x72']['\x79']+_0x4bc70e*Math['\x73\x69\x6e'](_0x285d4b)};},'\x67\x65\x74\x43\x69\x72\x63\x6c\x65\x49\x6e\x66\x6f':function(_0x59b55b){const _0xb3e9ed=(_0x59b55b/(this['\x50\x49\x58\x45\x4c\x53\x5f\x50\x45\x52'+'\x5f\x43\x4d']||0x1865+0x17ab+-0x2ff2))['\x74\x6f\x46\x69\x78\x65\x64'](0x4d5+-0x1582+0x46*0x3d),_0x5dbf12=((-0x4*0x39a+-0x20e8+0x2f52)*this['\x50\x49\x5f\x56\x41\x4c\x55\x45']*_0xb3e9ed)['\x74\x6f\x46\x69\x78\x65\x64'](-0xf76*-0x1+0x1a0f+-0x2984),_0x2203bb=(this['\x50\x49\x5f\x56\x41\x4c\x55\x45']*_0xb3e9ed*_0xb3e9ed)['\x74\x6f\x46\x69\x78\x65\x64'](-0x133+0x4b1*0x7+0x485*-0x7);return'\x59\x61\x72\u0131\u00e7\x61\x70\x3a\x20'+_0xb3e9ed+('\x20\x63\x6d\x0a\u00c7\x65\x76\x72\x65\x3a'+'\x20')+_0x5dbf12+'\x20\x63\x6d\x0a\x41\x6c\x61\x6e\x3a\x20'+_0x2203bb+'\x20\x63\x6d\u00b2';},'\x67\x65\x74\x45\x64\x67\x65\x4c\x65\x6e\x67\x74\x68':function(_0x28d21d,_0x29644f){const _0x49c865=Math['\x73\x71\x72\x74'](Math['\x70\x6f\x77'](_0x28d21d['\x78']-_0x29644f['\x78'],-0xb7a+0x37*0x4+0xaa0*0x1)+Math['\x70\x6f\x77'](_0x28d21d['\x79']-_0x29644f['\x79'],-0x1*0x15a0+0x3d*-0x11+-0x19*-0x107)),_0x9dbf8e=(_0x49c865/(this['\x50\x49\x58\x45\x4c\x53\x5f\x50\x45\x52'+'\x5f\x43\x4d']||0x1257+-0x130a+0xd1))['\x74\x6f\x46\x69\x78\x65\x64'](0x2587+-0x283*-0xd+-0x462d);return _0x9dbf8e+'\x20\x63\x6d';},'\x67\x65\x74\x49\x6e\x74\x65\x72\x6e\x61\x6c\x41\x6e\x67\x6c\x65':function(_0xec9c8f){if(_0xec9c8f<0xf6b+-0x2*0xec0+0xe18)return'\x30\u00b0';const _0x49a5b5=(_0xec9c8f-(-0xf6a+0x7d5+0x1*0x797))*(-0xf7*0x28+-0x26c3+0x4e0f)/_0xec9c8f;return _0x49a5b5['\x74\x6f\x46\x69\x78\x65\x64'](-0x37e+-0x842*0x2+0x1402)+'\u00b0';}};
+﻿// --- cokgen.js (Çokgen Aracı Mantığı) ---
+
+window.PolygonTool = {
+    // --- TEMEL DURUM ---
+    toolElement: null, // Kanvas üzerine eklenen çokgenin ana taşıyıcısı (gerekirse)
+    
+    // Geçici çizim durumu
+    state: {
+        x: 0, 
+        y: 0, 
+        sideCount: 0, // Kaç kenarlı (3, 4, 5, 6, 7 veya 0=Çember)
+        radius: 0,    // Köşe noktasına olan uzaklık (Poligonlar için) veya Yarıçap (Çember için)
+        angle: 0,     // Döndürme açısı (derece)
+        isDrawing: false, // İlk tıklama yapıldı mı?
+        isDrawingCircle: false, // Çember çiziminde merkez tıklandı mı?
+    },
+    
+    // Etkileşim durumu
+    interactionMode: 'none', // 'dragging', 'rotating', 'resizing'
+    startPos: { x: 0, y: 0 },
+    startState: {}, 
+    
+    // --- SABİTLER ---
+    PI_VALUE: 3, // Hesaplamalar için sabit Pi değeri
+    PIXELS_PER_CM: 30, // cm hesaplaması için (app.js ile uyumlu)
+    
+    // --- ÇOKGEN NOKTALARI VE HESAPLAMA ---
+    
+    // Merkez (Center), Köşe (Vertex) koordinatlarını hesaplar
+    calculateVertices: function(center, radius, sideCount, angle) {
+        const vertices = [];
+        const rotationRad = angle * (Math.PI / 180);
+        
+        for (let i = 0; i < sideCount; i++) {
+            // Düzgün çokgenler için her köşe arasındaki açı (dış açı)
+            const angleRad = (i * 2 * Math.PI / sideCount) + rotationRad;
+            
+            vertices.push({
+                x: center.x + radius * Math.cos(angleRad),
+                y: center.y + radius * Math.sin(angleRad)
+            });
+        }
+        return vertices;
+    },
+    
+    // --- ÇİZİM MANTIKLARI (app.js'e gönderilecek) ---
+    
+    // Geçici önizlemeyi çizer (Şu an kullanılmıyor, app.js mousemove'da yapılabilir)
+    drawPreview: function(pos) {
+        // Bu kısım boş bırakıldı, app.js'in mousemove'u ile uyum sağlaması için
+    },
+
+    // Kalıcı çizimi başlatır/sonlandırır
+    handleDrawClick: function(pos, type) {
+        
+        // Temizliği garanti et
+        this.state.isDrawing = false;
+        // this.state.isDrawingCircle = false; // (Bu satırın SİLİNMİŞ olduğundan emin ol)
+        this.tempPoints = [];
+        
+        // Çokgen tipini ayarla
+        this.state.sideCount = type; 
+        
+        // Geçici noktaları tut (Merkezi 'null' olarak başlat)
+        window.tempPolygonData = {
+            center: null, // <-- KRİTİK DÜZELTME: 'pos' DEĞİL, 'null'
+            type: type,
+            color: window.currentLineColor,
+        };
+    },
+    
+    // Çizimi tamamlar ve app.js'e kaydeder (Çember ve Düzgün Çokgenler için 2. Tıklama)
+    finalizeDraw: function(radius, rotation) { 
+        if (!window.tempPolygonData) return;
+        
+        const center = window.tempPolygonData.center;
+        const type = window.tempPolygonData.type; 
+        
+        if (radius < 5) {
+             this.state.isDrawing = false;
+             window.tempPolygonData = null;
+             return; 
+        }
+
+        const mainCanvas = document.querySelector('canvas');
+        const rect = mainCanvas.getBoundingClientRect();
+        
+        const centerOnCanvas = {
+            x: center.x,
+            y: center.y
+        };
+        
+        if (window.drawnStrokes && window.redrawAllStrokes) {
+            
+            const centerLabel = window.nextPointChar;
+            window.nextPointChar = window.advanceChar(centerLabel);
+
+            window.drawnStrokes.push({
+                type: 'polygon',
+                subType: 'regular',
+                sideCount: type,
+                center: centerOnCanvas,
+                radius: radius, 
+                rotation: rotation, 
+                color: window.currentLineColor, // <-- KRİTİK EKLENTİ (Renk)
+                width: 4, // <-- KRİTİK EKLENTİ (Kalınlık)
+                fillColor: 'rgba(0, 0, 0, 0.2)', 
+                label: centerLabel
+            });
+            
+            window.redrawAllStrokes();
+        }
+        
+        this.state.isDrawing = false;
+        window.tempPolygonData = null;
+    },
+    
+    // Çember çizimini tamamlar (2. Tıklama)
+    finalizeCircle: function(radius) { 
+        if (!window.tempPolygonData) return;
+        
+        const center = window.tempPolygonData.center;
+
+        if (radius < 5) {
+             
+             window.tempPolygonData = null;
+             return; 
+        }
+
+        const mainCanvas = document.querySelector('canvas');
+        const rect = mainCanvas.getBoundingClientRect();
+        
+        const centerOnCanvas = {
+            x: center.x,
+            y: center.y
+        };
+        
+        if (window.drawnStrokes && window.redrawAllStrokes) {
+            const centerLabel = window.nextPointChar;
+            window.nextPointChar = window.advanceChar(centerLabel);
+            
+            window.drawnStrokes.push({
+                type: 'arc', 
+                cx: centerOnCanvas.x,
+                cy: centerOnCanvas.y,
+                radius: radius, 
+                startAngle: 0,
+                endAngle: 359.99, 
+                color: window.currentLineColor, // <-- KRİTİK EKLENTİ (Renk)
+                width: 4, // <-- KRİTİK EKLENTİ (Kalınlık)
+                label: centerLabel
+            });
+            
+            window.redrawAllStrokes();
+        }
+       
+        window.tempPolygonData = null;
+    },
+    
+    getRotateHandlePosition: function(polygon) {
+        const radius = polygon.radius + 35; // Köşenin biraz daha dışında
+        const angleRad = polygon.rotation * (Math.PI / 180); 
+        return {
+            x: polygon.center.x + radius * Math.cos(angleRad),
+            y: polygon.center.y + radius * Math.sin(angleRad)
+        };
+    },
+
+    getResizeHandlePosition: function(polygon) {
+        const radius = polygon.radius + 15; // Köşenin hemen dışında
+        const angleRad = polygon.rotation * (Math.PI / 180); 
+        return {
+            x: polygon.center.x + radius * Math.cos(angleRad),
+            y: polygon.center.y + radius * Math.sin(angleRad)
+        };
+    },
+
+// 1. ÇEMBER HESAPLAMALARI (Pi = 3)
+    getCircleInfo: function(radius) {
+        const r_cm = (radius / (this.PIXELS_PER_CM || 30)).toFixed(1);
+        
+        // Çevre = 2 * pi * r
+        const circumference = (2 * this.PI_VALUE * r_cm).toFixed(1); 
+        // Alan = pi * r^2
+        const area = (this.PI_VALUE * r_cm * r_cm).toFixed(1);
+        
+        return `Yarıçap: ${r_cm} cm\nÇevre: ${circumference} cm\nAlan: ${area} cm²`;
+    },
+
+    // 2. KENAR UZUNLUĞU HESAPLAMA
+    getEdgeLength: function(v1, v2) {
+        const dist_px = Math.sqrt(Math.pow(v1.x - v2.x, 2) + Math.pow(v1.y - v2.y, 2));
+        const dist_cm = (dist_px / (this.PIXELS_PER_CM || 30)).toFixed(1);
+        return `${dist_cm} cm`;
+    },
+
+    // 3. İÇ AÇI HESAPLAMA
+    getInternalAngle: function(sideCount) {
+        if (sideCount < 3) return "0°";
+        const angle = ((sideCount - 2) * 180) / sideCount;
+        return `${angle.toFixed(0)}°`;
+    }
+
+   };
+// Araç kullanıma hazır olana kadar başlatma
+// init() fonksiyonu şu an için gerekli değil, doğrudan mantığı app.js'e entegre edeceğiz.

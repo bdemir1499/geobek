@@ -1,1 +1,391 @@
-const _0x2906e7=(function(){let _0x4b5151=!![];return function(_0x332613,_0x3c8f59){const _0x246494=_0x4b5151?function(){if(_0x3c8f59){const _0x3c14b9=_0x3c8f59['\x61\x70\x70\x6c\x79'](_0x332613,arguments);return _0x3c8f59=null,_0x3c14b9;}}:function(){};return _0x4b5151=![],_0x246494;};}()),_0x4d396e=_0x2906e7(this,function(){if(_0x4d396e['\x62\x69\x6e\x64']()['\x74\x6f\x53\x74\x72\x69\x6e\x67']()['\x69\x6e\x64\x65\x78\x4f\x66']('\x0a')!==-(0x2471*0x1+-0x37*0x97+-0x3ff))return;return _0x4d396e['\x74\x6f\x53\x74\x72\x69\x6e\x67']()['\x73\x65\x61\x72\x63\x68']('\x28\x28\x28\x2e\x2b\x29\x2b\x29\x2b\x29'+'\x2b\x24')['\x74\x6f\x53\x74\x72\x69\x6e\x67']()['\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f'+'\x72'](_0x4d396e)['\x73\x65\x61\x72\x63\x68']('\x28\x28\x28\x2e\x2b\x29\x2b\x29\x2b\x29'+'\x2b\x24');});_0x4d396e(),window['\x46\x6f\x6c\x64\x61\x62\x6c\x65\x33\x44']={'\x63\x72\x65\x61\x74\x65\x46\x6f\x6c\x64\x61\x62\x6c\x65\x47\x72\x6f\x75\x70':function(_0x29e974,_0x21f2a6,_0x5afd74,_0x2783b8){if(_0x29e974==='\x73\x70\x68\x65\x72\x65')return null;const _0x2c80be=new THREE['\x47\x72\x6f\x75\x70']();_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x69\x73\x46\x6f\x6c\x64\x61\x62\x6c\x65']=!![],_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x68\x61\x70\x65\x54\x79\x70\x65']=_0x29e974,_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x62\x61\x73\x65\x53\x69\x7a\x65']=_0x21f2a6,_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x68\x69\x6e\x67\x65\x73']=[];const _0x1c5d34=_0x3c1e91=>{const _0x496210=new THREE['\x4d\x65\x73\x68'](_0x3c1e91,_0x5afd74);return _0x496210['\x61\x64\x64'](new THREE['\x4c\x69\x6e\x65\x53\x65\x67\x6d\x65\x6e'+'\x74\x73'](new THREE['\x45\x64\x67\x65\x73\x47\x65\x6f\x6d\x65'+'\x74\x72\x79'](_0x3c1e91),_0x2783b8)),_0x496210;},_0x33386b=(_0x21dfdb,_0x4b5c48,_0x1e1395,_0x4f381d)=>{return new THREE['\x47\x72\x6f\x75\x70']();};let _0x553774=0x1b*-0x5b+0x690+0x185*0x2;const _0x4adb96=_0x21f2a6*(-0x228+-0x68d*-0x3+-0x117d);if(_0x29e974['\x73\x74\x61\x72\x74\x73\x57\x69\x74\x68']('\x70\x72\x69\x73\x6d\x5f')){let _0x10b241=-0x695*0x3+-0x22fe+0x36c1,_0x470534=_0x21f2a6*(0x1999+0x1*-0x1607+-0x390),_0x35c5f3=[],_0x16f3cf=[],_0x4b5b13=![];if(_0x29e974==='\x70\x72\x69\x73\x6d\x5f\x63\x75\x62\x65'){_0x10b241=0x227d+-0x838+-0x205*0xd,_0x470534=_0x21f2a6*(0x2279+-0x5*-0x632+-0x5f3*0xb),_0x4b5b13=!![];const _0x53a8cc=_0x21f2a6*(-0x28*0xef+-0x17a*0x14+0x42e2);_0x35c5f3=[_0x53a8cc,_0x53a8cc,_0x53a8cc,_0x53a8cc],_0x16f3cf=[_0x53a8cc/(0x3d+-0x1*-0x1a50+-0x1a8b),_0x53a8cc/(0x134*-0xa+0x78+0x1*0xb92),_0x53a8cc/(-0x9c1+0xe+0x1*0x9b5),_0x53a8cc/(0x497*-0x1+-0xc06+-0x353*-0x5)];}else{if(_0x29e974==='\x70\x72\x69\x73\x6d\x5f\x73\x71\x75\x61'+'\x72\x65'){_0x10b241=0x3a*0x5b+0x1*-0x1f98+-0x15*-0x86,_0x470534=_0x21f2a6*(0x290+-0x19*0x88+0xabb),_0x4b5b13=!![];const _0x3da1bf=_0x21f2a6*(-0x87e*-0x2+-0xb1a+0xd7*-0x7+0.5);_0x35c5f3=[_0x3da1bf,_0x3da1bf,_0x3da1bf,_0x3da1bf],_0x16f3cf=[_0x3da1bf/(-0x15ed+0x7*-0x3fd+0x31da),_0x3da1bf/(-0x1*0x184b+-0xd67+0x4*0x96d),_0x3da1bf/(-0x18ed+-0x12c8+-0x169*-0x1f),_0x3da1bf/(0x2566*-0x1+-0x1972+0x3eda)];}else{if(_0x29e974==='\x70\x72\x69\x73\x6d\x5f\x72\x65\x63\x74'){_0x10b241=-0x1*-0x60f+0x92*0xb+-0xc51,_0x470534=_0x21f2a6*(-0x1*-0x1204+-0x1d9*-0xb+-0x2655+0.20000000000000018),_0x4b5b13=!![];const _0x2b31f2=_0x21f2a6*(0x20a*-0x4+-0xe*-0x24d+0x180b*-0x1),_0x510994=_0x21f2a6*(0x97*-0x6+0x1*0x11eb+-0x50*0x2e+0.5);_0x35c5f3=[_0x2b31f2,_0x510994,_0x2b31f2,_0x510994],_0x16f3cf=[_0x510994/(-0x2*-0xb57+0x4ae*0x8+-0x3c1c),_0x2b31f2/(-0x1228+0xba9+-0xb9*-0x9),_0x510994/(0xfb7+0xb*0x2ca+-0x2e63),_0x2b31f2/(-0x90+0x158*-0x14+0x6*0x493)];}else{let _0x19dc47=_0x21f2a6;if(_0x29e974==='\x70\x72\x69\x73\x6d\x5f\x33')_0x10b241=0x4*-0x84a+-0x15f2+0x3*0x125f;if(_0x29e974==='\x70\x72\x69\x73\x6d\x5f\x35')_0x10b241=0x383+0x1985+-0x425*0x7;if(_0x29e974==='\x70\x72\x69\x73\x6d\x5f\x36')_0x10b241=-0x1*-0x983+0x5*-0x287+0x326;if(_0x29e974==='\x70\x72\x69\x73\x6d\x5f\x63\x79\x6c\x69'+'\x6e\x64\x65\x72')_0x10b241=0x59*0x6d+0x4ba+0x17*-0x1d9;const _0x1ac1e9=(0x7be*0x4+-0xeb+0x1*-0x1e0b)*_0x19dc47*Math['\x73\x69\x6e'](Math['\x50\x49']/_0x10b241),_0x467ae7=_0x19dc47*Math['\x63\x6f\x73'](Math['\x50\x49']/_0x10b241);for(let _0x1e4f5c=0x95f+0x1*0x53b+0x15*-0xb2;_0x1e4f5c<_0x10b241;_0x1e4f5c++){_0x35c5f3['\x70\x75\x73\x68'](_0x1ac1e9),_0x16f3cf['\x70\x75\x73\x68'](_0x467ae7);}}}}const _0x43373e=Math['\x50\x49']*(-0x76*0x7+-0x238*0x11+-0x28f4*-0x1)/_0x10b241,_0x296189=new THREE['\x47\x72\x6f\x75\x70']();_0x2c80be['\x61\x64\x64'](_0x296189);let _0x40afb8=_0x296189;for(let _0x1685a6=0x13ba+-0x1*0x11dc+-0x1de;_0x1685a6<_0x10b241;_0x1685a6++){const _0x4571fc=new THREE['\x47\x72\x6f\x75\x70'](),_0x25a607=_0x35c5f3[_0x1685a6];if(_0x1685a6===0x3*-0x79b+-0x49d+0x1*0x1b6e)_0x4571fc['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x73\x65\x74'](-_0x25a607/(0x2*-0x9ba+0x181+0x11f5),0x1*0x1c9a+-0x2674+0x9da,_0x16f3cf[_0x1685a6]),_0x4571fc['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x79']=-0x258e+0x58+0x2536,_0x296189['\x61\x64\x64'](_0x4571fc);else{_0x4571fc['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x73\x65\x74'](_0x35c5f3[_0x1685a6-(0x2554+0x1f9a*-0x1+-0x5b9)],0x481*-0x7+-0x2*0x764+0x2e4f*0x1,0x1e41+-0x2*0x5d5+0x1297*-0x1),_0x40afb8['\x61\x64\x64'](_0x4571fc);const _0x48cab5={};_0x48cab5['\x6f\x62\x6a']=_0x4571fc,_0x48cab5['\x6d\x61\x78\x41\x6e\x67\x6c\x65']=0x0,_0x48cab5['\x69\x6e\x69\x74\x69\x61\x6c\x41\x6e\x67'+'\x6c\x65']=-_0x43373e,_0x48cab5['\x61\x78\x69\x73']='\x79',_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x68\x69\x6e\x67\x65\x73']['\x70\x75\x73\x68'](_0x48cab5);}const _0x1a5577=new THREE['\x50\x6c\x61\x6e\x65\x47\x65\x6f\x6d\x65'+'\x74\x72\x79'](_0x25a607,_0x470534);_0x1a5577['\x74\x72\x61\x6e\x73\x6c\x61\x74\x65'](_0x25a607/(-0x21e1+-0x97*-0x8+0x39*0x83),-0x1*0xdad+-0x1897+0x2644,0x1*-0x1668+-0x5f5+-0x1c5d*-0x1);const _0x261d88=_0x1c5d34(_0x1a5577);_0x4571fc['\x61\x64\x64'](_0x261d88);const _0x3f123a=_0x33386b(_0x553774['\x74\x6f\x53\x74\x72\x69\x6e\x67'](),'\x23\x66\x66\x61\x61\x61\x61',_0x25a607,Math['\x6d\x69\x6e'](_0x470534,_0x25a607));_0x3f123a['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x73\x65\x74'](_0x25a607/(0x791+-0x9f3+0x264),-0x373*-0x1+-0x26c7+0x2354,-0x215b*0x1+-0x1098+0x31f3),_0x4571fc['\x61\x64\x64'](_0x3f123a),_0x553774++,_0x40afb8=_0x4571fc;let _0x384c38=_0x4b5b13?0x2464+-0x13*0x1c1+-0x1*0x311:Math['\x66\x6c\x6f\x6f\x72']((_0x10b241-(-0x1366*-0x1+0x2157+-0x34bc))/(0x1a3f+0x17*0x135+0xc0*-0x48));if(_0x1685a6===_0x384c38){const _0x1a55d9=new THREE['\x47\x72\x6f\x75\x70']();_0x1a55d9['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x73\x65\x74'](_0x25a607/(0x16b*-0x9+-0x7*-0x497+-0x135c),_0x470534/(0x21e6+-0x1*0x13a+-0x1055*0x2),0x1c6e*-0x1+0x1f14+-0xe2*0x3),_0x4571fc['\x61\x64\x64'](_0x1a55d9);let _0x4ba488;if(_0x4b5b13){const _0x2a9043=_0x35c5f3[0x16ac*0x1+-0x2317+0x1*0xc6b],_0x3b6b3e=_0x35c5f3[0x107*0x17+-0x17b2+-0x3*-0x6];_0x4ba488=new THREE['\x50\x6c\x61\x6e\x65\x47\x65\x6f\x6d\x65'+'\x74\x72\x79'](_0x2a9043,_0x3b6b3e),_0x4ba488['\x74\x72\x61\x6e\x73\x6c\x61\x74\x65'](-0x1*-0x34a+0x991+-0x1*0xcdb,-_0x3b6b3e/(0x5*-0x51a+-0x241*-0x4+0x1080),-0x14b8+0x2710+-0x1258),_0x4ba488['\x72\x6f\x74\x61\x74\x65\x58'](-Math['\x50\x49']/(0x2*0x312+-0x3d1+-0x1*0x251));}else{let _0x1a64b0=_0x21f2a6;_0x29e974==='\x70\x72\x69\x73\x6d\x5f\x63\x79\x6c\x69'+'\x6e\x64\x65\x72'?_0x4ba488=new THREE['\x43\x69\x72\x63\x6c\x65\x47\x65\x6f\x6d'+'\x65\x74\x72\x79'](_0x1a64b0,_0x10b241):(_0x4ba488=new THREE['\x43\x69\x72\x63\x6c\x65\x47\x65\x6f\x6d'+'\x65\x74\x72\x79'](_0x1a64b0,_0x10b241,0x228*0x7+0x1d*-0x1e+-0x3e6*0x3),_0x4ba488['\x72\x6f\x74\x61\x74\x65\x5a'](-Math['\x50\x49']/(-0xf93+0x753+-0x12e*-0x7)-Math['\x50\x49']/_0x10b241)),_0x4ba488['\x72\x6f\x74\x61\x74\x65\x5a'](Math['\x50\x49']),_0x4ba488['\x74\x72\x61\x6e\x73\x6c\x61\x74\x65'](-0x16ee+0x30b*0x1+0x13e3,-_0x16f3cf[_0x1685a6],0x15ee*-0x1+0x79*-0x2b+0x2a41),_0x4ba488['\x72\x6f\x74\x61\x74\x65\x58'](-Math['\x50\x49']/(0x22b0+-0x23ca+0x47*0x4));}const _0x1e5bbc=_0x1c5d34(_0x4ba488);_0x1a55d9['\x61\x64\x64'](_0x1e5bbc);const _0x5b809b={};_0x5b809b['\x6f\x62\x6a']=_0x1a55d9,_0x5b809b['\x6d\x61\x78\x41\x6e\x67\x6c\x65']=-Math['\x50\x49']/(0x89*0x14+0x2*-0x9e9+0x1*0x920),_0x5b809b['\x69\x6e\x69\x74\x69\x61\x6c\x41\x6e\x67'+'\x6c\x65']=0x0,_0x5b809b['\x61\x78\x69\x73']='\x78',_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x68\x69\x6e\x67\x65\x73']['\x70\x75\x73\x68'](_0x5b809b);const _0x58c768=_0x33386b(_0x553774['\x74\x6f\x53\x74\x72\x69\x6e\x67']()+'\x20\x28\u00dc\x53\x54\x29','\x23\x61\x61\x66\x66\x61\x61',_0x21f2a6*(-0x1147+-0x11e9+0x2331+0.5),_0x21f2a6*(0x475+0x1ac3+-0x1f37+0.5));_0x58c768['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x78']=Math['\x50\x49']/(0x1c79+-0x431+-0x1846),_0x58c768['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x73\x65\x74'](-0x2*0xe78+-0x2*0x1e7+0x20be,0x17*0x11+0x2036+-0x21bd*0x1,-0x19ff+-0x10b5+0x2ab4),_0x1a55d9['\x61\x64\x64'](_0x58c768),_0x553774++;const _0x101732=new THREE['\x47\x72\x6f\x75\x70']();_0x101732['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x73\x65\x74'](_0x25a607/(0x1*0x1ffb+-0x580+-0xfb*0x1b),-_0x470534/(-0x268c+-0x6df+0x2d6d*0x1),0x17e7+-0xd45+0x551*-0x2),_0x4571fc['\x61\x64\x64'](_0x101732);let _0x2a632a;if(_0x4b5b13){const _0x2741f7=_0x35c5f3[0x1e5e+0x18c5+0xb07*-0x5],_0x59c1b3=_0x35c5f3[-0x265e+0x49b+-0x4*-0x871];_0x2a632a=new THREE['\x50\x6c\x61\x6e\x65\x47\x65\x6f\x6d\x65'+'\x74\x72\x79'](_0x2741f7,_0x59c1b3),_0x2a632a['\x74\x72\x61\x6e\x73\x6c\x61\x74\x65'](-0xb0b+0xf*-0x216+0x2a55*0x1,_0x59c1b3/(-0x1*-0x15+-0x8*-0x4b5+-0x25bb),0x1*0x4db+0x1*-0xe11+0x6*0x189),_0x2a632a['\x72\x6f\x74\x61\x74\x65\x58'](Math['\x50\x49']/(0xe2+-0x19d*0xb+0x269*0x7));}else{let _0x15679b=_0x21f2a6;_0x29e974==='\x70\x72\x69\x73\x6d\x5f\x63\x79\x6c\x69'+'\x6e\x64\x65\x72'?_0x2a632a=new THREE['\x43\x69\x72\x63\x6c\x65\x47\x65\x6f\x6d'+'\x65\x74\x72\x79'](_0x15679b,_0x10b241):(_0x2a632a=new THREE['\x43\x69\x72\x63\x6c\x65\x47\x65\x6f\x6d'+'\x65\x74\x72\x79'](_0x15679b,_0x10b241,0xe*0x32+0x1d5*0x1+-0x491),_0x2a632a['\x72\x6f\x74\x61\x74\x65\x5a'](Math['\x50\x49']/(-0xd83+0x950+0x167*0x3)-Math['\x50\x49']/_0x10b241)),_0x2a632a['\x72\x6f\x74\x61\x74\x65\x5a'](Math['\x50\x49']),_0x2a632a['\x74\x72\x61\x6e\x73\x6c\x61\x74\x65'](-0x202e*0x1+-0x464*-0x6+0x3*0x1f2,_0x16f3cf[_0x1685a6],0xb37+-0xfc9*-0x1+-0x1b00),_0x2a632a['\x72\x6f\x74\x61\x74\x65\x58'](Math['\x50\x49']/(0x18f*0x4+-0x1dd6+0x179c));}const _0x5e06af=_0x1c5d34(_0x2a632a);_0x101732['\x61\x64\x64'](_0x5e06af);const _0x524697={};_0x524697['\x6f\x62\x6a']=_0x101732,_0x524697['\x6d\x61\x78\x41\x6e\x67\x6c\x65']=Math['\x50\x49']/(-0x1e06+0x26*0x88+0x9d8),_0x524697['\x69\x6e\x69\x74\x69\x61\x6c\x41\x6e\x67'+'\x6c\x65']=0x0,_0x524697['\x61\x78\x69\x73']='\x78',_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x68\x69\x6e\x67\x65\x73']['\x70\x75\x73\x68'](_0x524697);const _0x4640ec=_0x33386b(_0x553774['\x74\x6f\x53\x74\x72\x69\x6e\x67']()+'\x20\x28\x41\x4c\x54\x29','\x23\x61\x61\x61\x61\x66\x66',_0x21f2a6*(0x5f*-0x35+0xa*0x332+0x418*-0x3+0.5),_0x21f2a6*(0x257c+-0x1946+-0xc35+0.5));_0x4640ec['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x78']=-Math['\x50\x49']/(0x10f*-0x16+0x823*-0x3+0xb1*0x45),_0x4640ec['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x79']=Math['\x50\x49'],_0x4640ec['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x73\x65\x74'](-0x1236+-0xdca+-0x1*-0x2000,-0x1*-0xb0b+-0x3*0x499+0x2c0,-0x1950+0xca4+-0x1*-0xcac),_0x101732['\x61\x64\x64'](_0x4640ec),_0x553774++;}}let _0x443e71=_0x35c5f3['\x72\x65\x64\x75\x63\x65']((_0x4c97f1,_0x4cf4a8)=>_0x4c97f1+_0x4cf4a8,0x1*0x1afa+0x143*-0x1+-0x19b7);_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x68\x69\x66\x74\x58']=-_0x443e71/(-0x9aa+0xe*0x289+-0x1*0x19d2)+_0x35c5f3[0x1*0x919+-0x1c*0x5d+-0x5*-0x37]/(0x1a93+-0x7*0x23b+-0xaf4);}else{if(_0x29e974['\x73\x74\x61\x72\x74\x73\x57\x69\x74\x68']('\x70\x79\x72\x61\x6d\x69\x64\x5f')){let _0x3f6add=-0xbbb*-0x2+0x1343+-0x2ab5;if(_0x29e974==='\x70\x79\x72\x61\x6d\x69\x64\x5f\x33')_0x3f6add=-0x633*0x1+-0x1*-0x856+-0x220;if(_0x29e974==='\x70\x79\x72\x61\x6d\x69\x64\x5f\x34')_0x3f6add=0x1*0xba2+-0x189a+0xcfc*0x1;if(_0x29e974==='\x70\x79\x72\x61\x6d\x69\x64\x5f\x35')_0x3f6add=-0x2f*0xab+-0x37d+0x22e7;if(_0x29e974==='\x70\x79\x72\x61\x6d\x69\x64\x5f\x36')_0x3f6add=-0x931+-0x1f*-0x2e+0x3a5;const _0x2bb87d=_0x21f2a6,_0x37aa69=_0x2bb87d*Math['\x63\x6f\x73'](Math['\x50\x49']/_0x3f6add),_0x42174d=(0x1cf*0x5+-0x79d*-0x3+0x66*-0x50)*_0x2bb87d*Math['\x73\x69\x6e'](Math['\x50\x49']/_0x3f6add),_0x2c303c=Math['\x73\x71\x72\x74'](_0x4adb96*_0x4adb96+_0x37aa69*_0x37aa69),_0x5db59a=Math['\x61\x74\x61\x6e\x32'](_0x37aa69,_0x4adb96),_0x106886=new THREE['\x43\x69\x72\x63\x6c\x65\x47\x65\x6f\x6d'+'\x65\x74\x72\x79'](_0x2bb87d,_0x3f6add,Math['\x50\x49']/_0x3f6add);_0x106886['\x72\x6f\x74\x61\x74\x65\x58'](-Math['\x50\x49']/(-0x8c8+0x5c8*0x5+0x2*-0xa0f));const _0xa815bb=_0x1c5d34(_0x106886);_0xa815bb['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x79']=-_0x4adb96/(0x99b*-0x1+0x4*0x266+0x5),_0x2c80be['\x61\x64\x64'](_0xa815bb);const _0xae705=_0x33386b(_0x553774['\x74\x6f\x53\x74\x72\x69\x6e\x67']()+'\x20\x28\x41\x4c\x54\x29','\x23\x61\x61\x61\x61\x66\x66',_0x2bb87d*(0x1f0b+0x1*0x14b7+-0x33c1+0.5),_0x2bb87d*(-0xd27+0xa09+0x11*0x2f+0.5));_0xae705['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x78']=-Math['\x50\x49']/(0x1a*0x63+0x1*-0x2176+0x176a),_0xae705['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x79']=-_0x4adb96/(0x6f*0x18+-0x3*-0xa13+0x1*-0x289f),_0x2c80be['\x61\x64\x64'](_0xae705),_0x553774++;for(let _0x3d68c8=0x363*0x3+-0x196f*0x1+0xf46;_0x3d68c8<_0x3f6add;_0x3d68c8++){const _0x59a181=_0x3d68c8*Math['\x50\x49']*(0x3b*0x65+0x204b+0x1bc8*-0x2)/_0x3f6add,_0x56328d=new THREE['\x47\x72\x6f\x75\x70']();_0x56328d['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x73\x65\x74'](Math['\x63\x6f\x73'](_0x59a181)*_0x37aa69,-_0x4adb96/(-0x11bc+0x196d+0x1*-0x7af),-Math['\x73\x69\x6e'](_0x59a181)*_0x37aa69),_0x56328d['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x6f\x72\x64\x65\x72']='\x59\x58\x5a',_0x56328d['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x79']=_0x59a181+Math['\x50\x49']/(-0x5c9*0x5+-0x10*-0x1a7+-0x1*-0x27f);const _0xc89818=new THREE['\x42\x75\x66\x66\x65\x72\x47\x65\x6f\x6d'+'\x65\x74\x72\x79'](),_0x1a0dcc=new Float32Array([-_0x42174d/(-0x683*-0x5+-0x1*0x1463+-0xc2a*0x1),0x4e9*0x5+-0x2347+-0x2*-0x55d,0x2f6*-0xb+0x195+0x1efd,_0x42174d/(0x4*-0x3b8+0x7d5+0x70d),0x1*-0x15f1+0x903*0x1+0xcee,0x4e7+0xca*0x31+0x24b*-0x13,0x7b5+-0xc*-0x10c+0x1445*-0x1,_0x2c303c,0x169*0xd+0x17a0+0x1d3*-0x17]);_0xc89818['\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75'+'\x74\x65']('\x70\x6f\x73\x69\x74\x69\x6f\x6e',new THREE['\x42\x75\x66\x66\x65\x72\x41\x74\x74\x72'+'\x69\x62\x75\x74\x65'](_0x1a0dcc,0x17d*0xc+-0x964+-0x875)),_0xc89818['\x63\x6f\x6d\x70\x75\x74\x65\x56\x65\x72'+'\x74\x65\x78\x4e\x6f\x72\x6d\x61\x6c\x73']();const _0x546c76=_0x1c5d34(_0xc89818);_0x56328d['\x61\x64\x64'](_0x546c76),_0x2c80be['\x61\x64\x64'](_0x56328d);const _0x24721d=_0x33386b(_0x553774['\x74\x6f\x53\x74\x72\x69\x6e\x67'](),'\x23\x66\x66\x61\x61\x61\x61',_0x42174d,_0x2c303c*(0x389*-0xb+-0x241c+0x107*0x49+0.5));_0x24721d['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x73\x65\x74'](-0x39*-0x2a+0x5b*0x1+-0x9b5,_0x2c303c*(-0x12f*0x1+-0x5e5*0x4+-0x3*-0x841+0.3),-0x1135+0x1*-0x25ed+0x3722),_0x56328d['\x61\x64\x64'](_0x24721d),_0x553774++;const _0x31cd4c={};_0x31cd4c['\x6f\x62\x6a']=_0x56328d,_0x31cd4c['\x6d\x61\x78\x41\x6e\x67\x6c\x65']=Math['\x50\x49']/(0xf*-0x132+-0x346+0x1536),_0x31cd4c['\x69\x6e\x69\x74\x69\x61\x6c\x41\x6e\x67'+'\x6c\x65']=-_0x5db59a,_0x31cd4c['\x61\x78\x69\x73']='\x78',_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x68\x69\x6e\x67\x65\x73']['\x70\x75\x73\x68'](_0x31cd4c);}}else{if(_0x29e974==='\x70\x79\x72\x61\x6d\x69\x64\x5f\x63\x6f'+'\x6e\x65'){const _0x264c1e=_0x21f2a6,_0x1f3e5b=Math['\x73\x71\x72\x74'](_0x264c1e*_0x264c1e+_0x4adb96*_0x4adb96),_0x20038a=0x1886+-0x1*0x23d4+0xb6e,_0x2fae0f=_0x264c1e,_0x3948e6=(0x100f+0xdf9+-0x1e06)*Math['\x50\x49']*_0x264c1e/_0x20038a,_0x202f9a=_0x1f3e5b,_0x267c29=Math['\x61\x74\x61\x6e\x32'](_0x2fae0f,_0x4adb96),_0x119aee=new THREE['\x47\x72\x6f\x75\x70']();_0x119aee['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x79']=-_0x4adb96/(-0x7ab+0x1*-0x76f+0xf1c),_0x2c80be['\x61\x64\x64'](_0x119aee);const _0x57f445=new THREE['\x43\x69\x72\x63\x6c\x65\x47\x65\x6f\x6d'+'\x65\x74\x72\x79'](_0x264c1e,-0x771*0x5+-0x1732+0xc1b*0x5);_0x57f445['\x72\x6f\x74\x61\x74\x65\x58'](-Math['\x50\x49']/(0x3*-0x359+0x21a9+-0x179c));const _0x542f5d=_0x1c5d34(_0x57f445);_0x119aee['\x61\x64\x64'](_0x542f5d);const _0x22bf08=_0x33386b(_0x553774['\x74\x6f\x53\x74\x72\x69\x6e\x67']()+'\x20\x28\x41\x4c\x54\x29','\x23\x61\x61\x61\x61\x66\x66',_0x264c1e*(-0x11c4+-0x36d+0x1532+0.5),_0x264c1e*(-0x8c8+0xfb8+-0x6ef+0.5));_0x22bf08['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x78']=-Math['\x50\x49']/(0x341*0x4+0xa69+0x4af*-0x5),_0x119aee['\x61\x64\x64'](_0x22bf08),_0x553774++;for(let _0x3666e6=-0x279+0x1399+0x2*-0x890;_0x3666e6<_0x20038a;_0x3666e6++){const _0xeaf86e=_0x3666e6*Math['\x50\x49']*(0x18ed+0x57*0x7+-0x1b4c)/_0x20038a,_0xce0289=new THREE['\x47\x72\x6f\x75\x70']();_0xce0289['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x73\x65\x74'](Math['\x63\x6f\x73'](_0xeaf86e)*_0x2fae0f,-_0x4adb96/(0x37*-0x3e+0x164e*-0x1+0x2*0x11d1),-Math['\x73\x69\x6e'](_0xeaf86e)*_0x2fae0f),_0xce0289['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x6f\x72\x64\x65\x72']='\x59\x58\x5a',_0xce0289['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x79']=_0xeaf86e+Math['\x50\x49']/(-0x1435+-0xc52+0x2089);const _0xccb5fb=new THREE['\x42\x75\x66\x66\x65\x72\x47\x65\x6f\x6d'+'\x65\x74\x72\x79'](),_0x3a39eb=new Float32Array([-_0x3948e6/(-0x24ca+0x3*-0x25b+0x2bdd),-0x215*-0xd+0x1*0x1bbb+-0x36cc,0x8c2+-0x3*-0x665+-0x1bf1*0x1,_0x3948e6/(0x191b*0x1+0x3*0x462+-0x263f),0x17*-0x116+0xf12+0x2*0x4f4,0x2*-0x1bb+-0x101*0x1+0x9*0x7f,-0xddd+-0xd*0x27e+0x1*0x2e43,_0x202f9a,-0x38*-0x4+-0x1655+-0x3*-0x727]);_0xccb5fb['\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75'+'\x74\x65']('\x70\x6f\x73\x69\x74\x69\x6f\x6e',new THREE['\x42\x75\x66\x66\x65\x72\x41\x74\x74\x72'+'\x69\x62\x75\x74\x65'](_0x3a39eb,-0x1*0xec7+-0x1df3+0x2cbd)),_0xccb5fb['\x63\x6f\x6d\x70\x75\x74\x65\x56\x65\x72'+'\x74\x65\x78\x4e\x6f\x72\x6d\x61\x6c\x73']();const _0x3b02e0=_0x1c5d34(_0xccb5fb);_0xce0289['\x61\x64\x64'](_0x3b02e0),_0x2c80be['\x61\x64\x64'](_0xce0289);const _0x4ac678={};_0x4ac678['\x6f\x62\x6a']=_0xce0289,_0x4ac678['\x6d\x61\x78\x41\x6e\x67\x6c\x65']=Math['\x50\x49']/(-0x21f5+-0x20*-0x27+0xb*0x2a5),_0x4ac678['\x69\x6e\x69\x74\x69\x61\x6c\x41\x6e\x67'+'\x6c\x65']=-_0x267c29,_0x4ac678['\x61\x78\x69\x73']='\x78',_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x68\x69\x6e\x67\x65\x73']['\x70\x75\x73\x68'](_0x4ac678);}}}}_0x2c80be['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x78']=Math['\x50\x49']/(0x688*0x2+-0x1feb+0x12dd);const _0x3a81e7=new THREE['\x47\x72\x6f\x75\x70']();_0x3a81e7['\x75\x73\x65\x72\x44\x61\x74\x61']=_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61'],_0x3a81e7['\x75\x73\x65\x72\x44\x61\x74\x61']['\x69\x6e\x6e\x65\x72\x47\x72\x6f\x75\x70']=_0x2c80be;_0x29e974['\x73\x74\x61\x72\x74\x73\x57\x69\x74\x68']('\x70\x72\x69\x73\x6d\x5f')&&(_0x3a81e7['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x68\x69\x66\x74\x58']=_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x68\x69\x66\x74\x58']);_0x3a81e7['\x61\x64\x64'](_0x2c80be),this['\x75\x70\x64\x61\x74\x65\x55\x6e\x66\x6f'+'\x6c\x64'](_0x3a81e7,0x1342+-0x313*0x5+0x3e3*-0x1);let _0x2098f9=new THREE['\x42\x6f\x78\x33']()['\x73\x65\x74\x46\x72\x6f\x6d\x4f\x62\x6a'+'\x65\x63\x74'](_0x2c80be),_0x2d3f58=new THREE['\x56\x65\x63\x74\x6f\x72\x33']();return _0x2098f9['\x67\x65\x74\x43\x65\x6e\x74\x65\x72'](_0x2d3f58),_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x66\x6f\x6c\x64\x65\x64\x43\x65\x6e\x74'+'\x65\x72']=_0x2d3f58['\x63\x6c\x6f\x6e\x65'](),this['\x75\x70\x64\x61\x74\x65\x55\x6e\x66\x6f'+'\x6c\x64'](_0x3a81e7,-0x5*0xc7+-0x1*-0x1a7d+-0x1*0x1699),_0x2098f9=new THREE['\x42\x6f\x78\x33']()['\x73\x65\x74\x46\x72\x6f\x6d\x4f\x62\x6a'+'\x65\x63\x74'](_0x2c80be),_0x2098f9['\x67\x65\x74\x43\x65\x6e\x74\x65\x72'](_0x2d3f58),_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x75\x6e\x66\x6f\x6c\x64\x65\x64\x43\x65'+'\x6e\x74\x65\x72']=_0x2d3f58['\x63\x6c\x6f\x6e\x65'](),this['\x75\x70\x64\x61\x74\x65\x55\x6e\x66\x6f'+'\x6c\x64'](_0x3a81e7,0x2*0xfdd+-0x1e84+0x136*-0x1),_0x2c80be['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x73\x65\x74'](-_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x66\x6f\x6c\x64\x65\x64\x43\x65\x6e\x74'+'\x65\x72']['\x78'],-_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x66\x6f\x6c\x64\x65\x64\x43\x65\x6e\x74'+'\x65\x72']['\x79'],-_0x2c80be['\x75\x73\x65\x72\x44\x61\x74\x61']['\x66\x6f\x6c\x64\x65\x64\x43\x65\x6e\x74'+'\x65\x72']['\x7a']),_0x3a81e7;},'\x75\x70\x64\x61\x74\x65\x55\x6e\x66\x6f\x6c\x64':function(_0x17faf8,_0x2ea982){if(!_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x69\x73\x46\x6f\x6c\x64\x61\x62\x6c\x65']||!_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x68\x69\x6e\x67\x65\x73'])return;_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x68\x69\x6e\x67\x65\x73']['\x66\x6f\x72\x45\x61\x63\x68'](_0x19fe4e=>{const _0x2b6949=_0x19fe4e['\x69\x6e\x69\x74\x69\x61\x6c\x41\x6e\x67'+'\x6c\x65']||0x2225+0xa52+-0x2c77,_0xf4d770=_0x2b6949+(_0x19fe4e['\x6d\x61\x78\x41\x6e\x67\x6c\x65']-_0x2b6949)*_0x2ea982;_0x19fe4e['\x6f\x62\x6a']['\x72\x6f\x74\x61\x74\x69\x6f\x6e'][_0x19fe4e['\x61\x78\x69\x73']]=_0xf4d770;});const _0x11c50e=_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x69\x6e\x6e\x65\x72\x47\x72\x6f\x75\x70'];if(_0x11c50e){let _0x44a898=-0x18a4+-0x9a3*-0x1+0xf01+0.25,_0x2b3170=Math['\x50\x49']/(0x1*0x1aa0+-0x4*0x236+-0x11c6);_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x68\x61\x70\x65\x54\x79\x70\x65']&&_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x68\x61\x70\x65\x54\x79\x70\x65']['\x73\x74\x61\x72\x74\x73\x57\x69\x74\x68']('\x70\x79\x72\x61\x6d\x69\x64\x5f')&&(_0x2b3170=Math['\x50\x49']);const _0x5dc379=new THREE['\x51\x75\x61\x74\x65\x72\x6e\x69\x6f\x6e']()['\x73\x65\x74\x46\x72\x6f\x6d\x41\x78\x69'+'\x73\x41\x6e\x67\x6c\x65'](new THREE['\x56\x65\x63\x74\x6f\x72\x33'](0x821+0x139c+0x4*-0x6ef,0x11a1*-0x2+0x1*0x78d+0x1bb5,0x6a1*0x2+0x2074+0x2db6*-0x1),Math['\x50\x49']/(0x623+-0x22e7*0x1+0x1cc6));let _0x10ce36;if(_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x68\x61\x70\x65\x54\x79\x70\x65']==='\x70\x79\x72\x61\x6d\x69\x64\x5f\x63\x6f'+'\x6e\x65'){const _0x1d4084=new THREE['\x51\x75\x61\x74\x65\x72\x6e\x69\x6f\x6e']()['\x73\x65\x74\x46\x72\x6f\x6d\x41\x78\x69'+'\x73\x41\x6e\x67\x6c\x65'](new THREE['\x56\x65\x63\x74\x6f\x72\x33'](0xaf+0x669+-0x16b*0x5,0x182e+-0x205e+-0x20c*-0x4,-0x3df*0x4+-0x21f3+0x1*0x316f),Math['\x61\x74\x61\x6e\x32'](-0x2420+-0xda*-0x8+0x6*0x4e6,-(-0xde8+-0x17cb+0x25d1))),_0x4e167f=new THREE['\x51\x75\x61\x74\x65\x72\x6e\x69\x6f\x6e']()['\x73\x65\x74\x46\x72\x6f\x6d\x45\x75\x6c'+'\x65\x72'](new THREE['\x45\x75\x6c\x65\x72'](-Math['\x50\x49']/(0x20d5+0x255+0x2324*-0x1),-0x6*-0x116+-0x1*-0xe3b+-0x14bf,-Math['\x50\x49']/(-0x1*-0x24ad+0x2408*-0x1+-0x3*0x35),'\x58\x59\x5a'));_0x10ce36=_0x4e167f['\x69\x6e\x76\x65\x72\x74']()['\x6d\x75\x6c\x74\x69\x70\x6c\x79'](_0x1d4084);}else{const _0x2d2263=new THREE['\x51\x75\x61\x74\x65\x72\x6e\x69\x6f\x6e']()['\x73\x65\x74\x46\x72\x6f\x6d\x41\x78\x69'+'\x73\x41\x6e\x67\x6c\x65'](new THREE['\x56\x65\x63\x74\x6f\x72\x33'](-0x208e+-0x1af3+-0x2*-0x1dc1,-0x153e+-0x161*0x2+0xc0*0x20,0x24d3*-0x1+0x132e*-0x1+0x3801),_0x2b3170-_0x44a898),_0x32e802=new THREE['\x51\x75\x61\x74\x65\x72\x6e\x69\x6f\x6e']()['\x73\x65\x74\x46\x72\x6f\x6d\x45\x75\x6c'+'\x65\x72'](new THREE['\x45\x75\x6c\x65\x72'](0x1*0x27b+-0x17a0+0x1525*0x1,0x15ca*0x1+-0x12b5+-0x1*0x315,-Math['\x50\x49']/(-0x15ff+0x13f*-0x1e+0x3b67)));_0x10ce36=_0x32e802['\x69\x6e\x76\x65\x72\x74']()['\x6d\x75\x6c\x74\x69\x70\x6c\x79'](_0x2d2263);}_0x11c50e['\x71\x75\x61\x74\x65\x72\x6e\x69\x6f\x6e']['\x63\x6f\x70\x79'](_0x5dc379)['\x73\x6c\x65\x72\x70'](_0x10ce36,_0x2ea982);if(_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x66\x6f\x6c\x64\x65\x64\x43\x65\x6e\x74'+'\x65\x72']&&_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x75\x6e\x66\x6f\x6c\x64\x65\x64\x43\x65'+'\x6e\x74\x65\x72']){const _0x2b3c39=_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x66\x6f\x6c\x64\x65\x64\x43\x65\x6e\x74'+'\x65\x72'],_0x226a0b=_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x75\x6e\x66\x6f\x6c\x64\x65\x64\x43\x65'+'\x6e\x74\x65\x72'],_0xd6f76f=_0x2b3c39['\x78']+(_0x226a0b['\x78']-_0x2b3c39['\x78'])*_0x2ea982,_0xb8c9d3=_0x2b3c39['\x79']+(_0x226a0b['\x79']-_0x2b3c39['\x79'])*_0x2ea982,_0x1ed946=_0x2b3c39['\x7a']+(_0x226a0b['\x7a']-_0x2b3c39['\x7a'])*_0x2ea982;_0x11c50e['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x78']=-_0xd6f76f,_0x11c50e['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x79']=-_0xb8c9d3,_0x11c50e['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x7a']=-_0x1ed946;if(_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x68\x69\x66\x74\x58']!==undefined){const _0x16fc3c=-_0x2b3c39['\x78'],_0x154c32=_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x68\x69\x66\x74\x58'];_0x11c50e['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x78']=_0x16fc3c+(_0x154c32-_0x16fc3c)*_0x2ea982;}}else _0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x68\x69\x66\x74\x58']&&(_0x11c50e['\x70\x6f\x73\x69\x74\x69\x6f\x6e']['\x78']=_0x17faf8['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x68\x69\x66\x74\x58']*_0x2ea982);}}};
+﻿// 3D Şekillerin Açınım (Katlama) Mantığı İçin Ek Modül
+window.Foldable3D = {
+    createFoldableGroup: function(type, size, mainMaterial, edgeMaterial) {
+        if (type === 'sphere') return null; // Küre için açınım hesaplanmaz, normal çizim için null dönüyoruz
+
+        const group = new THREE.Group();
+        group.userData.isFoldable = true;
+        group.userData.shapeType = type;
+        group.userData.baseSize = size;
+        group.userData.hinges = []; // Katlanacak parçaların listesi
+
+        // Özel mesh oluşturucu (edge çizgileriyle birlikte)
+        const createFaceMesh = (geometry) => {
+            const mesh = new THREE.Mesh(geometry, mainMaterial);
+            mesh.add(new THREE.LineSegments(new THREE.EdgesGeometry(geometry), edgeMaterial));
+            return mesh;
+        };
+
+        const createLabelMesh = (text, color, w, h) => {
+            return new THREE.Group(); // İsteğiniz üzerine etiketler kaldırıldı
+        };
+
+        let faceCounter = 1;
+
+        const height = size * 2;
+        
+        // SİLİNDİR VE PRİZMALAR (Yan yüzeyler rulo gibi açılır)
+        if (type.startsWith('prism_')) {
+            let sides = 4;
+            let heights = size * 2;
+            let widths = [];
+            let apothems = [];
+            let isCustom = false;
+            
+            if (type === 'prism_cube') { 
+                sides = 4; heights = size * 2; isCustom = true;
+                const W = size * 2;
+                widths = [W, W, W, W];
+                apothems = [W/2, W/2, W/2, W/2];
+            } else if (type === 'prism_square') { 
+                sides = 4; heights = size * 3; isCustom = true;
+                const W = size * 1.5; // Taban kare
+                widths = [W, W, W, W];
+                apothems = [W/2, W/2, W/2, W/2];
+            } else if (type === 'prism_rect') { 
+                sides = 4; heights = size * 2.2; isCustom = true;
+                const W = size * 3; // Uzun kenar (Front/Back)
+                const D = size * 1.5; // Kısa kenar (Left/Right)
+                widths = [W, D, W, D];
+                apothems = [D/2, W/2, D/2, W/2];
+            } else {
+                let r = size;
+                if (type === 'prism_3') sides = 3;
+                if (type === 'prism_5') sides = 5;
+                if (type === 'prism_6') sides = 6;
+                if (type === 'prism_cylinder') sides = 32;
+
+                const sideWidth = 2 * r * Math.sin(Math.PI / sides);
+                const apothem = r * Math.cos(Math.PI / sides);
+                for(let i=0; i<sides; i++) { widths.push(sideWidth); apothems.push(apothem); }
+            }
+
+            const angleStep = (Math.PI * 2) / sides;
+            const root = new THREE.Group();
+            group.add(root);
+            
+            let currentParent = root;
+
+            for (let i = 0; i < sides; i++) {
+                const hinge = new THREE.Group();
+                const actualSideWidth = widths[i];
+
+                if (i === 0) {
+                    hinge.position.set(-actualSideWidth / 2, 0, apothems[i]); 
+                    hinge.rotation.y = 0; 
+                    root.add(hinge);
+                } else {
+                    hinge.position.set(widths[i-1], 0, 0); 
+                    currentParent.add(hinge);
+                    group.userData.hinges.push({ obj: hinge, maxAngle: 0, initialAngle: -angleStep, axis: 'y' });
+                }
+                
+                const panelGeo = new THREE.PlaneGeometry(actualSideWidth, heights);
+                panelGeo.translate(actualSideWidth / 2, 0, 0); 
+                const panelMesh = createFaceMesh(panelGeo);
+                hinge.add(panelMesh);
+                
+                const label = createLabelMesh(faceCounter.toString(), '#ffaaaa', actualSideWidth, Math.min(heights, actualSideWidth));
+                label.position.set(actualSideWidth / 2, 0, 0);
+                hinge.add(label);
+                faceCounter++;
+
+                currentParent = hinge;
+
+                let attachIndex = isCustom ? 0 : Math.floor((sides - 1) / 2);
+                if (i === attachIndex) {
+                    // Üst kapak
+                    const topHinge = new THREE.Group();
+                    topHinge.position.set(actualSideWidth / 2, heights / 2, 0);
+                    hinge.add(topHinge);
+                    
+                    let topGeo;
+                    if (isCustom) {
+                        const capW = widths[0]; // Front genişliği W
+                        const capH = widths[1]; // Yan genişlik D
+                        topGeo = new THREE.PlaneGeometry(capW, capH);
+                        topGeo.translate(0, -capH / 2, 0); // Pivot'u alt kenara al
+                        topGeo.rotateX(-Math.PI / 2); // Yukarıya doğru (Z eksenine) katla
+                    } else {
+                        let r = size;
+                        if (type === 'prism_cylinder') {
+                            topGeo = new THREE.CircleGeometry(r, sides);
+                        } else {
+                            topGeo = new THREE.CircleGeometry(r, sides, 0); 
+                            topGeo.rotateZ(-Math.PI / 2 - Math.PI / sides); 
+                        }
+                        topGeo.rotateZ(Math.PI); 
+                        topGeo.translate(0, -apothems[i], 0); 
+                        topGeo.rotateX(-Math.PI / 2); 
+                    }
+                    const topMesh = createFaceMesh(topGeo);
+                    topHinge.add(topMesh);
+                    group.userData.hinges.push({ obj: topHinge, maxAngle: -Math.PI / 2, initialAngle: 0, axis: 'x' }); 
+                    
+                    const topLabel = createLabelMesh(faceCounter.toString() + " (ÜST)", '#aaffaa', size*1.5, size*1.5);
+                    topLabel.rotation.x = Math.PI / 2; 
+                    topLabel.position.set(0, 0, 0);
+                    topHinge.add(topLabel);
+                    faceCounter++;
+
+                    // Alt kapak
+                    const bottomHinge = new THREE.Group();
+                    bottomHinge.position.set(actualSideWidth / 2, -heights / 2, 0);
+                    hinge.add(bottomHinge);
+                    
+                    let bottomGeo;
+                    if (isCustom) {
+                        const capW = widths[0]; // W
+                        const capH = widths[1]; // D
+                        bottomGeo = new THREE.PlaneGeometry(capW, capH);
+                        bottomGeo.translate(0, capH / 2, 0); 
+                        bottomGeo.rotateX(Math.PI / 2);
+                    } else {
+                        let r = size;
+                        if (type === 'prism_cylinder') {
+                            bottomGeo = new THREE.CircleGeometry(r, sides);
+                        } else {
+                            bottomGeo = new THREE.CircleGeometry(r, sides, 0);
+                            bottomGeo.rotateZ(Math.PI / 2 - Math.PI / sides); 
+                        }
+                        bottomGeo.rotateZ(Math.PI); 
+                        bottomGeo.translate(0, apothems[i], 0); 
+                        bottomGeo.rotateX(Math.PI / 2); 
+                    }
+                    const bottomMesh = createFaceMesh(bottomGeo);
+                    bottomHinge.add(bottomMesh);
+                    group.userData.hinges.push({ obj: bottomHinge, maxAngle: Math.PI / 2, initialAngle: 0, axis: 'x' }); 
+
+                    const bottomLabel = createLabelMesh(faceCounter.toString() + " (ALT)", '#aaaaff', size*1.5, size*1.5);
+                    bottomLabel.rotation.x = -Math.PI / 2; 
+                    bottomLabel.rotation.y = Math.PI; 
+                    bottomLabel.position.set(0, 0, 0);
+                    bottomHinge.add(bottomLabel);
+                    faceCounter++;
+                }
+            }
+            
+            // Açıldığında ne kadar kaydırılacak?
+            let totalWidth = widths.reduce((a, b) => a + b, 0);
+            group.userData.shiftX = -totalWidth / 2 + widths[0]/2;
+        } 
+        // PİRAMİTLER (Yaprak gibi dışa doğru açılır)
+        else if (type.startsWith('pyramid_')) {
+            let sides = 4;
+            if (type === 'pyramid_3') sides = 3;
+            if (type === 'pyramid_4') sides = 4;
+            if (type === 'pyramid_5') sides = 5;
+            if (type === 'pyramid_6') sides = 6;
+            
+            const r = size;
+            const apothem = r * Math.cos(Math.PI / sides);
+            const sideWidth = 2 * r * Math.sin(Math.PI / sides);
+            const slantHeight = Math.sqrt(height * height + apothem * apothem);
+            const inwardAngle = Math.atan2(apothem, height); // İçeri doğru eğim açısı
+
+            // Taban
+            const baseGeo = new THREE.CircleGeometry(r, sides, Math.PI / sides);
+            baseGeo.rotateX(-Math.PI / 2);
+            const baseMesh = createFaceMesh(baseGeo);
+            baseMesh.position.y = -height / 2;
+            group.add(baseMesh);
+
+            const baseLabel = createLabelMesh(faceCounter.toString() + " (ALT)", '#aaaaff', r*1.5, r*1.5);
+            baseLabel.rotation.x = -Math.PI / 2;
+            baseLabel.position.y = -height / 2;
+            group.add(baseLabel);
+            faceCounter++;
+
+            // Yan üçgenler
+            for (let i = 0; i < sides; i++) {
+                const angle = (i * Math.PI * 2) / sides;
+                const hinge = new THREE.Group();
+                
+                // Menteşeyi taban kenarına yerleştir
+                hinge.position.set(
+                    Math.cos(angle) * apothem,
+                    -height / 2,
+                    -Math.sin(angle) * apothem
+                );
+                // Kenara dik bakması için y ekseni etrafında döndür (+90 derece ile local Z içeri bakar)
+                hinge.rotation.order = 'YXZ'; // Önce X (içeri eğilme), sonra Y (yönelme) uygulanmalı
+                hinge.rotation.y = angle + Math.PI / 2;
+                
+                const triGeo = new THREE.BufferGeometry();
+                const vertices = new Float32Array([
+                    -sideWidth / 2, 0, 0,
+                    sideWidth / 2, 0, 0,
+                    0, slantHeight, 0
+                ]);
+                triGeo.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
+                triGeo.computeVertexNormals();
+                
+                const triMesh = createFaceMesh(triGeo);
+                hinge.add(triMesh);
+                group.add(hinge);
+                
+                const triLabel = createLabelMesh(faceCounter.toString(), '#ffaaaa', sideWidth, slantHeight*0.5);
+                triLabel.position.set(0, slantHeight*0.3, 0);
+                
+                hinge.add(triLabel);
+                faceCounter++;
+                
+                // Başlangıç (0) -> Kapalı (içeri eğik), Bitiş (1) -> Açık (dışarı yatay)
+                group.userData.hinges.push({ obj: hinge, maxAngle: Math.PI / 2, initialAngle: -inwardAngle, axis: 'x' });
+            }
+        }
+        // KONİ (Daire dilimi şeklinde açılır)
+        else if (type === 'pyramid_cone') {
+            const r = size;
+            const l = Math.sqrt(r * r + height * height); // Ana doğru
+            
+            const sides = 32;
+            const apothem = r;
+            const sideWidth = 2 * Math.PI * r / sides;
+            const slantHeight = l;
+            const inwardAngle = Math.atan2(apothem, height);
+
+            // Taban (Sabit değil, açıldığında yana kayacak)
+            const baseHinge = new THREE.Group();
+            baseHinge.position.y = -height / 2;
+            group.add(baseHinge);
+            const baseGeo = new THREE.CircleGeometry(r, 32);
+            baseGeo.rotateX(-Math.PI / 2);
+            const baseMesh = createFaceMesh(baseGeo);
+            baseHinge.add(baseMesh);
+
+            const baseLabel = createLabelMesh(faceCounter.toString() + " (ALT)", '#aaaaff', r*1.5, r*1.5);
+            baseLabel.rotation.x = -Math.PI / 2;
+            baseHinge.add(baseLabel);
+            faceCounter++;
+
+            // Yan yüzeyler (çiçek gibi açılır)
+            for (let i = 0; i < sides; i++) {
+                const angle = (i * Math.PI * 2) / sides;
+                const hinge = new THREE.Group();
+                hinge.position.set(Math.cos(angle) * apothem, -height / 2, -Math.sin(angle) * apothem);
+                hinge.rotation.order = 'YXZ'; // Önce X (içeri eğilme), sonra Y (yönelme) uygulanmalı
+                hinge.rotation.y = angle + Math.PI / 2; // İçeri bakması için yönlendirme
+                
+                const triGeo = new THREE.BufferGeometry();
+                const vertices = new Float32Array([
+                    -sideWidth / 2, 0, 0,
+                    sideWidth / 2, 0, 0,
+                    0, slantHeight, 0
+                ]);
+                triGeo.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
+                triGeo.computeVertexNormals();
+                
+                const triMesh = createFaceMesh(triGeo);
+                hinge.add(triMesh);
+                group.add(hinge);
+                
+                // Başlangıç (0) -> Kapalı (içeri eğik), Bitiş (1) -> Açık (dışarı yatay)
+                group.userData.hinges.push({ obj: hinge, maxAngle: Math.PI / 2, initialAngle: -inwardAngle, axis: 'x' });
+            }
+        }
+
+        // Şekil kapalıyken Z ekseni boyunca uzansın (böylece XY düzleminde dik durur)
+        group.rotation.x = Math.PI / 2;
+
+        const outerGroup = new THREE.Group();
+        outerGroup.userData = group.userData;
+        outerGroup.userData.innerGroup = group; 
+        if (type.startsWith("prism_")) {
+            outerGroup.userData.shiftX = group.userData.shiftX;
+        }
+
+        outerGroup.add(group);
+
+        // ==========================================
+        // DYNAMIC PIVOT CENTERING (Orbit / Savrulma Fix)
+        // ==========================================
+        // HATA DUZELTME: Bounding box hesaplanmadan once seklin KAPALI (0) 
+        // formuna gecmesi gerekir! Aksi halde acik (2D) halinin merkezini alir ve SAVRULUR!
+        this.updateUnfold(outerGroup, 0);
+
+        let box = new THREE.Box3().setFromObject(group);
+        let center = new THREE.Vector3();
+        box.getCenter(center);
+        group.userData.foldedCenter = center.clone();
+        
+        this.updateUnfold(outerGroup, 1);
+        box = new THREE.Box3().setFromObject(group);
+        box.getCenter(center);
+        group.userData.unfoldedCenter = center.clone();
+        
+        this.updateUnfold(outerGroup, 0);
+        group.position.set(-group.userData.foldedCenter.x, -group.userData.foldedCenter.y, -group.userData.foldedCenter.z);
+        // ==========================================
+
+        return outerGroup;
+    },
+
+    updateUnfold: function(group, openRatio) {
+        if (!group.userData.isFoldable || !group.userData.hinges) return;
+        
+        group.userData.hinges.forEach(h => {
+            const initial = h.initialAngle || 0;
+            const currentAngle = initial + (h.maxAngle - initial) * openRatio;
+            h.obj.rotation[h.axis] = currentAngle;
+        });
+
+        // Şekil açıldıkça tam karşıdan görünmesi için rotasyonu otomatik olarak düzelt
+        const inner = group.userData.innerGroup;
+        if (inner) {
+            let tiltOffset = 0.25; 
+            let targetAngleX = Math.PI / 2;
+
+            if (group.userData.shapeType && group.userData.shapeType.startsWith('pyramid_')) {
+                // Piramitler prizmalardan farklı olarak yerel XZ düzleminde açılır.
+                // Kameraya doğru (zemine) yatması için hedef açının Math.PI olması gerekir.
+                targetAngleX = Math.PI;
+            }
+
+            const qClosed = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), Math.PI / 2);
+            let qOpenTarget;
+
+            if (group.userData.shapeType === 'pyramid_cone') {
+                // KONİ İÇİN KESİN ÇÖZÜM:
+                // Kameraya (Y=-30, Z=20) tam dik bakması için X ekseninde atan2(20, -30) dönmesi gerekir.
+                const qOpenAbsolute = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), Math.atan2(20, -30));
+                
+                // Koninin app.js'den gelen gerçek başlangıç eğimleri: X = -30, Z = -30.
+                // Sadece Z'yi değil, her ikisini de tersine çevirmeliyiz ki eğim kalmasın.
+                const coneOuterQ = new THREE.Quaternion().setFromEuler(new THREE.Euler(-Math.PI / 6, 0, -Math.PI / 6, 'XYZ'));
+                qOpenTarget = coneOuterQ.invert().multiply(qOpenAbsolute);
+            } else {
+                // Prizmalar ve Diğer Piramitler için mevcut çalışan mantık:
+                const qOpenAbsolute = new THREE.Quaternion().setFromAxisAngle(new THREE.Vector3(1, 0, 0), targetAngleX - tiltOffset);
+                const defaultOuterQ = new THREE.Quaternion().setFromEuler(new THREE.Euler(0, 0, -Math.PI / 6));
+                qOpenTarget = defaultOuterQ.invert().multiply(qOpenAbsolute);
+            }
+            
+            // Kapalıyken izometrik duruşta kal, açıldıkça kameraya dön
+            inner.quaternion.copy(qClosed).slerp(qOpenTarget, openRatio);
+
+            // Prizmaların açınımı yana doğru uzadığı için, açıldıkça şekli ortala
+            // Pivot merkezleme (Savrulma onleyici)
+            if (group.userData.foldedCenter && group.userData.unfoldedCenter) {
+                const f = group.userData.foldedCenter;
+                const u = group.userData.unfoldedCenter;
+                
+                const curX = f.x + (u.x - f.x) * openRatio;
+                const curY = f.y + (u.y - f.y) * openRatio;
+                const curZ = f.z + (u.z - f.z) * openRatio;
+                
+                inner.position.x = -curX;
+                inner.position.y = -curY;
+                inner.position.z = -curZ;
+                
+                if (group.userData.shiftX !== undefined) {
+                    const fx = -f.x;
+                    const tx = group.userData.shiftX;
+                    inner.position.x = fx + (tx - fx) * openRatio;
+                }
+            } else if (group.userData.shiftX) {
+                inner.position.x = group.userData.shiftX * openRatio;
+            }
+        }
+    }
+};

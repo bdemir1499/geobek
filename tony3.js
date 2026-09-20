@@ -1,1 +1,197 @@
-const _0xfb424f=(function(){let _0x2a78b3=!![];return function(_0x298000,_0x103ca8){const _0x59202d=_0x2a78b3?function(){if(_0x103ca8){const _0x27120d=_0x103ca8['\x61\x70\x70\x6c\x79'](_0x298000,arguments);return _0x103ca8=null,_0x27120d;}}:function(){};return _0x2a78b3=![],_0x59202d;};}()),_0x414ef6=_0xfb424f(this,function(){if(_0x414ef6['\x62\x69\x6e\x64']()['\x74\x6f\x53\x74\x72\x69\x6e\x67']()['\x69\x6e\x64\x65\x78\x4f\x66']('\x0a')!==-(-0x1*0x14e3+0x114f+0x395))return;return _0x414ef6['\x74\x6f\x53\x74\x72\x69\x6e\x67']()['\x73\x65\x61\x72\x63\x68']('\x28\x28\x28\x2e\x2b\x29\x2b\x29\x2b\x29'+'\x2b\x24')['\x74\x6f\x53\x74\x72\x69\x6e\x67']()['\x63\x6f\x6e\x73\x74\x72\x75\x63\x74\x6f'+'\x72'](_0x414ef6)['\x73\x65\x61\x72\x63\x68']('\x28\x28\x28\x2e\x2b\x29\x2b\x29\x2b\x29'+'\x2b\x24');});_0x414ef6(),tonyBtn['\x6f\x6e\x63\x6c\x69\x63\x6b']=async()=>{if(tonyActive){camera&&(camera['\x73\x74\x6f\x70'](),camera=null);hands&&(hands['\x63\x6c\x6f\x73\x65'](),hands=null);const _0x14bbfd=document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74'+'\x42\x79\x49\x64']('\x74\x6f\x6e\x79\x2d\x76\x69\x64\x65\x6f'+'\x2d\x65\x6c\x65\x6d');_0x14bbfd&&_0x14bbfd['\x72\x65\x6d\x6f\x76\x65']();tonyActive=![],laserCursor['\x73\x74\x79\x6c\x65']['\x64\x69\x73\x70\x6c\x61\x79']='\x6e\x6f\x6e\x65',tonyBtn['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c']='\ud83e\udd16\x20\x53\x69\x68\x69\x72\x6c\x69\x20'+'\x45\x6c',tonyBtn['\x73\x74\x79\x6c\x65']['\x62\x6f\x72\x64\x65\x72\x43\x6f\x6c\x6f'+'\x72']='\x23\x30\x30\x39\x36\x66\x66',tonyBtn['\x73\x74\x79\x6c\x65']['\x62\x6f\x78\x53\x68\x61\x64\x6f\x77']='\x6e\x6f\x6e\x65';return;}tonyBtn['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c']='\u23f3\x20\x28\x4b\x56\x4b\x4b\x29',tonyBtn['\x73\x74\x79\x6c\x65']['\x62\x6f\x72\x64\x65\x72\x43\x6f\x6c\x6f'+'\x72']='\x23\x66\x66\x66\x66\x30\x30',tonyBtn['\x73\x74\x79\x6c\x65']['\x62\x6f\x78\x53\x68\x61\x64\x6f\x77']='\x30\x20\x30\x20\x31\x30\x70\x78\x20\x72'+'\x67\x62\x61\x28\x32\x35\x35\x2c\x32\x35'+'\x35\x2c\x30\x2c\x30\x2e\x35\x29';try{await loadScript('\x6d\x65\x64\x69\x61\x70\x69\x70\x65\x2f'+'\x63\x61\x6d\x65\x72\x61\x5f\x75\x74\x69'+'\x6c\x73\x2e\x6a\x73'),await loadScript('\x6d\x65\x64\x69\x61\x70\x69\x70\x65\x2f'+'\x68\x61\x6e\x64\x73\x2e\x6a\x73');const _0x58fdae=document['\x63\x72\x65\x61\x74\x65\x45\x6c\x65\x6d'+'\x65\x6e\x74']('\x76\x69\x64\x65\x6f');_0x58fdae['\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75'+'\x74\x65']('\x70\x6c\x61\x79\x73\x69\x6e\x6c\x69\x6e'+'\x65',''),_0x58fdae['\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75'+'\x74\x65']('\x61\x75\x74\x6f\x70\x6c\x61\x79',''),_0x58fdae['\x73\x65\x74\x41\x74\x74\x72\x69\x62\x75'+'\x74\x65']('\x6d\x75\x74\x65\x64',''),_0x58fdae['\x69\x64']='\x74\x6f\x6e\x79\x2d\x76\x69\x64\x65\x6f'+'\x2d\x65\x6c\x65\x6d',_0x58fdae['\x73\x74\x79\x6c\x65']['\x70\x6f\x73\x69\x74\x69\x6f\x6e']='\x66\x69\x78\x65\x64',_0x58fdae['\x73\x74\x79\x6c\x65']['\x6f\x70\x61\x63\x69\x74\x79']='\x30\x2e\x31\x35',_0x58fdae['\x73\x74\x79\x6c\x65']['\x74\x72\x61\x6e\x73\x66\x6f\x72\x6d']='\x73\x63\x61\x6c\x65\x58\x28\x2d\x31\x29',_0x58fdae['\x73\x74\x79\x6c\x65']['\x77\x69\x64\x74\x68']='\x31\x30\x30\x25',_0x58fdae['\x73\x74\x79\x6c\x65']['\x68\x65\x69\x67\x68\x74']='\x31\x30\x30\x25',_0x58fdae['\x73\x74\x79\x6c\x65']['\x7a\x49\x6e\x64\x65\x78']='\x2d\x39\x39\x39\x39',_0x58fdae['\x73\x74\x79\x6c\x65']['\x74\x6f\x70']='\x30',_0x58fdae['\x73\x74\x79\x6c\x65']['\x6c\x65\x66\x74']='\x30',_0x58fdae['\x73\x74\x79\x6c\x65']['\x70\x6f\x69\x6e\x74\x65\x72\x45\x76\x65'+'\x6e\x74\x73']='\x6e\x6f\x6e\x65',_0x58fdae['\x6d\x75\x74\x65\x64']=!![],document['\x62\x6f\x64\x79']['\x61\x70\x70\x65\x6e\x64\x43\x68\x69\x6c'+'\x64'](_0x58fdae);const _0x2fd7c1={};_0x2fd7c1['\x6c\x6f\x63\x61\x74\x65\x46\x69\x6c\x65']=_0x56045e=>'\x76\x65\x6e\x64\x6f\x72\x2f'+_0x56045e,hands=new window['\x48\x61\x6e\x64\x73'](_0x2fd7c1);const _0xa61dd={};_0xa61dd['\x6d\x61\x78\x4e\x75\x6d\x48\x61\x6e\x64'+'\x73']=0x2,_0xa61dd['\x6d\x6f\x64\x65\x6c\x43\x6f\x6d\x70\x6c'+'\x65\x78\x69\x74\x79']=0x0,_0xa61dd['\x6d\x69\x6e\x44\x65\x74\x65\x63\x74\x69'+'\x6f\x6e\x43\x6f\x6e\x66\x69\x64\x65\x6e'+'\x63\x65']=0.5,_0xa61dd['\x6d\x69\x6e\x54\x72\x61\x63\x6b\x69\x6e'+'\x67\x43\x6f\x6e\x66\x69\x64\x65\x6e\x63'+'\x65']=0.5,hands['\x73\x65\x74\x4f\x70\x74\x69\x6f\x6e\x73'](_0xa61dd);let _0x17b610=-0x1ab1+0x10ea*0x2+-0x723,_0x104c68=-0xc61+-0x1*-0x19d8+-0xd77,_0x25a1d5=-0x1eb2+-0x233e+-0x698*-0xa,_0x34a412=0x2*-0x157+0x11*0x98+-0x769,_0x424c3a=0x22cd+0x853*0x1+-0x2b20,_0x1a952a=-0x79*0x23+0x55c+0xb2f;hands['\x6f\x6e\x52\x65\x73\x75\x6c\x74\x73'](_0x100130=>{tonyBtn['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c']='\x41\x49\x20\x41\x6b\x74\x69\x66';if(_0x100130['\x6d\x75\x6c\x74\x69\x48\x61\x6e\x64\x4c'+'\x61\x6e\x64\x6d\x61\x72\x6b\x73']&&_0x100130['\x6d\x75\x6c\x74\x69\x48\x61\x6e\x64\x4c'+'\x61\x6e\x64\x6d\x61\x72\x6b\x73']['\x6c\x65\x6e\x67\x74\x68']>0x4a5*-0x4+-0x142d+0xceb*0x3){tonyBtn['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c']='\x45\x6c\x20\x47\u00f6\x72\u00fc\x6e\x64\u00fc'+'\x21';const _0x4df1e8=_0x100130['\x6d\x75\x6c\x74\x69\x48\x61\x6e\x64\x4c'+'\x61\x6e\x64\x6d\x61\x72\x6b\x73']['\x6c\x65\x6e\x67\x74\x68']===-0x337*0x7+0x1322+0x361,_0x297a7e=_0x100130['\x6d\x75\x6c\x74\x69\x48\x61\x6e\x64\x4c'+'\x61\x6e\x64\x6d\x61\x72\x6b\x73'][-0x64*-0x5+-0x283+0xb*0xd],_0x4cee56=(-0xb20+0x741*0x4+-0x11e3-_0x297a7e[-0x588*-0x2+0x5*0x24d+-0x1689]['\x78'])*window['\x69\x6e\x6e\x65\x72\x57\x69\x64\x74\x68'],_0x270974=_0x297a7e[-0x21*0x71+0x116+0x3*0x481]['\x79']*window['\x69\x6e\x6e\x65\x72\x48\x65\x69\x67\x68'+'\x74'];laserCursor['\x73\x74\x79\x6c\x65']['\x64\x69\x73\x70\x6c\x61\x79']='\x62\x6c\x6f\x63\x6b',laserCursor['\x73\x74\x79\x6c\x65']['\x6c\x65\x66\x74']=_0x4cee56+'\x70\x78',laserCursor['\x73\x74\x79\x6c\x65']['\x74\x6f\x70']=_0x270974+'\x70\x78';const _0x45f3b8=calculateDistance(_0x297a7e[-0x1*-0x197b+0x14c3+-0x2e3a],_0x297a7e[0x1*-0xa91+-0x9f0*-0x1+-0x1*-0xa9]),_0x193d5b=_0x45f3b8<-0x17ac+0x1*0x1489+-0xb*-0x49+0.12;if(window['\x53\x63\x65\x6e\x65\x33\x44']){let _0x5cdd74=window['\x53\x63\x65\x6e\x65\x33\x44']['\x63\x75\x72\x72\x65\x6e\x74\x4d\x65\x73'+'\x68'];!_0x5cdd74&&window['\x53\x63\x65\x6e\x65\x33\x44']['\x73\x63\x65\x6e\x65']&&(_0x5cdd74=window['\x53\x63\x65\x6e\x65\x33\x44']['\x73\x63\x65\x6e\x65']['\x63\x68\x69\x6c\x64\x72\x65\x6e']['\x73\x6c\x69\x63\x65']()['\x72\x65\x76\x65\x72\x73\x65']()['\x66\x69\x6e\x64'](_0x26e7fa=>_0x26e7fa['\x75\x73\x65\x72\x44\x61\x74\x61']&&_0x26e7fa['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x74\x72\x6f\x6b\x65\x44\x61\x74\x61']));if(_0x5cdd74){if(_0x4df1e8){const _0x1656ef=_0x100130['\x6d\x75\x6c\x74\x69\x48\x61\x6e\x64\x4c'+'\x61\x6e\x64\x6d\x61\x72\x6b\x73'][0x935+-0x1e02+0x14ce],_0x151ec9=calculateDistance(_0x1656ef[-0x684+0x904+-0x9f*0x4],_0x1656ef[0x78b+0x6af*0x2+-0x14e1]),_0x5c6f09=_0x151ec9<0x20*-0x47+0x3d*0x4a+-0x13*0x76+0.12,_0x15cdc4=calculateDistance(_0x297a7e[-0x9f*0x19+-0x69*-0xd+0xa3a],_0x1656ef[-0xe5c+0x26a9*-0x1+0x350d]);if(_0x193d5b&&_0x5c6f09){laserCursor['\x73\x74\x79\x6c\x65']['\x62\x61\x63\x6b\x67\x72\x6f\x75\x6e\x64'+'\x43\x6f\x6c\x6f\x72']='\x23\x66\x66\x30\x30\x66\x66';if(_0x25a1d5===-0x2710+-0x715*-0x1+0x1ffb)_0x25a1d5=_0x15cdc4,_0x34a412=_0x5cdd74['\x73\x63\x61\x6c\x65']['\x78'];else{const _0x21418e=_0x15cdc4/_0x25a1d5;let _0x3f814b=_0x34a412*_0x21418e;_0x3f814b=Math['\x6d\x61\x78'](0x9d4+-0xd84+0x3b0+0.2,Math['\x6d\x69\x6e'](_0x3f814b,0x18a6+0xf94+0x506*-0x8)),_0x5cdd74['\x73\x63\x61\x6c\x65']['\x73\x65\x74\x53\x63\x61\x6c\x61\x72'](_0x3f814b);if(_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']&&_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x74\x72\x6f\x6b\x65\x44\x61\x74\x61']){_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x74\x72\x6f\x6b\x65\x44\x61\x74\x61']['\x6d\x65\x73\x68\x53\x63\x61\x6c\x65']=_0x3f814b;if(typeof window['\x73\x65\x6e\x64\x4e\x65\x74\x77\x6f\x72'+'\x6b\x44\x61\x74\x61']==='\x66\x75\x6e\x63\x74\x69\x6f\x6e'){const _0xaafb96={};_0xaafb96['\x74\x79\x70\x65']='\x73\x65\x6b\x69\x6c\x5f\x67\x75\x6e\x63'+'\x65\x6c\x6c\x65',_0xaafb96['\x73\x74\x72\x6f\x6b\x65']=_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x74\x72\x6f\x6b\x65\x44\x61\x74\x61'],window['\x73\x65\x6e\x64\x4e\x65\x74\x77\x6f\x72'+'\x6b\x44\x61\x74\x61'](_0xaafb96);}}}_0x424c3a=0x29d*-0x4+0x774+0x300;}else{if(!_0x193d5b&&!_0x5c6f09){laserCursor['\x73\x74\x79\x6c\x65']['\x62\x61\x63\x6b\x67\x72\x6f\x75\x6e\x64'+'\x43\x6f\x6c\x6f\x72']='\x23\x66\x66\x66\x66\x30\x30';if(_0x424c3a===0x4*-0x5a1+0x59e*0x3+0x5aa)_0x424c3a=_0x15cdc4,_0x1a952a=_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x74\x72\x6f\x6b\x65\x44\x61\x74\x61']?.['\x6f\x70\x65\x6e\x52\x61\x74\x69\x6f']||0xf99+-0x1c4d+0xcb4;else{const _0xdf3454=_0x15cdc4-_0x424c3a;let _0xd5338a=_0xdf3454*(-0x873*0x4+0x2*-0x30a+0x7fa*0x5),_0x2e8f0e=Math['\x6d\x61\x78'](0x24b3+-0x9fc+-0x1*0x1ab7,Math['\x6d\x69\x6e'](0x6e*0x55+-0x23e4+0xa1*-0x1,_0x1a952a+_0xd5338a));const _0x5ce89e=document['\x67\x65\x74\x45\x6c\x65\x6d\x65\x6e\x74'+'\x42\x79\x49\x64']('\x73\x68\x61\x70\x65\x2d\x73\x6c\x69\x64'+'\x65\x72');if(_0x5ce89e)_0x5ce89e['\x76\x61\x6c\x75\x65']=_0x2e8f0e*(0xf81+-0x1bca*-0x1+0x621*-0x7);if(_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']['\x69\x73\x43\x75\x73\x74\x6f\x6d\x43\x6f'+'\x6e\x65']&&window['\x43\x75\x73\x74\x6f\x6d\x43\x6f\x6e\x65'+'\x45\x6e\x67\x69\x6e\x65'])window['\x43\x75\x73\x74\x6f\x6d\x43\x6f\x6e\x65'+'\x45\x6e\x67\x69\x6e\x65']['\x75\x70\x64\x61\x74\x65'](_0x5cdd74,_0x2e8f0e);else window['\x46\x6f\x6c\x64\x61\x62\x6c\x65\x33\x44']&&window['\x46\x6f\x6c\x64\x61\x62\x6c\x65\x33\x44']['\x75\x70\x64\x61\x74\x65\x55\x6e\x66\x6f'+'\x6c\x64'](_0x5cdd74,_0x2e8f0e);if(_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']&&_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x74\x72\x6f\x6b\x65\x44\x61\x74\x61']){_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x74\x72\x6f\x6b\x65\x44\x61\x74\x61']['\x6f\x70\x65\x6e\x52\x61\x74\x69\x6f']=_0x2e8f0e;if(typeof window['\x73\x65\x6e\x64\x4e\x65\x74\x77\x6f\x72'+'\x6b\x44\x61\x74\x61']==='\x66\x75\x6e\x63\x74\x69\x6f\x6e'){const _0x4177cd={};_0x4177cd['\x74\x79\x70\x65']='\x73\x65\x6b\x69\x6c\x5f\x67\x75\x6e\x63'+'\x65\x6c\x6c\x65',_0x4177cd['\x73\x74\x72\x6f\x6b\x65']=_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x74\x72\x6f\x6b\x65\x44\x61\x74\x61'],window['\x73\x65\x6e\x64\x4e\x65\x74\x77\x6f\x72'+'\x6b\x44\x61\x74\x61'](_0x4177cd);}}}_0x25a1d5=-0x230+-0x7b7*-0x5+-0x2463;}}_0x17b610=-0x2064+-0x11*0xf7+0x1*0x30cb;}else{_0x25a1d5=-0xaec+0x242f+-0x1943,_0x424c3a=-0x1f9f+0x1cd8+-0x1*-0x2c7;if(_0x193d5b){laserCursor['\x73\x74\x79\x6c\x65']['\x62\x61\x63\x6b\x67\x72\x6f\x75\x6e\x64'+'\x43\x6f\x6c\x6f\x72']='\x23\x30\x30\x66\x66\x30\x30';if(_0x17b610!==-0x1f66*-0x1+-0xf28+-0x129*0xe&&_0x104c68!==0x1af7+0x2151+-0x3c48){const _0x21f412=_0x4cee56-_0x17b610,_0x57acb7=_0x270974-_0x104c68;_0x5cdd74['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x79']+=_0x21f412*-(0x14e1+0x1687*0x1+0x8*-0x56d+0.005),_0x5cdd74['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x78']+=_0x57acb7*(-0xb7b+0x1187+0x60c*-0x1+0.005);if(_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']&&_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x74\x72\x6f\x6b\x65\x44\x61\x74\x61']){const _0x298498=_0x5cdd74['\x75\x73\x65\x72\x44\x61\x74\x61']['\x73\x74\x72\x6f\x6b\x65\x44\x61\x74\x61'];_0x298498['\x72\x6f\x74\x61\x74\x69\x6f\x6e\x58']=_0x5cdd74['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x78'],_0x298498['\x72\x6f\x74\x61\x74\x69\x6f\x6e\x59']=_0x5cdd74['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x79'],_0x298498['\x72\x6f\x74\x61\x74\x69\x6f\x6e\x5a']=_0x5cdd74['\x72\x6f\x74\x61\x74\x69\x6f\x6e']['\x7a'];if(typeof window['\x73\x65\x6e\x64\x4e\x65\x74\x77\x6f\x72'+'\x6b\x44\x61\x74\x61']==='\x66\x75\x6e\x63\x74\x69\x6f\x6e'){const _0x473431={};_0x473431['\x74\x79\x70\x65']='\x73\x65\x6b\x69\x6c\x5f\x67\x75\x6e\x63'+'\x65\x6c\x6c\x65',_0x473431['\x73\x74\x72\x6f\x6b\x65']=_0x298498,window['\x73\x65\x6e\x64\x4e\x65\x74\x77\x6f\x72'+'\x6b\x44\x61\x74\x61'](_0x473431);}}}_0x17b610=_0x4cee56,_0x104c68=_0x270974;}else laserCursor['\x73\x74\x79\x6c\x65']['\x62\x61\x63\x6b\x67\x72\x6f\x75\x6e\x64'+'\x43\x6f\x6c\x6f\x72']='\x23\x30\x30\x66\x66\x66\x66',_0x17b610=-0x67*0xa+0xd86*-0x1+0x1*0x118c,_0x104c68=0x65a*0x2+0x1*0x1763+0x2417*-0x1;}}}}else _0x17b610=0x2082+0x1dd0+-0x3e52,_0x104c68=-0x1d53+0x1e04+-0x3*0x3b,_0x25a1d5=-0x2687+-0x1061+0x36e8,_0x424c3a=-0x1d54+0x1*-0xd2d+0x2a81,laserCursor['\x73\x74\x79\x6c\x65']['\x64\x69\x73\x70\x6c\x61\x79']='\x6e\x6f\x6e\x65';}),camera=new window['\x43\x61\x6d\x65\x72\x61'](_0x58fdae,{'\x6f\x6e\x46\x72\x61\x6d\x65':async()=>{const _0x528b2d={};_0x528b2d['\x69\x6d\x61\x67\x65']=_0x58fdae,await hands['\x73\x65\x6e\x64'](_0x528b2d);},'\x77\x69\x64\x74\x68':0x280,'\x68\x65\x69\x67\x68\x74':0x1e0,'\x66\x61\x63\x69\x6e\x67\x4d\x6f\x64\x65':'\x75\x73\x65\x72'}),camera['\x73\x74\x61\x72\x74'](),tonyBtn['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c']='\ud83e\udd16\x20\x53\x69\x68\x69\x72\x6c\x69\x20'+'\x45\x6c',tonyBtn['\x73\x74\x79\x6c\x65']['\x62\x6f\x72\x64\x65\x72\x43\x6f\x6c\x6f'+'\x72']='\x23\x30\x30\x66\x66\x30\x30',tonyBtn['\x73\x74\x79\x6c\x65']['\x62\x6f\x78\x53\x68\x61\x64\x6f\x77']='\x30\x20\x30\x20\x32\x30\x70\x78\x20\x72'+'\x67\x62\x61\x28\x30\x2c\x32\x35\x35\x2c'+'\x32\x35\x35\x2c\x30\x2e\x38\x29',tonyBtn['\x73\x74\x79\x6c\x65']['\x63\x6f\x6c\x6f\x72']='\x23\x30\x30\x66\x66\x30\x30',tonyActive=!![];}catch(_0x104861){console['\x65\x72\x72\x6f\x72']('\x54\x6f\x6e\x79\x20\x53\x74\x61\x72\x6b'+'\x20\x4d\x6f\x64\x75\x20\x48\x61\x74\x61'+'\x73\u0131\x3a',_0x104861),tonyBtn['\x69\x6e\x6e\x65\x72\x48\x54\x4d\x4c']='\u274c\x20\x48\x61\x74\x61',tonyBtn['\x73\x74\x79\x6c\x65']['\x62\x6f\x72\x64\x65\x72\x43\x6f\x6c\x6f'+'\x72']='\x23\x66\x66\x30\x30\x30\x30',tonyBtn['\x73\x74\x79\x6c\x65']['\x62\x6f\x78\x53\x68\x61\x64\x6f\x77']='\x30\x20\x30\x20\x31\x30\x70\x78\x20\x72'+'\x67\x62\x61\x28\x32\x35\x35\x2c\x30\x2c'+'\x30\x2c\x30\x2e\x35\x29',tonyBtn['\x73\x74\x79\x6c\x65']['\x63\x6f\x6c\x6f\x72']='\x23\x66\x66\x30\x30\x30\x30';}};
+﻿    tonyBtn.onclick = async () => {
+        if (tonyActive) {
+            if (camera) { camera.stop(); camera = null; }
+            if (hands) { hands.close(); hands = null; }
+            const vid = document.getElementById('tony-video-elem');
+            if (vid) { vid.remove(); }
+            tonyActive = false;
+            laserCursor.style.display = 'none';
+            tonyBtn.innerHTML = '🤖 Sihirli El';
+            tonyBtn.style.borderColor = '#0096ff';
+            tonyBtn.style.boxShadow = 'none';
+            return;
+        }
+
+        tonyBtn.innerHTML = '⏳ (KVKK)';
+        tonyBtn.style.borderColor = '#ffff00';
+        tonyBtn.style.boxShadow = '0 0 10px rgba(255,255,0,0.5)';
+
+        try {
+            await loadScript('mediapipe/camera_utils.js');
+            await loadScript('mediapipe/hands.js');
+
+            const videoElement = document.createElement('video');
+            videoElement.setAttribute('playsinline', '');
+            videoElement.setAttribute('autoplay', '');
+            videoElement.setAttribute('muted', '');
+            videoElement.id = 'tony-video-elem';
+            videoElement.style.position = 'fixed'; 
+            videoElement.style.opacity = '0.15'; 
+            videoElement.style.transform = 'scaleX(-1)';
+            videoElement.style.width = '100%'; 
+            videoElement.style.height = '100%'; 
+            videoElement.style.zIndex = '-9999'; 
+            videoElement.style.top = '0'; 
+            videoElement.style.left = '0'; 
+            videoElement.style.pointerEvents = 'none'; 
+            videoElement.muted = true;
+            document.body.appendChild(videoElement);
+
+            hands = new window.Hands({
+                locateFile: (file) => 'vendor/' + file
+            });
+
+            hands.setOptions({
+                maxNumHands: 2, 
+                modelComplexity: 0,
+                minDetectionConfidence: 0.5,
+                minTrackingConfidence: 0.5
+            });
+
+            let startX = 0, startY = 0;
+            let startScaleDistance = 0, startScale = 1;
+            let startOpenDistance = 0, startOpenRatio = 0;
+
+            hands.onResults((results) => {
+                tonyBtn.innerHTML = 'AI Aktif';
+                if (results.multiHandLandmarks && results.multiHandLandmarks.length > 0) {
+                    tonyBtn.innerHTML = 'El Göründü!';
+                    const isTwoHands = results.multiHandLandmarks.length === 2;
+                    const hand1 = results.multiHandLandmarks[0];
+                    
+                    const px1 = (1 - hand1[8].x) * window.innerWidth;
+                    const py1 = hand1[8].y * window.innerHeight;
+                    laserCursor.style.display = 'block';
+                    laserCursor.style.left = px1 + 'px';
+                    laserCursor.style.top = py1 + 'px';
+                    
+                    const pinchDist1 = calculateDistance(hand1[4], hand1[8]);
+                    const isPinched1 = pinchDist1 < 0.12; 
+
+                    if (window.Scene3D) {
+                        let mesh = window.Scene3D.currentMesh;
+                        if (!mesh && window.Scene3D.scene) {
+                            mesh = window.Scene3D.scene.children.slice().reverse().find(m => m.userData && m.userData.strokeData);
+                        }
+                        if (mesh) {
+                            if (isTwoHands) {
+                                const hand2 = results.multiHandLandmarks[1];
+                                const pinchDist2 = calculateDistance(hand2[4], hand2[8]);
+                                const isPinched2 = pinchDist2 < 0.12;
+                                const handsDistance = calculateDistance(hand1[8], hand2[8]);
+
+                                if (isPinched1 && isPinched2) {
+                                    laserCursor.style.backgroundColor = '#ff00ff'; 
+                                    if (startScaleDistance === 0) {
+                                        startScaleDistance = handsDistance;
+                                        startScale = mesh.scale.x;
+                                    } else {
+                                        const scaleFactor = handsDistance / startScaleDistance;
+                                        let newScale = startScale * scaleFactor;
+                                        newScale = Math.max(0.2, Math.min(newScale, 10)); 
+                                        mesh.scale.setScalar(newScale);
+                                        
+                                        if (mesh.userData && mesh.userData.strokeData) {
+                                            mesh.userData.strokeData.meshScale = newScale;
+                                            if (typeof window.sendNetworkData === 'function') {
+                                                window.sendNetworkData({ type: 'sekil_guncelle', stroke: mesh.userData.strokeData });
+                                            }
+                                        }
+                                    }
+                                    startOpenDistance = 0; 
+                                } 
+                                else if (!isPinched1 && !isPinched2) {
+                                    laserCursor.style.backgroundColor = '#ffff00'; 
+                                    if (startOpenDistance === 0) {
+                                        startOpenDistance = handsDistance;
+                                        startOpenRatio = mesh.userData.strokeData?.openRatio || 0;
+                                    } else {
+                                        const distDiff = handsDistance - startOpenDistance;
+                                        let ratioChange = distDiff * 2; 
+                                        let newRatio = Math.max(0, Math.min(1, startOpenRatio + ratioChange));
+                                        
+                                        const sInput = document.getElementById('shape-slider');
+                                        if(sInput) sInput.value = newRatio * 100;
+                                        
+                                        if (mesh.userData.isCustomCone && window.CustomConeEngine) {
+                                            window.CustomConeEngine.update(mesh, newRatio);
+                                        } else if (window.Foldable3D) {
+                                            window.Foldable3D.updateUnfold(mesh, newRatio);
+                                        }
+                                        
+                                        if (mesh.userData && mesh.userData.strokeData) {
+                                            mesh.userData.strokeData.openRatio = newRatio;
+                                            if (typeof window.sendNetworkData === 'function') {
+                                                window.sendNetworkData({ type: 'sekil_guncelle', stroke: mesh.userData.strokeData });
+                                            }
+                                        }
+                                    }
+                                    startScaleDistance = 0; 
+                                }
+                                startX = 0; 
+                            } 
+                            else {
+                                startScaleDistance = 0;
+                                startOpenDistance = 0;
+
+                                if (isPinched1) {
+                                    laserCursor.style.backgroundColor = '#00ff00'; 
+                                    if (startX !== 0 && startY !== 0) {
+                                        const dx = px1 - startX;
+                                        const dy = py1 - startY;
+
+                                        mesh.rotation.y += dx * -0.005;
+                                        mesh.rotation.x += dy * 0.005;
+
+                                        if (mesh.userData && mesh.userData.strokeData) {
+                                            const sd = mesh.userData.strokeData;
+                                            sd.rotationX = mesh.rotation.x;
+                                            sd.rotationY = mesh.rotation.y;
+                                            sd.rotationZ = mesh.rotation.z;
+                                            if (typeof window.sendNetworkData === 'function') {
+                                                window.sendNetworkData({ type: 'sekil_guncelle', stroke: sd });
+                                            }
+                                        }
+                                    }
+                                    startX = px1;
+                                    startY = py1;
+                                } else {
+                                    laserCursor.style.backgroundColor = '#00ffff'; 
+                                    startX = 0;
+                                    startY = 0;
+                                }
+                            }
+                        }
+                    }
+                } else {
+                    startX = 0; startY = 0;
+                    startScaleDistance = 0; startOpenDistance = 0;
+                    laserCursor.style.display = 'none';
+                }
+            });
+
+            camera = new window.Camera(videoElement, {
+                onFrame: async () => {
+                    await hands.send({image: videoElement});
+                },
+                width: 640,
+                height: 480,
+                facingMode: 'user'
+            });
+
+            camera.start();
+
+            tonyBtn.innerHTML = '🤖 Sihirli El';
+            tonyBtn.style.borderColor = '#00ff00';
+            tonyBtn.style.boxShadow = '0 0 20px rgba(0,255,255,0.8)';
+            tonyBtn.style.color = '#00ff00';
+            tonyActive = true;
+
+        } catch (e) {
+            console.error('Tony Stark Modu Hatası:', e);
+            tonyBtn.innerHTML = '❌ Hata';
+            tonyBtn.style.borderColor = '#ff0000';
+            tonyBtn.style.boxShadow = '0 0 10px rgba(255,0,0,0.5)';
+            tonyBtn.style.color = '#ff0000';
+        }
+    };
