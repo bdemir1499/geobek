@@ -7049,18 +7049,18 @@ if (!data || !data.type) return;
             
             strokesArr.forEach(s => {
                 if (typeof adaptStrokeToScreen === 'function') {
-                    const senderCw = data.cw || data.cssW;
-                    const senderCh = data.ch || data.cssH;
-                    adaptStrokeToScreen(s, data.cssW, data.cssH, senderCw, senderCh, data);
+                    const senderCw = data.cw || data.cssW || 1920;
+                    const senderCh = data.ch || data.cssH || 1080;
+                    adaptStrokeToScreen(s, data.cssW || senderCw, data.cssH || senderCh, senderCw, senderCh, data);
                 }
             });
 
-            // EÃ¯Â¿Â½er veride bir anormallik olup dizi (array) gelirse diye gÃ¯Â¿Â½venlik Ã¯Â¿Â½nlemi
             if (isArr) {
                 strokesArr.forEach(s => {
                     const isExist = s.id && window.drawnStrokes.some(ex => ex.id === s.id);
                     if (!isExist) window.drawnStrokes.push(s);
                 });
+                if (typeof drawnStrokes !== 'undefined') drawnStrokes = window.drawnStrokes;
                 if (window.redrawAllStrokes) window.redrawAllStrokes();
                 return;
             }
@@ -7070,6 +7070,7 @@ if (!data || !data.type) return;
 
             if (existingIndex !== -1) {
                 window.drawnStrokes[existingIndex] = stroke;
+                if (typeof drawnStrokes !== 'undefined') drawnStrokes = window.drawnStrokes;
                 if (window.redrawAllStrokes) window.redrawAllStrokes();
             } else {
                 if (stroke.type === 'image' && stroke.imgData) {
@@ -7078,10 +7079,12 @@ if (!data || !data.type) return;
                     tempImg.onload = () => {
                         stroke.imgObj = tempImg;
                         window.drawnStrokes.push(stroke);
+                        if (typeof drawnStrokes !== 'undefined') drawnStrokes = window.drawnStrokes;
                         if (window.redrawAllStrokes) window.redrawAllStrokes();
                     };
                 } else {
                     window.drawnStrokes.push(stroke);
+                    if (typeof drawnStrokes !== 'undefined') drawnStrokes = window.drawnStrokes;
                     if (window.redrawAllStrokes) window.redrawAllStrokes();
 
                     // ?? EÃ¯Â¿Â½ER GELEN Ã¯Â¿Â½Ã¯Â¿Â½ZÃ¯Â¿Â½M 3D Ã¯Â¿Â½EKÃ¯Â¿Â½LSE PC MOTORUNU TETÃ¯Â¿Â½KLE ??
