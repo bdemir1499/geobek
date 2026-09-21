@@ -1334,7 +1334,7 @@ function advanceChar(char) {
 }
 
 function findSnapPoint(pos) {
-    for (const stroke of drawnStrokes) {
+    for (const stroke of window.drawnStrokes) {
         if (stroke.type === 'point') {
             if (distance(pos, stroke) < SNAP_THRESHOLD) return { x: stroke.x, y: stroke.y };
         } else if (stroke.type === 'straightLine' || stroke.type === 'segment') {
@@ -1425,7 +1425,7 @@ function redrawAllStrokes() {
     ctx.save();
     // (Buradaki translate ve scale satÃ¯Â¿Â½rlarÃ¯Â¿Â½nÃ¯Â¿Â½ tamamen sildik. Zemin artÃ¯Â¿Â½k sabit!)
 
-    for (const stroke of drawnStrokes) {
+    for (const stroke of window.drawnStrokes) {
 
         // --- BU BLOÃ¯Â¿Â½U DÃ¯Â¿Â½NGÃ¯Â¿Â½NÃ¯Â¿Â½N EN BAÃ¯Â¿Â½INA EKLE ---
         if (stroke.type === 'preview') {
@@ -1948,7 +1948,7 @@ function redrawAllStrokes() {
     // === EKLENECEK YENÃ¯Â¿Â½ BÃ¯Â¿Â½LÃ¯Â¿Â½M: SAYFAYI EN ARKAYA Ã¯Â¿Â½Ã¯Â¿Â½Z ===
     if (bgCtx) {
         bgCtx.save();
-        for (const stroke of drawnStrokes) {
+        for (const stroke of window.drawnStrokes) {
             if (stroke.type === 'image' && stroke.isBackground !== false) {
                 let imgToDraw = null;
                 if (stroke.img && stroke.img instanceof HTMLImageElement) {
