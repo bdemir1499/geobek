@@ -1090,16 +1090,10 @@ let active3DSliderStroke = null; // SÃ¯Â¿Â½rgÃ¯Â¿Â½sÃ¯Â¿Â½ oyn
 const sliderContainer = document.createElement('div');
 sliderContainer.id = 'slider-container';
 sliderContainer.innerHTML = `
-    <label>AÃ¯Â¿Â½Ã¯Â¿Â½nÃ¯Â¿Â½m (Katlama)</label>
+    <label>Açınım (Katlama)</label>
     <input type="range" id="shape-slider" min="0" max="100" value="0">
 `;
-const leftPanel = document.querySelector('.left-panel');
-const btnOyunlarOptions = document.getElementById('oyunlar-options');
-if (leftPanel && btnOyunlarOptions) {
-    leftPanel.insertBefore(sliderContainer, btnOyunlarOptions.nextSibling);
-} else {
-    document.body.appendChild(sliderContainer);
-}
+document.body.appendChild(sliderContainer);
 const shapeSlider = document.getElementById('shape-slider');
 
 // Alan / Hacim GÃ¯Â¿Â½sterge Kutusunu HTML'e Otomatik Ekle
