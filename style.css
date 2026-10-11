@@ -1078,23 +1078,24 @@ canvas {
 
 #info-tooltip {
     position: fixed;
-    bottom: 160px;
-    left: 50%;
-    transform: translateX(-50%);
     display: none;
-    z-index: 9999;
-    background: transparent;
-    border: none;
-    color: #FFFF00;
-    padding: 5px 10px;
-    border-radius: 0;
-    font-family: 'Arial', sans-serif;
-    font-size: 14px;
-    line-height: 1.15;
-    pointer-events: none; /* Farenin/parmağın tıklamasını engellemesin */
-    box-shadow: none;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.9), -1px -1px 3px rgba(0, 0, 0, 0.9);
-    white-space: pre-line; /* Alt satıra inmeyi tanır */
+    z-index: 10001;
+    background: rgba(18, 22, 36, 0.92);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1.5px solid rgba(0, 255, 204, 0.45);
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 15px rgba(0, 255, 204, 0.15);
+    color: #f0f0f0;
+    padding: 12px 16px;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    font-size: 13px;
+    line-height: 1.45;
+    pointer-events: none;
+    text-shadow: none;
+    white-space: normal;
+    max-width: 290px;
+    box-sizing: border-box;
 }
 
 /* =========================================
